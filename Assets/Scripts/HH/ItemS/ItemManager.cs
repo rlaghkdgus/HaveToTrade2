@@ -129,9 +129,10 @@ public class ItemManager : Singleton<ItemManager>
         float itemTotalWeight = itemSO.items[currentProductIndex].weight * itemCountIndex[productCount];
 
         playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight += itemTotalWeight;
-        if(playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight > playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight)
+        if (playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight > playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight)
         {
-            float over = playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight - playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight;
+            Debug.LogError("인벤토리 용량 초과 : " + playerInventory.sortWeight[itemSO.items[currentProductIndex].sort]);
+            /*float over = playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight - playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight;
             over = Mathf.Min(over, itemTotalWeight);
 
             if (playerInventory.PublicCurrentWeight + over > playerInventory.PublicMaxWeight)
@@ -141,9 +142,9 @@ public class ItemManager : Singleton<ItemManager>
                 Debug.LogWarning("Cannot add item");
                 return;
             }
-            playerInventory.PublicCurrentWeight += over;
+            playerInventory.PublicCurrentWeight += over;*/
         }
-        
+
         #endregion
 
         Player.Instance.money -= currentPrice; // 물건 비용 지불
@@ -197,7 +198,7 @@ public class ItemManager : Singleton<ItemManager>
         {
             playerInventory.sortWeight[itemToRemove.sort].CurrentWeight -= itemTotalWeight;
         }
-        else
+        /*else
         {
             if(playerInventory.sortWeight[itemToRemove.sort].CurrentWeight - itemTotalWeight >= playerInventory.sortWeight[itemToRemove.sort].MaxWeight)
             {
@@ -211,7 +212,7 @@ public class ItemManager : Singleton<ItemManager>
                 float over = itemTotalWeight - margin;
                 playerInventory.PublicCurrentWeight -= over;
             }
-        }
+        }*/
         if (QuestSystem.Instance.currentQuestType == QuestType.Trade)
             QuestSystem.Instance.QuestProgress(itemToRemove, itemTotalWeight);
         #endregion

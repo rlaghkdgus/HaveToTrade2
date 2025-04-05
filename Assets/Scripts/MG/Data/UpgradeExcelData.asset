@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcf8d681ab484b4a99eec0f333cd0aa, type: 3}
+  m_Name: UpgradeExcelData
+  m_EditorClassIdentifier: 
+  Carriage:
+  - ID: 10
+    Name: "\uAE30\uBCF8 \uBCA0\uC774\uC2A4"
+    Food: 80
+    pFood: 80
+    Clothes: 80
+    Furniture: 80
+    Accesory: 30
+  - ID: 11
+    Name: "\uC232\uC758 \uBC14\uAD6C\uB2C8"
+    Food: 150
+    pFood: 80
+    Clothes: 80
+    Furniture: 80
+    Accesory: 30
+  - ID: 12
+    Name: "\uC2E0\uC758 \uC120\uBB3C\uCE78"
+    Food: 190
+    pFood: 120
+    Clothes: 120
+    Furniture: 120
+    Accesory: 40
+  - ID: 13
+    Name: "\uBC14\uB78C\uC758 \uCC3D\uACE0"
+    Food: 230
+    pFood: 160
+    Clothes: 160
+    Furniture: 160
+    Accesory: 50
+  - ID: 14
+    Name: "\uACE1\uBB3C \uAE08\uACE0"
+    Food: 270
+    pFood: 200
+    Clothes: 200
+    Furniture: 200
+    Accesory: 60
+  - ID: 15
+    Name: "\uACE1\uC2DD \uC804\uC6A9\uCE78"
+    Food: 310
+    pFood: 240
+    Clothes: 240
+    Furniture: 240
+    Accesory: 70
+  - ID: 21
+    Name: "\uD587\uC0B4 \uBC14\uAD6C\uB2C8"
+    Food: 80
+    pFood: 150
+    Clothes: 80
+    Furniture: 80
+    Accesory: 30
+  - ID: 22
+    Name: "\uAC00\uACF5\uD488\uCE78"
+    Food: 120
+    pFood: 190
+    Clothes: 120
+    Furniture: 120
+    Accesory: 40
+  - ID: 23
+    Name: "\uB300\uC9C0\uC758 \uC228\uACB0"
+    Food: 160
+    pFood: 230
+    Clothes: 160
+    Furniture: 160
+    Accesory: 50
+  - ID: 24
+    Name: "\uACE0\uAE30 \uC11C\uB298\uCE78"
+    Food: 200
+    pFood: 270
+    Clothes: 200
+    Furniture: 200
+    Accesory: 60
+  - ID: 25
+    Name: "\uBC24\uC758 \uC815\uC6D0\uCE78"
+    Food: 240
+    pFood: 310
+    Clothes: 240
+    Furniture: 240
+    Accesory: 70
+  - ID: 31
+    Name: "\uBAA9\uCD08\uC9C0 \uC9D0\uCE78"
+    Food: 80
+    pFood: 80
+    Clothes: 150
+    Furniture: 80
+    Accesory: 30
+  - ID: 32
+    Name: "\uC758\uB958\uC9D0\uCE78"
+    Food: 120
+    pFood: 120
+    Clothes: 190
+    Furniture: 120
+    Accesory: 40
+  - ID: 33
+    Name: "\uC2DC\uAC04\uC758 \uC9D0\uCE78"
+    Food: 160
+    pFood: 160
+    Clothes: 230
+    Furniture: 160
+    Accesory: 50
+  - ID: 34
+    Name: "\uBB34\uAE30\uACE0\uCE78"
+    Food: 200
+    pFood: 200
+    Clothes: 270
+    Furniture: 200
+    Accesory: 60
+  - ID: 35
+    Name: "\uBCC4\uBE5B\uC758 \uC548\uC2DD\uCC98"
+    Food: 240
+    pFood: 240
+    Clothes: 310
+    Furniture: 240
+    Accesory: 70
+  - ID: 41
+    Name: "\uC0C8\uBCBD\uBE5B \uCC3D\uACE0"
+    Food: 80
+    pFood: 80
+    Clothes: 80
+    Furniture: 150
+    Accesory: 30
+  - ID: 42
+    Name: "\uAC00\uAD6C\uC6B4\uC1A1\uCE78"
+    Food: 120
+    pFood: 120
+    Clothes: 120
+    Furniture: 190
+    Accesory: 40
+  - ID: 43
+    Name: "\uAE30\uC5B5\uC758 \uCC3D\uACE0"
+    Food: 160
+    pFood: 160
+    Clothes: 160
+    Furniture: 230
+    Accesory: 50
+  - ID: 44
+    Name: "\uC7A5\uC778\uC758 \uC190\uAE38\uCE78"
+    Food: 200
+    pFood: 200
+    Clothes: 200
+    Furniture: 270
+    Accesory: 60
+  - ID: 45
+    Name: "\uC601\uC6D0\uC758 \uC11C\uACE0\uCE78"
+    Food: 240
+    pFood: 240
+    Clothes: 240
+    Furniture: 310
+    Accesory: 70
+  - ID: 51
+    Name: "\uB2EC\uBE5B \uCC3D\uACE0"
+    Food: 80
+    pFood: 80
+    Clothes: 80
+    Furniture: 80
+    Accesory: 40
+  - ID: 52
+    Name: "\uADC0\uAE08\uC18D\uCE78"
+    Food: 120
+    pFood: 120
+    Clothes: 120
+    Furniture: 120
+    Accesory: 50
+  - ID: 53
+    Name: "\uBCC4\uBE5B\uC758 \uD488"
+    Food: 160
+    pFood: 160
+    Clothes: 160
+    Furniture: 160
+    Accesory: 60
+  - ID: 54
+    Name: "\uADC0\uC871\uC758 \uC9D0\uCE78"
+    Food: 200
+    pFood: 200
+    Clothes: 200
+    Furniture: 200
+    Accesory: 70
+  - ID: 55
+    Name: "\uC2EC\uD574\uC758 \uC9C4\uC8FC\uD568"
+    Food: 240
+    pFood: 240
+    Clothes: 240
+    Furniture: 240
+    Accesory: 80

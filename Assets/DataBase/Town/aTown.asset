@@ -18,7 +18,6 @@ MonoBehaviour:
   - {fileID: 6350724525790011638, guid: ad83e69e66202db43a446c53fb817a85, type: 3}
   - {fileID: 3136945069006094219, guid: f05498b6d4b325c4fae7361c21667ae7, type: 3}
   - {fileID: 5059678703820474622, guid: ac70f6b175106a84c848edab8c4188ab, type: 3}
-  - {fileID: 3791891572008202123, guid: 1c541dea90a9e3946bcbfedb87816340, type: 3}
   RoadPrefabs_F:
   - {fileID: 1845644765570509702, guid: d6c95dedbb8c9e24f976e9d093adf525, type: 3}
   RoadPrefabs_M:

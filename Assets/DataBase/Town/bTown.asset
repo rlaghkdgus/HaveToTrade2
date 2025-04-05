@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a5e859ebf3941448b8c4e90eddd4c8, type: 3}
+  m_Name: bTown
+  m_EditorClassIdentifier: 
+  TownName: b
+  TownType: 2
+  TownPrefabs:
+  - {fileID: 3791891572008202123, guid: 1c541dea90a9e3946bcbfedb87816340, type: 3}
+  - {fileID: 5059678703820474622, guid: ac70f6b175106a84c848edab8c4188ab, type: 3}
+  - {fileID: 3136945069006094219, guid: f05498b6d4b325c4fae7361c21667ae7, type: 3}
+  - {fileID: 6350724525790011638, guid: ad83e69e66202db43a446c53fb817a85, type: 3}
+  RoadPrefabs_F:
+  - {fileID: 899073335700122018, guid: caed60d40f03a9e40ab2ea234d5a2961, type: 3}
+  RoadPrefabs_M:
+  - {fileID: 5201365630356673003, guid: cda5778f7342d054c9bc3889288d9928, type: 3}
+  RoadPrefabs_B:
+  - {fileID: 2208883120381032692, guid: 8ca69f2156b7add4ca3ce099a86e86a2, type: 3}

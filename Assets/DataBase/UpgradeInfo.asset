@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fa6cc1a4802f64d8867fb7c5e2402d, type: 3}
+  m_Name: UpgradeInfo
+  m_EditorClassIdentifier: 
+  InfoList:
+  - Base: 1000
+    Food: 0
+    pFood: 0
+    Clothes: 0
+    Furniture: 0
+    Accesory: 0
+  - Base: 3000
+    Food: 0
+    pFood: 0
+    Clothes: 0
+    Furniture: 0
+    Accesory: 0
+  - Base: 5000
+    Food: 0
+    pFood: 0
+    Clothes: 0
+    Furniture: 0
+    Accesory: 0
+  - Base: 7000
+    Food: 0
+    pFood: 0
+    Clothes: 0
+    Furniture: 0
+    Accesory: 0
+  - Base: 0
+    Food: 0
+    pFood: 0
+    Clothes: 0
+    Furniture: 0
+    Accesory: 0

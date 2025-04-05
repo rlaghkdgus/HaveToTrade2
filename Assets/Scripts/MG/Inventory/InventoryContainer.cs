@@ -21,31 +21,29 @@ public class InventoryContainer : ScriptableObject
         {ItemSorts.accesory, new SortWeight() }
     };
 
-    public float PublicMaxWeight;
+    //public float PublicMaxWeight;
 
-    public float PublicCurrentWeight;
+    //public float PublicCurrentWeight;
 
     public List<pItem> inventory;
 
-    public UpgradeInfo UpgradeInfo;
-
-    [SerializeField] private int current_Tier = 0;
+    public int Upgrade_ID;
+    //[SerializeField] private int current_Tier = 0;
 
     public void InitWeight()
     {
-        var tier = UpgradeInfo.InfoList[current_Tier];
-        ApplyMaxWeight(tier);
+        ApplyMaxWeight();
         CalCurrentWeight();
     }
 
-    private void ApplyMaxWeight(TierUp tier)
-    {
+    private void ApplyMaxWeight()
+    {/*
         sortWeight[ItemSorts.food].MaxWeight = tier.Food;
         sortWeight[ItemSorts.pFood].MaxWeight = tier.pFood;
         sortWeight[ItemSorts.clothes].MaxWeight = tier.Clothes;
         sortWeight[ItemSorts.furniture].MaxWeight = tier.Furniture;
         sortWeight[ItemSorts.accesory].MaxWeight = tier.Accesory;
-        PublicMaxWeight = tier.Base;
+        PublicMaxWeight = tier.Base;*/
     }
 
     private void CalCurrentWeight()
@@ -54,7 +52,7 @@ public class InventoryContainer : ScriptableObject
         {
             sortWeight[sort].CurrentWeight = 0;
         }
-        PublicCurrentWeight = 0;
+        //PublicCurrentWeight = 0;
 
         foreach (var item in inventory)
         {
@@ -63,12 +61,13 @@ public class InventoryContainer : ScriptableObject
 
             if (sortWeight[item.sort].CurrentWeight > sortWeight[item.sort].MaxWeight)
             {
-                float over = sortWeight[item.sort].CurrentWeight - sortWeight[item.sort].MaxWeight;
+                Debug.LogError("인벤토리 용량 초과 : " + item.sort);
+                /*float over = sortWeight[item.sort].CurrentWeight - sortWeight[item.sort].MaxWeight;
                 if(over > itemTotalWeight)
                 {
                     over = itemTotalWeight;
                 }
-                PublicCurrentWeight += over;
+                PublicCurrentWeight += over;*/
             }
         }
     }
@@ -79,7 +78,7 @@ public class InventoryContainer : ScriptableObject
         {
             Debug.Log($"{sort.Key} - Current Weight: {sort.Value.CurrentWeight} / Max Weight: {sort.Value.MaxWeight}");
         }
-        Debug.Log($"Shared Current Weight: {PublicCurrentWeight} / Shared Capacity: {PublicMaxWeight}");
+        //Debug.Log($"Shared Current Weight: {PublicCurrentWeight} / Shared Capacity: {PublicMaxWeight}");
     }
 
     #region 기능 보관용(쓰려면 public 교체 후 사용)
@@ -90,13 +89,13 @@ public class InventoryContainer : ScriptableObject
         float expectedWeight = sortWeight[newitem.sort].CurrentWeight + itemTotalWeight;
         float over = expectedWeight - sortWeight[newitem.sort].MaxWeight;
         if(over > 0)
-        {
+        {/*
             if(PublicCurrentWeight + over > PublicMaxWeight)
             {
                 Debug.LogWarning("Cannot add item");
                 return;
             }
-            PublicCurrentWeight += over;
+            PublicCurrentWeight += over;*/
         }
 
         var invenItem = inventory.Find(i => i.stuffName == newitem.stuffName && i.sort == newitem.sort);
@@ -131,9 +130,9 @@ public class InventoryContainer : ScriptableObject
 
             float over = sortWeight[itemToRemove.sort].CurrentWeight - sortWeight[itemToRemove.sort].MaxWeight;
             if(over < 0)
-            {
+            {/*
                 float RestoreWeight = itemTotalWeight - Mathf.Abs(over);
-                PublicCurrentWeight -= RestoreWeight;
+                PublicCurrentWeight -= RestoreWeight;*/
             }
         }
     }

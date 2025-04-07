@@ -7,10 +7,10 @@ using UnityEngine;
 public enum ItemSorts
 {
     food,
-    accesory,
-    furniture,
+    pFood,
     clothes,
-    pFood
+    furniture,
+    accesory
 }
 public enum CustomerState
 {
@@ -22,16 +22,9 @@ public enum CustomerState
     Sell,
     Reject,
     Bargain,
-    BargainReject,
     End,
 }
-public enum RoadEventState
-{
-    Idle,
-    Thief,
-    Rock,
-    
-}
+
 public enum QuestType
 {
     Idle,

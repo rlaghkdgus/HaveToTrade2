@@ -13,7 +13,7 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private int branch; // 리스트에서 선택한 대사 분기 인덱스
 
     [Header("리스트 선택 방식용 변수")]
-    public string selectedDialogName; // 선택한 리스트 이름
+    public string seletedDialogName; // 선택한 리스트 이름
     private List<TextData> currentList; // 선택한 리스트를 담을 빈 리스트
 
     [Header("공용 변수")]
@@ -42,15 +42,13 @@ public class DialogSystem : MonoBehaviour
         Setting();
     }
 
- 
-
     public void DialogListLoading() // 리스트 선택 방식
     {
         // 장점 : 액셀 파일 관리가 편함
         // 단점 : 스크립트 조금씩 수정 필요
         dialogs.Clear();
 
-        var field = DialogDB.GetType().GetField(selectedDialogName);
+        var field = DialogDB.GetType().GetField(seletedDialogName);
         if (field != null && field.FieldType == typeof(List<TextData>))
         {
             currentList = (List<TextData>)field.GetValue(DialogDB);
@@ -202,7 +200,7 @@ public class DialogSystem : MonoBehaviour
         //speaker.Cursor.SetActive(false);
 
         Color color = speaker.SpeakerImage.color;
-        color.a = isActive == true ? 1 : 0.0f;
+        color.a = isActive == true ? 1 : 0.2f;
         speaker.SpeakerImage.color = color;
     }
 

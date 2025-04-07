@@ -13,31 +13,13 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   PublicMaxWeight: 1000
-  PublicCurrentWeight: 880
+  PublicCurrentWeight: 80
   inventory:
-  - price: 500
-    stuffName: Sofa
-    sort: 3
-    image: {fileID: 21300000, guid: 050ba25f528743b47a269a0b08f226ef, type: 3}
-    weight: 70
-    counts: 1
-  - price: 200
-    stuffName: Apple
+  - price: 70
+    stuffName: Grape
     sort: 0
-    image: {fileID: 21300000, guid: 1361b7b0e2895c44ca5486d7625959d6, type: 3}
-    weight: 3
-    counts: 2
-  - price: 250
-    stuffName: Meat
-    sort: 0
-    image: {fileID: 21300000, guid: 3202a30638fbc4a479fb617e565e760b, type: 3}
-    weight: 1
-    counts: 4
-  - price: 150
-    stuffName: Oats
-    sort: 0
-    image: {fileID: 21300000, guid: 5d68c3c900b2d2a438a03f1fa386f8bd, type: 3}
+    image: {fileID: -270290214, guid: 074db126ffe9c2343bb815ccd49d95ad, type: 3}
     weight: 10
-    counts: 75
+    counts: 8
   UpgradeInfo: {fileID: 11400000, guid: 670bb50a050bc364fa934cb31e4b952c, type: 2}
   current_Tier: 0

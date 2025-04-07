@@ -17,9 +17,10 @@ public class ItemManager : Singleton<ItemManager>
     [Header("데이터 교환시 사용할 리스트(UI포함)")]
     public List<int> productIndex; // 랜덤인덱스 저장공간
     public List<int> itemCountIndex;// 아이템 개수 저장 공간
-    
-    
-    
+
+    [Header("확률 체크")]
+    public float chancePoint;
+    public float totalChance;
 
     // 계산시 저장공간
     public int productCount = 0;//상품 순서 분류
@@ -224,22 +225,24 @@ public class ItemManager : Singleton<ItemManager>
     public void SetBargainPrice(float initialChance,int bargainValue,int bargainPoint, float bargainPercent)// 초기확률(%),흥정제시가격, 흥정단위, 흥정 단위당 %순서
     {
         float randomValue = Random.Range(0f, 100f);
-        int diff; //차이계산
-        int chancePoint; // 지정된확률에 얼마를 곱할건지
-        float totalChance; // 최종확률
+        float diff; //차이계산
+        //int chancePoint; // 지정된확률에 얼마를 곱할건지
+        //float totalChance; // 최종확률
         if (Customer.buyOrSell== true)//구매일때
         {
-            diff = itemSO.items[currentProductIndex].price - bargainValue;//받아온 흥정값과 아이템값 차이를 계산 후
+            diff =  itemSO.items[currentProductIndex].price - bargainValue;//받아온 흥정값과 아이템값 차이를 계산 후
+            chancePoint = diff / ((float)itemSO.items[currentProductIndex].price / 100f);
         }
         else//판매일때
         {
            if(bargainValue < 0)//물건팔때는 0원으로 제한...
                 bargainValue = 0;
             diff = bargainValue - playerInventory.inventory[currentProductIndex].price; // 판매, 흥정가가 더 높아야 하므로 역으로 계산
+            chancePoint = diff / (playerInventory.inventory[currentProductIndex].price / 100f);
         }
-        chancePoint = diff / bargainPoint; //차이와 단위를 나눔
-        totalChance = initialChance - (chancePoint * bargainPercent); //초기확률에 계산된 확률단위와 흥정단위당%값을뺀 값을 계산, 실제 흥정 확률
-
+        //chancePoint = diff / bargainPoint; //차이와 단위를 나눔
+        //totalChance = initialChance - (chancePoint * bargainPercent); //초기확률에 계산된 확률단위와 흥정단위당%값을뺀 값을 계산, 실제 흥정 확률
+        totalChance = initialChance - chancePoint;
         if (totalChance >= randomValue)//결과 확률이 random으로 나온 값보다 높으면 성공, ex) 확률이 30이면 random값으로 31이 나왔을때 실패, 랜덤값이 29이면 성공
         {
             bargainPrice = bargainValue;

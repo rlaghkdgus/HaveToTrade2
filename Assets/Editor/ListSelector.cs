@@ -22,12 +22,12 @@ public class ListSeleCtor : Editor // 리스트 선택을 위한 유틸 기능
                 .ToArray();
 
             // 드롭다운으로 선택
-            int currentIndex = Array.IndexOf(fields, selector.selectedDialogName);
+            int currentIndex = Array.IndexOf(fields, selector.seletedDialogName);
             int newIndex = EditorGUILayout.Popup("Selected List", currentIndex, fields);
 
             if (newIndex >= 0 && newIndex < fields.Length)
             {
-                selector.selectedDialogName = fields[newIndex];
+                selector.seletedDialogName = fields[newIndex];
             }
         }
         else

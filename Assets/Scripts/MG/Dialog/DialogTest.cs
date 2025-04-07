@@ -33,6 +33,6 @@ public class DialogTest : MonoBehaviour
             Debug.Log("´ÙÀ½ ¾ê±â");
         }
 
-       ButtonGruop.SetActive(true);
+        ButtonGruop.SetActive(true);
     }
 }

@@ -19,12 +19,6 @@ public class customerPrefab
 }
 public class Customer : MonoBehaviour
 {
-    [Header("손님 대화용")]
-    [SerializeField] List <DialogSystem> customerDialog;
-    [SerializeField] private GameObject FadeUI;
-    [SerializeField] private float FadeTime = 1f;
-    private bool talkStart = false;
-    private bool dialogStop = false;
     [Header("손님수, 현재는 시작시 랜덤 지정")]
     public int cusCount;
     [Header("손님 세부 옵션")]
@@ -129,13 +123,10 @@ public class Customer : MonoBehaviour
                 cusCount = Random.Range(3, 6);
             }
             randcusnum = Random.Range(0,cusList.Count);
-            randcusnum = 1; //테스트용, 주석해야함.
+            //randcusnum = 1; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, cusList[randcusnum].cusPrefab.Length);
-            talkStart = true;
-            dialogStop = false;
             newCustomer = Instantiate(cusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
             CusBargainPointSet(randcusnum);
-            SetDialog(randcusnum);
             StartCoroutine(MoveCustomerToPosition(newCustomer, customerTransform[1].position));
         }
     }
@@ -200,13 +191,12 @@ public class Customer : MonoBehaviour
             BargainUI.SetActive(true);
         }
     }
- 
     private void CustomerExit(CustomerState _cState)
     {
         if(_cState == CustomerState.End)//종료
         {
             initialChance = 100f;
-            //StartCoroutine(MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration)); //퇴장 및 페이드 아웃
+            StartCoroutine(MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration)); //퇴장 및 페이드 아웃
             cusCount--;
             StartCoroutine(TradeEnd());
         }
@@ -270,7 +260,6 @@ public class Customer : MonoBehaviour
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetPosition, speed * Time.deltaTime);
             yield return null;
         }
-        yield return DialogPlay();
         cState.Value = CustomerState.ItemSet;
     }
     IEnumerator MoveAndFadeOutCustomer(GameObject customer, Vector3 targetPosition, float duration)//손님퇴장
@@ -329,20 +318,7 @@ public class Customer : MonoBehaviour
     }
     IEnumerator TradeEnd()//거래 종료
     {
-        ItemManager.Instance.ListClear(); 
-        if (dialogStop == false)
-        {
-            talkStart = false;
-            SetDialog(randcusnum);
-            yield return DialogPlay();
-        }
-        else
-        {
-            SetDialog(randcusnum);
-            yield return DialogPlay();
-        }
-                
-        yield return MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration);
+        ItemManager.Instance.ListClear();
         yield return YieldCache.WaitForSeconds(fadeDuration * 1.5f);
         if (cusCount <= 0)
         {
@@ -380,66 +356,6 @@ public class Customer : MonoBehaviour
         talkText.text = null;
         
     }
-
-    private IEnumerator DialogPlay()
-    {
-        for (int i = 0; i < customerDialog.Count; i++)
-        {
-            yield return new WaitUntil(() => customerDialog[i].UpdateDialog());
-            if (i != customerDialog.Count - 1)
-            {
-                GameObject FadeInOut = Instantiate(FadeUI);
-                yield return YieldCache.WaitForSeconds(FadeTime);
-            }
-            customerDialog[i].SetActiveFalseUI();
-            
-        }
-    }
-
-    private void SetDialog(int customnum)
-    {
-        if (talkStart && cState.Value == CustomerState.Start)
-        {
-            switch (customnum)
-            {
-                case 1:
-                    customerDialog[customerDialog.Count - 1].selectedDialogName = "TextEX3";
-                    break;
-            }
-            customerDialog[customerDialog.Count - 1].DialogListLoading();
-            return;
-        }
-        else if(!talkStart && cState.Value == CustomerState.End)
-        {
-            switch (customnum)
-            {
-                case 1:
-                    customerDialog[customerDialog.Count - 1].selectedDialogName = "Customer2";
-                    break;
-            }
-            customerDialog[customerDialog.Count - 1].DialogListLoading();
-            return;
-        }
-        if (ItemManager.Instance.bargainSuccess == true)
-        {
-            
-        }
-        else
-        {
-            switch(customnum)
-            {
-                case 1:
-                    customerDialog[customerDialog.Count - 1].selectedDialogName = "CustomerReject1";
-                    break;
-            }
-            customerDialog[customerDialog.Count - 1].DialogListLoading();
-            return;
-        }
-       
-        
-    }
-
-
     #endregion
     private void UIon()// UI 일괄 on
     {
@@ -463,8 +379,6 @@ public class Customer : MonoBehaviour
                 if(ItemManager.Instance.bargainSuccess == false)
                 {
                     StopCoroutine("BargainCycle");
-                    
-                    dialogStop = true;
                     cState.Value = CustomerState.End;
                 }
                 break;

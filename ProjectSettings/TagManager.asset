@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Town
+  - Road
+  - Map
+  - B_Inven
+  - S_Inven
+  - Canvas
   layers:
   - Default
   - TransparentFX
@@ -40,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Town
+    uniqueID: 3089258133
+    locked: 0
+  - name: Map
+    uniqueID: 3835847653
     locked: 0

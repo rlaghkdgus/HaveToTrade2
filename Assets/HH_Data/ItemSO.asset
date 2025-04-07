@@ -13,28 +13,158 @@ MonoBehaviour:
   m_Name: ItemSO
   m_EditorClassIdentifier: 
   items:
-  - price: 250
-    stuffName: Meat
+  - price: 30
+    stuffName: Wheat
     sort: 0
-    image: {fileID: 21300000, guid: 3202a30638fbc4a479fb617e565e760b, type: 3}
-    weight: 40
-  - price: 300
-    stuffName: Ham
-    sort: 1
-    image: {fileID: 21300000, guid: e041c70d3d9242e4d8ee6d4071022e61, type: 3}
+    image: {fileID: -52342052, guid: b4cae545629e5fa4a917056f36ab05e7, type: 3}
     weight: 10
-  - price: 500
-    stuffName: Sofa
-    sort: 3
-    image: {fileID: 21300000, guid: 050ba25f528743b47a269a0b08f226ef, type: 3}
-    weight: 70
-  - price: 200
-    stuffName: Apple
-    sort: 0
-    image: {fileID: 21300000, guid: 1361b7b0e2895c44ca5486d7625959d6, type: 3}
-    weight: 5
   - price: 150
     stuffName: Oats
     sort: 0
-    image: {fileID: 21300000, guid: 5d68c3c900b2d2a438a03f1fa386f8bd, type: 3}
+    image: {fileID: 1412834780, guid: 6e01412c884e583439247f54b5f68309, type: 3}
     weight: 10
+  - price: 20
+    stuffName: barley
+    sort: 0
+    image: {fileID: 258052238, guid: 6e01412c884e583439247f54b5f68309, type: 3}
+    weight: 10
+  - price: 40
+    stuffName: Fish
+    sort: 0
+    image: {fileID: -2054471219, guid: 7bc3bed4a1d1e084eabd81da197146d2, type: 3}
+    weight: 70
+  - price: 40
+    stuffName: Meat
+    sort: 0
+    image: {fileID: 21300000, guid: 3202a30638fbc4a479fb617e565e760b, type: 3}
+    weight: 70
+  - price: 60
+    stuffName: Apple
+    sort: 0
+    image: {fileID: 977401110, guid: 074db126ffe9c2343bb815ccd49d95ad, type: 3}
+    weight: 10
+  - price: 70
+    stuffName: Grape
+    sort: 0
+    image: {fileID: -270290214, guid: 074db126ffe9c2343bb815ccd49d95ad, type: 3}
+    weight: 10
+  - price: 80
+    stuffName: Bread
+    sort: 1
+    image: {fileID: -1197825227, guid: 7bc3bed4a1d1e084eabd81da197146d2, type: 3}
+    weight: 10
+  - price: 70
+    stuffName: SmokedFish
+    sort: 1
+    image: {fileID: 21300000, guid: 1fb3191ba4d036841a57f2bb2123efa4, type: 3}
+    weight: 10
+  - price: 50
+    stuffName: SmokedMeat
+    sort: 1
+    image: {fileID: 21300000, guid: 8e985fbbbe2d7ad4f8466643483b360c, type: 3}
+    weight: 10
+  - price: 400
+    stuffName: AppleWine
+    sort: 1
+    image: {fileID: 21300000, guid: 5f6de4ffdc5141f408a43eafd3e1a628, type: 3}
+    weight: 1
+  - price: 800
+    stuffName: GrapeWine
+    sort: 1
+    image: {fileID: -386711198, guid: fdd4921beefbe0c408e944650bf2c4eb, type: 3}
+    weight: 1
+  - price: 300
+    stuffName: FruitJam
+    sort: 1
+    image: {fileID: 610850933, guid: fdd4921beefbe0c408e944650bf2c4eb, type: 3}
+    weight: 1
+  - price: 6000
+    stuffName: Dress
+    sort: 2
+    image: {fileID: 1649844888, guid: 52c7aedd51dffeb48b473c7e848dc24b, type: 3}
+    weight: 20
+  - price: 4000
+    stuffName: Suit
+    sort: 2
+    image: {fileID: -247696668, guid: 52c7aedd51dffeb48b473c7e848dc24b, type: 3}
+    weight: 10
+  - price: 2000
+    stuffName: Top
+    sort: 2
+    image: {fileID: -758681976, guid: 46131c6964f9fbc4aa0408cd3b70b034, type: 3}
+    weight: 8
+  - price: 1000
+    stuffName: Bottom
+    sort: 2
+    image: {fileID: -350357677, guid: 46131c6964f9fbc4aa0408cd3b70b034, type: 3}
+    weight: 7
+  - price: 1000
+    stuffName: Gloves
+    sort: 2
+    image: {fileID: -862697627, guid: d91e2f012e7805c49ab30ac7b78e9556, type: 3}
+    weight: 2
+  - price: 8000
+    stuffName: Armor
+    sort: 2
+    image: {fileID: -1680524194, guid: d91e2f012e7805c49ab30ac7b78e9556, type: 3}
+    weight: 60
+  - price: 1000
+    stuffName: Leather
+    sort: 2
+    image: {fileID: 21300000, guid: 668b9ca32f3122e4a98520b8c58ce3c8, type: 3}
+    weight: 5
+  - price: 2000
+    stuffName: Bed
+    sort: 3
+    image: {fileID: -692606304, guid: 747069b2b6429f344927b7408ad55fc4, type: 3}
+    weight: 70
+  - price: 1000
+    stuffName: Chair
+    sort: 3
+    image: {fileID: -1209014450, guid: 3edb1114c011cda499a087fc297d08aa, type: 3}
+    weight: 50
+  - price: 1500
+    stuffName: Table
+    sort: 3
+    image: {fileID: -1455798107, guid: 3edb1114c011cda499a087fc297d08aa, type: 3}
+    weight: 60
+  - price: 2500
+    stuffName: Closet
+    sort: 3
+    image: {fileID: 250086631, guid: 747069b2b6429f344927b7408ad55fc4, type: 3}
+    weight: 80
+  - price: 500
+    stuffName: FarmingTool
+    sort: 3
+    image: {fileID: 21300000, guid: 488d4273c0b99d44c8b896f92feb3560, type: 3}
+    weight: 8
+  - price: 8500
+    stuffName: PearlPreciounMetals
+    sort: 4
+    image: {fileID: -1062320218, guid: 72a4d4fb4f1bb054585627bc66b0bf30, type: 3}
+    weight: 10
+  - price: 6000
+    stuffName: AnPearlPreciounMetals
+    sort: 4
+    image: {fileID: -126782044, guid: 72a4d4fb4f1bb054585627bc66b0bf30, type: 3}
+    weight: 10
+  - price: 7000
+    stuffName: PreciounMetals
+    sort: 4
+    image: {fileID: -162198221, guid: 56a3fc8f4a4109b4cb0b3a17b90480ef, type: 3}
+    weight: 15
+  - price: 3000
+    stuffName: Beacelet
+    sort: 4
+    image: {fileID: 851117958, guid: 505c46fae4f68554b9476c99437eae2e, type: 3}
+    weight: 5
+  - price: 4000
+    stuffName: Ring
+    sort: 4
+    image: {fileID: 825002914, guid: 56a3fc8f4a4109b4cb0b3a17b90480ef, type: 3}
+    weight: 5
+  - price: 5000
+    stuffName: Necklace
+    sort: 4
+    image: {fileID: -1134915087, guid: 505c46fae4f68554b9476c99437eae2e, type: 3}
+    weight: 5

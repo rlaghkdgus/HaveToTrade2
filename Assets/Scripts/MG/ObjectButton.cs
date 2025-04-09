@@ -11,7 +11,7 @@ public class ObjectButton : MonoBehaviour
     public Material outline_M;
 
     [SerializeField] private Customer customer;
-    [SerializeField] private QuestSystem quest;
+    //은행 들어가야 함
 
     private void Awake()
     {
@@ -27,7 +27,15 @@ public class ObjectButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
+        switch (s_Type)
+        {
+            case structureType.Trade:
+                customer.CustomerStart();
+                break;
+            case structureType.Upgrade:
+                UpgradeManager.Instance.UpdateUI();
+                break;
+        }
     }
 
     private void OnMouseExit()
@@ -40,6 +48,6 @@ public enum structureType
 {
     Trade,
     Upgrade,
-    Bar,
+    Bank,
     Guild
 }

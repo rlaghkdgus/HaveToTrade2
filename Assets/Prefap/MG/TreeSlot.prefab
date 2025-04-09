@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 3638962332016718001}
   - component: {fileID: 3638962332016718000}
   - component: {fileID: 3638962332016718003}
+  - component: {fileID: 5585003567943758024}
   m_Layer: 5
   m_Name: TreeSlot
   m_TagString: Untagged
@@ -257,7 +258,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3638962332016718001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3638962332016718003}
+        m_TargetAssemblyTypeName: UpgradeNode, Assembly-CSharp
+        m_MethodName: UpgradeInfoChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3638962332016718003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +284,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  parent: {fileID: 0}
-  child: {fileID: 0}
-  Root: 0
+--- !u!114 &5585003567943758024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638962332016718006}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.07132578, g: 1, b: 0, a: 0}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1

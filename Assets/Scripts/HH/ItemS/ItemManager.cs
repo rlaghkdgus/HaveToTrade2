@@ -8,6 +8,8 @@ public class ItemManager : Singleton<ItemManager>
 {
     [Header("아이템데이터")]
     [SerializeField] ItemSO itemSO;
+    [Header("손님 참조")]
+    [SerializeField] Customer customer;
     [Header("플레이어 데이터 아이템")]
     //public List<pItem> playerItems;
     public InventoryContainer playerInventory;
@@ -228,7 +230,7 @@ public class ItemManager : Singleton<ItemManager>
         int diff; //차이계산
         int chancePoint; // 지정된확률에 얼마를 곱할건지
         float totalChance; // 최종확률
-        if (Customer.buyOrSell== true)//구매일때
+        if (customer.buyOrSell== true)//구매일때
         {
             diff = itemSO.items[currentProductIndex].price - bargainValue;//받아온 흥정값과 아이템값 차이를 계산 후
         }
@@ -244,7 +246,7 @@ public class ItemManager : Singleton<ItemManager>
         if (totalChance >= randomValue)//결과 확률이 random으로 나온 값보다 높으면 성공, ex) 확률이 30이면 random값으로 31이 나왔을때 실패, 랜덤값이 29이면 성공
         {
             bargainPrice = bargainValue;
-            Customer.costText.text = "price : " + bargainPrice;
+            customer.costText.text = "price : " + bargainPrice;
             bargainSuccess = true;
         }
         else
@@ -268,41 +270,41 @@ public class ItemManager : Singleton<ItemManager>
     public void PutInfo(int randCount)//SetUI과정에서 중복되는부분 코드줄이기
     {
         itemCountIndex.Add(randCount); //몇개 살건지 추가
-        if (Customer.buyOrSell == true)
+        if (customer.buyOrSell == true)
         {
             buyItem = new pItem (itemSO.items[currentProductIndex]);
             pItem countItem = playerInventory.inventory.Find(item => item.stuffName == buyItem.stuffName); // 사려고하는 아이템 찾기
             if (countItem != null)//만약 있다면
             {
-                Customer.playerCountTexts.text = "" + countItem.counts;
+                customer.playerCountTexts.text = "" + countItem.counts;
             }
             else //없다면
             {
-                Customer.playerCountTexts.text = "" + 0; //플레이어가 들고있는 개수텍스트 에 0 삽입
+                customer.playerCountTexts.text = "" + 0; //플레이어가 들고있는 개수텍스트 에 0 삽입
             }
-            Customer.productImages.sprite = itemSO.items[currentProductIndex].image; //상품의 이미지
-            Customer.costText.text = "price : " + itemSO.items[currentProductIndex].price;//; 가격 텍스트에 반영
+            customer.productImages.sprite = itemSO.items[currentProductIndex].image; //상품의 이미지
+            customer.costText.text = "price : " + itemSO.items[currentProductIndex].price;//; 가격 텍스트에 반영
         }
         else
         {
-            Customer.playerCountTexts.text = "" + playerInventory.inventory[currentProductIndex].counts;
-            Customer.productImages.sprite = playerInventory.inventory[currentProductIndex].image;
-            Customer.costText.text = "price : " + playerInventory.inventory[currentProductIndex].price;
+            customer.playerCountTexts.text = "" + playerInventory.inventory[currentProductIndex].counts;
+            customer.productImages.sprite = playerInventory.inventory[currentProductIndex].image;
+            customer.costText.text = "price : " + playerInventory.inventory[currentProductIndex].price;
         }
         CusProductCountSet();
-        Customer.productTexts.text = "" + itemCountIndex[productCount];//개수 텍스트에 반영
+        customer.productTexts.text = "" + itemCountIndex[productCount];//개수 텍스트에 반영
     }
     #endregion
     private void CusProductCountSet()
     {
-        switch (Customer.randcusnum)
+        switch (customer.currentCusList[customer.randcusnum].customerNum)
         {
             case 1:
-                if (Customer.buyOrSell == true && buyItem.sort == ItemSorts.food)
+                if (customer.buyOrSell == true && buyItem.sort == ItemSorts.food)
                 {
                     itemCountIndex[productCount] = itemCountIndex[productCount] + 5;
                 }
-                else if (Customer.buyOrSell == false && playerInventory.inventory[currentProductIndex].sort == ItemSorts.food)//순서문제. 어짜피 buyorsell이 판매로 지정된이상 playerItem에는 무조건 아이템이 하나는 있으므로.
+                else if (customer.buyOrSell == false && playerInventory.inventory[currentProductIndex].sort == ItemSorts.food)//순서문제. 어짜피 buyorsell이 판매로 지정된이상 playerItem에는 무조건 아이템이 하나는 있으므로.
                 {
                     itemCountIndex[productCount] = itemCountIndex[productCount] + 5;
                     if (itemCountIndex[productCount] >= playerInventory.inventory[currentProductIndex].counts)

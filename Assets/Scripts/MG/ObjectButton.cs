@@ -12,7 +12,6 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public Material outline_M;
 
     [SerializeField] private Customer customer;
-    //���� ���� ��
     
     private void Awake()
     {
@@ -56,7 +55,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     
 }
 
-    public enum structureType
+public enum structureType
 {
     Trade,
     Upgrade,

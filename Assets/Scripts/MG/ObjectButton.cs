@@ -30,19 +30,6 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerExit(PointerEventData eventData)
     {
         sr.material = origin_M;
-        switch(s_Type)
-        {
-            case structureType.Guild:
-                UIManage.Instance.GuildUI.SetActive(true);     
-                break;
-            case structureType.Bar:
-                UIManage.Instance.BarUI.SetActive(true);
-                break;
-            case structureType.Bank:
-                UIManage.Instance.BankUI.SetActive(true);
-                break;
-
-        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -54,6 +41,15 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 break;
             case structureType.Upgrade:
                 UpgradeManager.Instance.UpdateUI();
+                break;
+            case structureType.Guild:
+                UIManage.Instance.GuildUI.SetActive(true);
+                break;
+            case structureType.Bar:
+                UIManage.Instance.BarUI.SetActive(true);
+                break;
+            case structureType.Bank:
+                UIManage.Instance.BankUI.SetActive(true);
                 break;
         }
     }

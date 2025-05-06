@@ -232,6 +232,7 @@ public class ItemManager : Singleton<ItemManager>
         float totalChance; // 최종확률
         if (customer.buyOrSell== true)//구매일때
         {
+           
             diff = itemSO.items[currentProductIndex].price - bargainValue;//받아온 흥정값과 아이템값 차이를 계산 후
         }
         else//판매일때

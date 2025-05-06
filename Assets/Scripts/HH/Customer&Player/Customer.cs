@@ -46,6 +46,9 @@ public class Customer : MonoBehaviour
     public float bargainChance; // 해당 단위를 넘을때마다 흥정확률이 몇%씩 떨어질지
     [Header("몇개의 종류를 거래할건지")]
     public int tradeSortCount; // 손님이 몇개의 종류를 거래할건지
+    [Header("흥정 신호(확인용)")]
+    public int preBargainValue;
+    public bool reBargain = false;
     [Header("손님 프리팹(손님 별 기능 및 외형),생성 및 퇴장 위치 설정")]
     public List<customerPrefab> currentCusList;
     public List<customerPrefab> cusList;
@@ -76,7 +79,7 @@ public class Customer : MonoBehaviour
     [SerializeField] float typingDelay;//타이핑 간격
     [Header("거래 후 버튼 관리")]
     [SerializeField] GameObject buttonEdit;
-    //static,private 옵저버패턴 변수 등 인스펙터에 안보이는 요소들
+
     public Data<CustomerState> cState = new Data<CustomerState>();//상태별 이벤트
     private GameObject newCustomer;
     private int bargainValue;
@@ -160,7 +163,7 @@ public class Customer : MonoBehaviour
             }
             currentCusList = SetRegionCustomer();
             randcusnum = Random.Range(0,currentCusList.Count);
-            //randcusnum = 1; //테스트용, 주석해야함.
+            randcusnum = 4; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
             talkStart = true;
@@ -266,7 +269,11 @@ public class Customer : MonoBehaviour
     IEnumerator BargainCycle()//흥정과정
     {
         if (int.TryParse(bargainField.text, out bargainValue))//파싱
-        {       
+        {
+            if (reBargain == true && buyOrSell == true && preBargainValue > bargainValue)
+                yield break;
+            else if (reBargain == true && buyOrSell == false && bargainValue > preBargainValue)
+                yield break;
             ItemManager.Instance.SetBargainPrice(initialChance, bargainValue, bargainPoint, bargainChance);
             BargainUI.SetActive(false);
             bargainField.text = "";
@@ -279,7 +286,10 @@ public class Customer : MonoBehaviour
             }
             else
             {
-                CusBargainReject(currentCusList[randcusnum].customerNum);
+                preBargainValue = bargainValue;
+                reBargain = CusBargainReject(currentCusList[randcusnum].customerNum);
+                if (reBargain)
+                    yield break;
                 yield return null;
                 bargainButton.SetActive(false);
                 CustomerUI.SetActive(true);
@@ -291,8 +301,6 @@ public class Customer : MonoBehaviour
             yield return null;
             //정수 이외 다른 값일시 돌아가도록
         }
-        
-        
     }
     IEnumerator MoveCustomerToPosition(GameObject customer, Vector3 targetPosition)//손님 입장
     {
@@ -498,8 +506,13 @@ public class Customer : MonoBehaviour
     {
         initialChance += currentCusList[customnum].cusBargainChance;
     }
+    private IEnumerator StateChangeDialog(CustomerState _cstate)
+    {
+        yield return DialogPlay();
+        cState.Value = _cstate;
+    }
     
-    private void CusBargainReject(int customnum)
+    private bool CusBargainReject(int customnum)
     {
         switch(customnum)
         {
@@ -510,9 +523,23 @@ public class Customer : MonoBehaviour
                     
                     dialogStop = true;
                     cState.Value = CustomerState.End;
+                    return true;
+                }
+                break;
+            case 4:
+                if(ItemManager.Instance.bargainSuccess == false)
+                {
+                    if (reBargain)
+                        return false;
+                    customerDialog[customerDialog.Count - 1].selectedDialogName = "CustomerReject2";
+                    customerDialog[customerDialog.Count - 1].DialogListLoading();
+                    noDialog = false;
+                    StartCoroutine(StateChangeDialog(CustomerState.Bargain));
+                    return true;
                 }
                 break;
         }
+        return false;
     }
     #endregion
 }

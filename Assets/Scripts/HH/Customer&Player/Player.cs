@@ -18,6 +18,7 @@ public class Player : Singleton<Player>
     [Header("플레이어 정보")]
     public int money;
     public TMP_Text moneyText;
+    public int Upgrade_ID;
     
     [Header("명성")]
     public Fame foodFame;

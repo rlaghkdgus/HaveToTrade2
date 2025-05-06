@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ObjectButton : MonoBehaviour
+public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public structureType s_Type;
 
@@ -10,6 +11,8 @@ public class ObjectButton : MonoBehaviour
     private Material origin_M;
     public Material outline_M;
 
+    [SerializeField] private Customer customer;
+    //���� ���� ��
     
     private void Awake()
     {
@@ -19,14 +22,14 @@ public class ObjectButton : MonoBehaviour
         
     }
 
-
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         sr.material = outline_M;
     }
 
-    private void OnMouseDown()
+    public void OnPointerExit(PointerEventData eventData)
     {
+        sr.material = origin_M;
         switch(s_Type)
         {
             case structureType.Guild:
@@ -42,9 +45,17 @@ public class ObjectButton : MonoBehaviour
         }
     }
 
-    private void OnMouseExit()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        sr.material = origin_M;
+        switch (s_Type)
+        {
+            case structureType.Trade:
+                customer.CustomerStart();
+                break;
+            case structureType.Upgrade:
+                UpgradeManager.Instance.UpdateUI();
+                break;
+        }
     }
     
 }

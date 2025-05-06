@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -11,6 +12,8 @@ public class InventoryUI : MonoBehaviour
 
     [SerializeField] private Transform S_Inven;
     [SerializeField] private Transform B_Inven;
+
+    [SerializeField] private List<TextMeshProUGUI> WeightTextList; 
 
     private void Start()
     {
@@ -46,6 +49,7 @@ public class InventoryUI : MonoBehaviour
             Show();
             SetAllIndex();
         }
+        UpdateWeightText();
     }
 
     public void GenerateSlot()
@@ -65,6 +69,36 @@ public class InventoryUI : MonoBehaviour
         S_uiSlots.RemoveAt(index);
         Destroy(B_uiSlots[index].gameObject);
         B_uiSlots.RemoveAt(index);
+    }
+
+    public void UpdateWeightText()
+    {
+        List<ItemSorts> keys = new List<ItemSorts>(ItemManager.Instance.playerInventory.sortWeight.Keys);
+
+        for(int i = 0; i < WeightTextList.Count; ++i)
+        {
+            if(i < keys.Count)
+            {
+                switch (keys[i])
+                {
+                    case ItemSorts.food:
+                        WeightTextList[i].text = "식품 : " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].CurrentWeight + " / " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].MaxWeight;
+                        break;
+                    case ItemSorts.pFood:
+                        WeightTextList[i].text = "가공식품 : " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].CurrentWeight + " / " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].MaxWeight;
+                        break;
+                    case ItemSorts.clothes:
+                        WeightTextList[i].text = "옷 : " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].CurrentWeight + " / " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].MaxWeight;
+                        break;
+                    case ItemSorts.furniture:
+                        WeightTextList[i].text = "가구 : " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].CurrentWeight + " / " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].MaxWeight;
+                        break;
+                    case ItemSorts.accesory:
+                        WeightTextList[i].text = "장신구 : " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].CurrentWeight + " / " + ItemManager.Instance.playerInventory.sortWeight[keys[i]].MaxWeight;
+                        break;
+                }
+            }
+        }
     }
 
     private void SetAllIndex()

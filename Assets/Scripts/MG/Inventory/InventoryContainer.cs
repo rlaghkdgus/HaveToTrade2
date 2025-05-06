@@ -26,24 +26,22 @@ public class InventoryContainer : ScriptableObject
     //public float PublicCurrentWeight;
 
     public List<pItem> inventory;
-
-    public int Upgrade_ID;
     //[SerializeField] private int current_Tier = 0;
 
     public void InitWeight()
     {
-        ApplyMaxWeight();
+        ApplyMaxWeight(UpgradeManager.Instance.InfoSearch_ID(Player.Instance.Upgrade_ID));
         CalCurrentWeight();
     }
 
-    private void ApplyMaxWeight()
-    {/*
-        sortWeight[ItemSorts.food].MaxWeight = tier.Food;
-        sortWeight[ItemSorts.pFood].MaxWeight = tier.pFood;
-        sortWeight[ItemSorts.clothes].MaxWeight = tier.Clothes;
-        sortWeight[ItemSorts.furniture].MaxWeight = tier.Furniture;
-        sortWeight[ItemSorts.accesory].MaxWeight = tier.Accesory;
-        PublicMaxWeight = tier.Base;*/
+    private void ApplyMaxWeight(UpgradeInfo info)
+    {
+        sortWeight[ItemSorts.food].MaxWeight = info.Food;
+        sortWeight[ItemSorts.pFood].MaxWeight = info.pFood;
+        sortWeight[ItemSorts.clothes].MaxWeight = info.Clothes;
+        sortWeight[ItemSorts.furniture].MaxWeight = info.Furniture;
+        sortWeight[ItemSorts.accesory].MaxWeight = info.Accesory;
+        //PublicMaxWeight = tier.Base;
     }
 
     private void CalCurrentWeight()

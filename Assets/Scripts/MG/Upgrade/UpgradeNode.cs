@@ -1,26 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeNode : MonoBehaviour
 {
     public int ID;
-    public UpgradeNode parent;
-    public List<UpgradeNode> children;
-
-    public UpgradeNode()
-    {
-        children = new List<UpgradeNode>();
-    }
 
     public void UpgradeInfoChange()
     {
-        ItemManager.Instance.playerInventory.Upgrade_ID = ID;
+        Player.Instance.Upgrade_ID = ID;
+        UpgradeManager.Instance.UpdateOutline();
+        ItemManager.Instance.playerInventory.InitWeight();
     }
 
-    public void AddChild(UpgradeNode node)
+    public void ActiveOutline(bool OnOff)
     {
-        children.Add(node);
-        node.parent = this;
+        GetComponent<Outline>().enabled = OnOff;
     }
 }

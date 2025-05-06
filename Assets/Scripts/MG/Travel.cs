@@ -14,6 +14,7 @@ public class Travel : MonoBehaviour
 
     [Header("다음 마을 생성 타이밍")]
     [SerializeField] private int NextIndex = 0; // 길 생성을 멈추고 다음 마을을 생성할 타이밍을 재는 변수
+    [SerializeField] private int RoadMaxIndex;
 
     [Header("각 레이어 리스트")]
     [SerializeField] private List<GameObject> ForwardList = new List<GameObject>(); // 맨 앞 레이어 리스트
@@ -33,6 +34,7 @@ public class Travel : MonoBehaviour
 
     [Header("페이드 인/아웃")]
     [SerializeField] private GameObject fadeUI;
+    [SerializeField] private bool isFade = false;
     [SerializeField] private float FadeTime = 1f;
 
     public Data<RoadEventState> rState = new Data<RoadEventState>();
@@ -172,7 +174,7 @@ public class Travel : MonoBehaviour
         }
         OnMove = true;
         yield return YieldCache.WaitForSeconds(1.0f);
-        RoadEventSet();
+        //RoadEventSet();
         if (rState.Value != RoadEventState.Idle)
         {
             OnMove = false;
@@ -195,6 +197,9 @@ public class Travel : MonoBehaviour
     {
         if (OnMove)
             MoveBackGround();
+
+        if (isFade)
+            StartCoroutine(ArriveTown());
     }
 
     private void MoveBackGround()
@@ -202,7 +207,7 @@ public class Travel : MonoBehaviour
         for (int i = 0; i < ForwardList.Count; i++)
         {
             ForwardList[i].transform.localPosition += Vector3.left * Time.deltaTime * speed_F;
-            if (NextIndex < 2)
+            if (NextIndex < RoadMaxIndex)
             {
                 if (ForwardList[i].transform.localPosition.x <= -interval)
                 {
@@ -211,9 +216,11 @@ public class Travel : MonoBehaviour
                     NextIndex++;
                 }
             }
-            else if (nextTownClone == null)
+            else if (nextTownClone == null && NextIndex == RoadMaxIndex)
             {
-                nextTownClone = Instantiate<GameObject>(nextTown, new Vector3(ForwardList[index_F].transform.localPosition.x + interval, 0f, 0f), Quaternion.identity);
+                isFade = true;
+                NextIndex++;
+                //new Vector3(ForwardList[index_F].transform.localPosition.x + interval, 0f, 0f)
             }
         }
 
@@ -236,17 +243,22 @@ public class Travel : MonoBehaviour
                 index_B = (index_B + 1) % BackList.Count;
             }
         }
+    }
 
-        if (nextTownClone != null)
-        {
-            nextTownClone.transform.localPosition += Vector3.left * Time.deltaTime * speed_F;
-            if (nextTownClone.transform.localPosition.x <= 0)
-            {
-                OnMove = false;
-                InitRoad();
+    private IEnumerator ArriveTown()
+    {
+        isFade = false;
+        GameObject fadeInout = Instantiate(fadeUI);
 
-                TownManager.Instance.UpdateTown();
-            }
-        }
+        yield return new WaitForSeconds(FadeTime);
+        nextTownClone = Instantiate<GameObject>(nextTown, Vector3.zero, Quaternion.identity);
+        yield return new WaitForSeconds(FadeTime);
+        OnMove = false;
+        InitRoad();
+
+        TownManager.Instance.UpdateTown();
+        isFade = false;
+
+        yield return null;
     }
 }

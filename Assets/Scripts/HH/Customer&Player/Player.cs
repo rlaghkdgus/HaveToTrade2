@@ -46,7 +46,7 @@ public class Player : Singleton<Player>
     }
     public void RenewMoney()
     {
-        moneyText.text = "Money :" + money;
+        moneyText.text = "" + money;
     }
 
     public void SkillUp(int sorts)

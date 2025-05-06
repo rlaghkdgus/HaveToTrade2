@@ -12,13 +12,14 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public Material outline_M;
 
     [SerializeField] private Customer customer;
-    //ÀºÇà µé¾î°¡¾ß ÇÔ
-
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½ï¿½
+    
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         origin_M = sr.material;
         outline_M.mainTexture = GetComponent<SpriteRenderer>().sprite.texture;
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -29,6 +30,19 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerExit(PointerEventData eventData)
     {
         sr.material = origin_M;
+        switch(s_Type)
+        {
+            case structureType.Guild:
+                UIManage.Instance.GuildUI.SetActive(true);     
+                break;
+            case structureType.Bar:
+                UIManage.Instance.BarUI.SetActive(true);
+                break;
+            case structureType.Bank:
+                UIManage.Instance.BankUI.SetActive(true);
+                break;
+
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -43,12 +57,14 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 break;
         }
     }
+    
 }
 
-public enum structureType
+    public enum structureType
 {
     Trade,
     Upgrade,
-    Bank,
-    Guild
+    Bar,
+    Guild,
+    Bank
 }

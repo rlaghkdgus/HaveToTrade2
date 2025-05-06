@@ -10,15 +10,15 @@ public class ObjectButton : MonoBehaviour
     private Material origin_M;
     public Material outline_M;
 
-    [SerializeField] private Customer customer;
-    [SerializeField] private QuestSystem quest;
-
+    
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         origin_M = sr.material;
         outline_M.mainTexture = GetComponent<SpriteRenderer>().sprite.texture;
+        
     }
+
 
     private void OnMouseEnter()
     {
@@ -27,19 +27,33 @@ public class ObjectButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
+        switch(s_Type)
+        {
+            case structureType.Guild:
+                UIManage.Instance.GuildUI.SetActive(true);     
+                break;
+            case structureType.Bar:
+                UIManage.Instance.BarUI.SetActive(true);
+                break;
+            case structureType.Bank:
+                UIManage.Instance.BankUI.SetActive(true);
+                break;
+
+        }
     }
 
     private void OnMouseExit()
     {
         sr.material = origin_M;
     }
+    
 }
 
-public enum structureType
+    public enum structureType
 {
     Trade,
     Upgrade,
     Bar,
-    Guild
+    Guild,
+    Bank
 }

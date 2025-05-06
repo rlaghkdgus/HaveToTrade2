@@ -13,4 +13,5 @@ public class DialogData : ScriptableObject
     public List<TextData> TextEX3;
     public List<TextData> Customer2;
     public List<TextData> CustomerReject1;
+    public List<TextData> CustomerReject2;
 }

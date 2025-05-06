@@ -4,13 +4,17 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 public class QuestSystem : Singleton<QuestSystem>
-{
+{   
+    [Header("손님 참조용")]
+    [SerializeField] private Customer customer;
+    [Header("퀘스트 테이블")]
     [SerializeField] private QuestTable questTable;
     //public List<TMP_Text> questName = new List<TMP_Text>();
     [Header("퀘스트 버튼")]
     public List<Button> questButtons = new List<Button>();
     [Header("퀘스트 문구")]
-    public List<TMP_Text> questDescription = new List<TMP_Text>();
+    [SerializeField] List<TMP_Text> questDescription = new List<TMP_Text>();
+    [SerializeField] List<TMP_Text> questName;
     [Header("퀘스트 번호 확인용")]
     public List<int> questRandIndex = new List<int>();
     [Header("퀘스트UI(on/off용)")]
@@ -42,6 +46,7 @@ public class QuestSystem : Singleton<QuestSystem>
             }while(questRandIndex.Contains(randnum));
             questRandIndex.Add(randnum);
             questDescription[i].text = questTable.quest[randnum].questText;
+            questName[i].text = questTable.quest[randnum].questName;
         }
     }
     public void QuestAccept(int buttonindex)
@@ -71,7 +76,7 @@ public class QuestSystem : Singleton<QuestSystem>
     }
     public void QuestProgress(pItem ItemCheck, float QuestWeight)
     {
-        if (questSign == false || ItemCheck.sort != qTargetItem || Customer.buyOrSell != questBuyOrSell)
+        if (questSign == false || ItemCheck.sort != qTargetItem || customer.buyOrSell != questBuyOrSell)
             return;
         questTarget += QuestWeight;
         TextReset();
@@ -79,10 +84,7 @@ public class QuestSystem : Singleton<QuestSystem>
             QuestClear();
     }
     #endregion
-    private void Start()
-    {
-        RandomQuest(); //퀘스트 랜덤 배치       
-    }
+ 
   
     private void TextReset()
     {

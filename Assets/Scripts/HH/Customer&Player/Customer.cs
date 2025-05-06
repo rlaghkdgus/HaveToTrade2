@@ -115,7 +115,6 @@ public class Customer : MonoBehaviour
     {
         cState.Value = CustomerState.Start;
     }
-    
     public void CustomerBuy()
     {
         cState.Value = CustomerState.Buy;
@@ -421,7 +420,6 @@ public class Customer : MonoBehaviour
         talkText.text = null;
         
     }
-
     private IEnumerator DialogPlay()
     {
         if (noDialog)
@@ -438,7 +436,6 @@ public class Customer : MonoBehaviour
             
         }
     }
-
     private void SetDialog(int customnum)
     {
         if (talkStart && cState.Value == CustomerState.Start)
@@ -487,8 +484,6 @@ public class Customer : MonoBehaviour
             customerDialog[customerDialog.Count - 1].DialogListLoading();
             return;
         }
-       
-        
     }
 
 

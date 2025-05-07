@@ -122,3 +122,10 @@ MonoBehaviour:
     SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uB9C8 \uB044\uC9C0\uB77C \uADF8\uB0E5"
+  CustomerReject2:
+  - SpeakerIndex: 3
+    Name: "\uC190\uB2D8"
+    Dialog: "\uADF8\uAC70\uB108\uBB34\uBE44\uC2FC\uB370 \uD765\uC815\uC880\uB2E4\uC2DC\uD560\uAE4C\uC694"
+  - SpeakerIndex: 0
+    Name: "\uC544\uB9AC\uC0AC"
+    Dialog: "\uC608\uBB50\uC5BC\uB9C8\uC6D0\uD558\uC2ED\uB2C8\uAEBC"

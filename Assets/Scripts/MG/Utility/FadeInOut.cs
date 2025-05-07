@@ -6,6 +6,6 @@ public class FadeInOut : MonoBehaviour
 {
     public void DestroyUI()
     {
-        Destroy(transform.parent.gameObject);
+        Destroy(gameObject);
     }
 }

@@ -13,87 +13,113 @@ MonoBehaviour:
   m_Name: DialogData
   m_EditorClassIdentifier: 
   TextEX:
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC548\uB155"
-  - SpeakerIndex: 1
+  - Type: 
+    SpeakerIndex: 1
     Name: "\uBE45\uD130"
     Dialog: "\uBC18\uAC00\uC6CC"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC624\uB298\uC740 \uC5B4\uB54C?"
-  - SpeakerIndex: 1
+  - Type: 
+    SpeakerIndex: 1
     Name: "\uBE45\uD130"
     Dialog: "\uAD1C\uCC2E\uC740 \uAC83 \uAC19\uC544"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uB2E4\uD589\uC774\uB2E4"
-  - SpeakerIndex: 1
+  - Type: 
+    SpeakerIndex: 1
     Name: "\uBE45\uD130"
     Dialog: "\uBCC4 \uAC71\uC815\uC744 \uB2E4 \uD558\uB124"
   TextEX2:
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uB300\uD654\uC758 \uB05D\uC744 \uC120\uC5B8\uD569\uB2C8\uB2E4."
-  - SpeakerIndex: 1
+  - Type: 
+    SpeakerIndex: 1
     Name: "\uBE45\uD130"
     Dialog: "\uC774\uAC8C \uBB34\uC2A8 \uB9C9\uB9D0 \uC911\uC778\uC9C0 \uC6D0."
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uD14C\uC2A4\uD2B8\uD558\uAE30 \uC704\uD574\uC11C\uB77C\uACE0. \uC5F4\uC2EC\uD788
       \uC784\uD560 \uAC83!"
-  - SpeakerIndex: 1
+  - Type: 
+    SpeakerIndex: 1
     Name: "\uBE45\uD130"
     Dialog: "\uC5D0\uD734, \uC9C4\uC9DC."
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC608\uC05C \uB9D0 \uD558\uAE30! \uC57D\uC18D\uD588\uC796\uC544!"
-  - SpeakerIndex: 1
+  - Type: 
+    SpeakerIndex: 1
     Name: "\uBE45\uD130"
     Dialog: "\uC774 \uC815\uB3C4\uBA74 \uB098\uC05C \uB9D0 \uC544\uB2C8\uC796\uC544?"
-  - SpeakerIndex: 2
+  - Type: 
+    SpeakerIndex: 2
     Name: "\uBCA8"
     Dialog: "\uC624, \uBB34\uC2A8 \uC598\uAE30\uC57C?"
   TextEX3:
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC5B4\uC11C\uC624\uC2A4\uC694"
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uC300\uB0B4\uB194\uB77C"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC608??"
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uC300\uB0B4\uB193\uC73C\uB77C\uACE0"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC548\uD314\uC544\uC694"
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uB2C8\uAC00\uADF8\uB7EC\uACE0\uB3C4\uC0C1\uC778\uC774\uC57C?"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC624\uC9E4\uB080\uB370"
   Customer2:
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uAC10\uC0AC\uD569\uB2C8\uB2E4"
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uADF8\uB798\uADF8\uB798 \uC790\uC8FC\uC880\uB4E4\uB824\uB77C"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uB2E4\uC2DC\uB294 \uBCF4\uC9C0\uB9D9\uC2DC\uB2E4 \uC800\uD76C"
   CustomerReject1:
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uC544 \uC548\uD574 \uC548\uD574 \uC9D1\uC5B4\uCE58\uC6CC"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC544\uB2C8, \uC800\uD76C\uB3C4 \uB0A8\uB294\uAC8C \uC5C6\uB2E4\uB2C8\uAE4C\uC694"
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uB9C8 \uB044\uC9C0\uB77C \uADF8\uB0E5"
   CustomerReject2:

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4391095325452261229}
   - component: {fileID: 4391095325452261228}
   - component: {fileID: 4391095325452261227}
+  - component: {fileID: 4433033335413047063}
   m_Layer: 5
   m_Name: FadeImageCanvas
   m_TagString: Untagged
@@ -177,3 +178,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &4433033335413047063
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391095325452261226}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

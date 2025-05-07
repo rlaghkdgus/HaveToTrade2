@@ -165,13 +165,14 @@ public class Travel : MonoBehaviour
 
     private IEnumerator MoveRoad()
     {
-        GameObject fadeInOut = Instantiate(fadeUI);
+        GameObject fadeInOut = Instantiate(fadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
         
         yield return new WaitForSeconds(FadeTime);
         if (curTownClone != null)
         {
             Destroy(curTownClone);
         }
+        Player.Instance.AnimationChange(true);
         OnMove = true;
         yield return YieldCache.WaitForSeconds(1.0f);
         //RoadEventSet();
@@ -248,10 +249,11 @@ public class Travel : MonoBehaviour
     private IEnumerator ArriveTown()
     {
         isFade = false;
-        GameObject fadeInout = Instantiate(fadeUI);
+        GameObject fadeInout = Instantiate(fadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
 
         yield return new WaitForSeconds(FadeTime);
         nextTownClone = Instantiate<GameObject>(nextTown, Vector3.zero, Quaternion.identity);
+        Player.Instance.AnimationChange(false);
         yield return new WaitForSeconds(FadeTime);
         OnMove = false;
         InitRoad();

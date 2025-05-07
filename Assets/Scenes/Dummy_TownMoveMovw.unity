@@ -8432,7 +8432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7317782632700201405, guid: 1c5862be2dfb63a44872195168894d41, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7317782632700201405, guid: 1c5862be2dfb63a44872195168894d41, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8683,7 +8683,14 @@ MonoBehaviour:
     - {fileID: 8012301508408922154, guid: 88d9107084f6a0149a247143e56c2ac2, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
-  SmokianCusList: []
+  SmokianCusList:
+  - customerNum: 5
+    customerName: 
+    customerDescription: 
+    cusPrefab:
+    - {fileID: 8309213339656623887, guid: 37e8de217e6fb884cbfa0094cb2c1fd7, type: 3}
+    cusBargainChance: 0
+    cusProductCount: 0
   customerTransform:
   - {fileID: 362906531}
   - {fileID: 888385202}
@@ -10092,7 +10099,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00081499375
+      value: 0.000033481265
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10120,7 +10127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054645988971, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054645988971, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11569,7 +11576,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12715,9 +12722,9 @@ RectTransform:
   - {fileID: 512947150}
   - {fileID: 1601669907}
   - {fileID: 1953437245}
-  - {fileID: 1729286108}
   - {fileID: 1185708501}
   - {fileID: 1302389104}
+  - {fileID: 1729286108}
   - {fileID: 1716473618}
   - {fileID: 1122727174}
   - {fileID: 1346053493}
@@ -13620,7 +13627,7 @@ RectTransform:
   - {fileID: 1149547969}
   - {fileID: 1564083307}
   m_Father: {fileID: 1601694289}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

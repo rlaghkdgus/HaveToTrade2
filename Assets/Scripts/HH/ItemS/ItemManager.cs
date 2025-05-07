@@ -134,6 +134,10 @@ public class ItemManager : Singleton<ItemManager>
         if (playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight > playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight)
         {
             Debug.LogError("인벤토리 용량 초과 : " + playerInventory.sortWeight[itemSO.items[currentProductIndex].sort]);
+            productCount++;
+            buyItem = null;
+            BargainClear();
+            return;
             /*float over = playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight - playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight;
             over = Mathf.Min(over, itemTotalWeight);
 

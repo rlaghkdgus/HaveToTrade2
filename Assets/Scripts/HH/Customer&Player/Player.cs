@@ -49,6 +49,15 @@ public class Player : Singleton<Player>
         moneyText.text = "Money :" + money;
     }
 
+    public void AnimationChange(bool isChange)
+    {
+        GetComponent<SpriteRenderer>().enabled = !isChange;
+        for(int i = 0; i < 2; ++i)
+        {
+            transform.GetChild(i).gameObject.SetActive(isChange);
+        }
+    }
+
     public void SkillUp(int sorts)
     {
         FameCheck(GetFameRef((ItemSorts)sorts));

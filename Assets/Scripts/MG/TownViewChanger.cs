@@ -40,7 +40,7 @@ public class TownViewChanger : MonoBehaviour
 
     IEnumerator ChangeTownViewPrefab(int index, List<GameObject> SingleTownList)
     {
-        GameObject fade = Instantiate(FadeUI);
+        GameObject fade = Instantiate(FadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
         yield return new WaitForSeconds(FadeTime);
         Destroy(TownManager.Instance.TownClone);
         currentIndex += index;

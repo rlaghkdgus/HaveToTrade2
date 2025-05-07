@@ -7,6 +7,13 @@ using TMPro;
  * 거래 진입 시 고객의 수, 거래 물품의 종류 및 숫자를 정할 공간
  * 손님 행동패턴 요약 : 입장(Start) -> 대기(Idle) -> 아이템매니저에서 가져온 아이템으로 UI세팅-> 흥정(선택)-> 구매 or 판매 -> 퇴장(End) -> 입장, 손님수 만큼 반복
  */
+
+
+/*
+ * 해야할 것 : 아이템매니저 내부의 거래시스템(손님별 거래 옵션 변경) 추적 인덱스 변경(완)
+ * 거래중 건물 버튼 클릭 막기
+ * 앞으로 대사 인덱스는 SetCustomer에서 나온 randcusnum이 아닌 Npc 내부의 인덱스로 처리할 것 
+ */
 [System.Serializable]
 public class customerPrefab
 {
@@ -19,6 +26,13 @@ public class customerPrefab
 }
 public class Customer : MonoBehaviour
 {
+    [Header("손님 대화용")]
+    [SerializeField] List <DialogSystem> customerDialog;
+    [SerializeField] private GameObject FadeUI;
+    [SerializeField] private float FadeTime = 1f;
+    private bool talkStart = false;
+    private bool dialogStop = false;
+    private bool noDialog = false;
     [Header("손님수, 현재는 시작시 랜덤 지정")]
     public int cusCount;
     [Header("손님 세부 옵션")]
@@ -32,8 +46,14 @@ public class Customer : MonoBehaviour
     public float bargainChance; // 해당 단위를 넘을때마다 흥정확률이 몇%씩 떨어질지
     [Header("몇개의 종류를 거래할건지")]
     public int tradeSortCount; // 손님이 몇개의 종류를 거래할건지
+    [Header("흥정 신호(확인용)")]
+    public int preBargainValue;
+    public bool reBargain = false;
     [Header("손님 프리팹(손님 별 기능 및 외형),생성 및 퇴장 위치 설정")]
+    public List<customerPrefab> currentCusList;
     public List<customerPrefab> cusList;
+    public List<customerPrefab> GrestarCusList;
+    public List<customerPrefab> SmokianCusList;
     public List<Transform> customerTransform;// 생성, 거래위치, 퇴장
 
 
@@ -59,16 +79,16 @@ public class Customer : MonoBehaviour
     [SerializeField] float typingDelay;//타이핑 간격
     [Header("거래 후 버튼 관리")]
     [SerializeField] GameObject buttonEdit;
-    //static,private 옵저버패턴 변수 등 인스펙터에 안보이는 요소들
+
     public Data<CustomerState> cState = new Data<CustomerState>();//상태별 이벤트
     private GameObject newCustomer;
     private int bargainValue;
-    public static int randcusnum = 0;
-    public static TMP_Text productTexts;
-    public static Image productImages;
-    public static TMP_Text playerCountTexts;// 플레이어가 들고있는 상품 개수 카운트
-    public static TMP_Text costText;//가격 텍스트, product랑 price의 앞글자가 겹쳐서..
-    public static bool buyOrSell;//참일때구매, 거짓일때판매
+    public int randcusnum = 0;
+    public TMP_Text productTexts;
+    public Image productImages;
+    public TMP_Text playerCountTexts;// 플레이어가 들고있는 상품 개수 카운트
+    public TMP_Text costText;//가격 텍스트, product랑 price의 앞글자가 겹쳐서..
+    public bool buyOrSell;//참일때구매, 거짓일때판매
     void Start()
     {
         productTexts = pTxt;
@@ -95,7 +115,6 @@ public class Customer : MonoBehaviour
     {
         cState.Value = CustomerState.Start;
     }
-    
     public void CustomerBuy()
     {
         cState.Value = CustomerState.Buy;
@@ -113,6 +132,25 @@ public class Customer : MonoBehaviour
         cState.Value = CustomerState.Bargain;
     }
     #endregion
+    #region 손님 지역별 세팅
+    List<customerPrefab> SetRegionCustomer()//지역별로 다른 손님들의 리스트 생성
+    {
+        List<customerPrefab> list = new List<customerPrefab>();
+        list.AddRange(cusList);// 기본손님 리스트 추가
+        switch (TownManager.Instance.curTown.TownType)
+        {
+            case VillageType.GreStar:
+                list.AddRange(GrestarCusList);
+                break;
+            case VillageType.Smokian:
+                list.AddRange(SmokianCusList);
+                break;
+            default:
+                break;
+        }
+        return list;  
+    }
+    #endregion
     #region 손님 행동패턴
     private void SetCustomer(CustomerState _cState)
     {
@@ -122,11 +160,15 @@ public class Customer : MonoBehaviour
             {
                 cusCount = Random.Range(3, 6);
             }
-            randcusnum = Random.Range(0,cusList.Count);
-            //randcusnum = 1; //테스트용, 주석해야함.
-            int randcusprefab = Random.Range(0, cusList[randcusnum].cusPrefab.Length);
-            newCustomer = Instantiate(cusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
-            CusBargainPointSet(randcusnum);
+            currentCusList = SetRegionCustomer();
+            randcusnum = Random.Range(0,currentCusList.Count);
+            randcusnum = 4; //테스트용, 주석해야함.
+            int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
+            newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
+            talkStart = true;
+            dialogStop = false;
+            CusBargainPointSet(currentCusList[randcusnum].customerNum);
+            SetDialog(currentCusList[randcusnum].customerNum);
             StartCoroutine(MoveCustomerToPosition(newCustomer, customerTransform[1].position));
         }
     }
@@ -191,12 +233,13 @@ public class Customer : MonoBehaviour
             BargainUI.SetActive(true);
         }
     }
+ 
     private void CustomerExit(CustomerState _cState)
     {
         if(_cState == CustomerState.End)//종료
         {
             initialChance = 100f;
-            StartCoroutine(MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration)); //퇴장 및 페이드 아웃
+            //StartCoroutine(MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration)); //퇴장 및 페이드 아웃
             cusCount--;
             StartCoroutine(TradeEnd());
         }
@@ -225,7 +268,11 @@ public class Customer : MonoBehaviour
     IEnumerator BargainCycle()//흥정과정
     {
         if (int.TryParse(bargainField.text, out bargainValue))//파싱
-        {       
+        {
+            if (reBargain == true && buyOrSell == true && preBargainValue > bargainValue)
+                yield break;
+            else if (reBargain == true && buyOrSell == false && bargainValue > preBargainValue)
+                yield break;
             ItemManager.Instance.SetBargainPrice(initialChance, bargainValue, bargainPoint, bargainChance);
             BargainUI.SetActive(false);
             bargainField.text = "";
@@ -238,7 +285,10 @@ public class Customer : MonoBehaviour
             }
             else
             {
-                CusBargainReject(randcusnum);
+                preBargainValue = bargainValue;
+                reBargain = CusBargainReject(currentCusList[randcusnum].customerNum);
+                if (reBargain)
+                    yield break;
                 yield return null;
                 bargainButton.SetActive(false);
                 CustomerUI.SetActive(true);
@@ -250,8 +300,6 @@ public class Customer : MonoBehaviour
             yield return null;
             //정수 이외 다른 값일시 돌아가도록
         }
-        
-        
     }
     IEnumerator MoveCustomerToPosition(GameObject customer, Vector3 targetPosition)//손님 입장
     {
@@ -260,6 +308,7 @@ public class Customer : MonoBehaviour
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetPosition, speed * Time.deltaTime);
             yield return null;
         }
+        yield return DialogPlay();
         cState.Value = CustomerState.ItemSet;
     }
     IEnumerator MoveAndFadeOutCustomer(GameObject customer, Vector3 targetPosition, float duration)//손님퇴장
@@ -318,10 +367,25 @@ public class Customer : MonoBehaviour
     }
     IEnumerator TradeEnd()//거래 종료
     {
-        ItemManager.Instance.ListClear();
+        ItemManager.Instance.ListClear(); 
+        if (dialogStop == false)
+        {
+            talkStart = false;
+            SetDialog(currentCusList[randcusnum].customerNum);
+            yield return DialogPlay();
+        }
+        else
+        {
+            SetDialog(currentCusList[randcusnum].customerNum);
+            yield return DialogPlay();
+        }
+                
+        yield return MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration);
         yield return YieldCache.WaitForSeconds(fadeDuration * 1.5f);
+        noDialog = false;
         if (cusCount <= 0)
         {
+            currentCusList.Clear();
             cState.Value = CustomerState.Idle;
             buttonEdit.SetActive(true);
         }
@@ -356,6 +420,73 @@ public class Customer : MonoBehaviour
         talkText.text = null;
         
     }
+    private IEnumerator DialogPlay()
+    {
+        if (noDialog)
+            yield break;
+        for (int i = 0; i < customerDialog.Count; i++)
+        {
+            yield return new WaitUntil(() => customerDialog[i].UpdateDialog());
+            if (i != customerDialog.Count - 1)
+            {
+                GameObject FadeInOut = Instantiate(FadeUI);
+                yield return YieldCache.WaitForSeconds(FadeTime);
+            }
+            customerDialog[i].SetActiveFalseUI();
+            
+        }
+    }
+    private void SetDialog(int customnum)
+    {
+        if (talkStart && cState.Value == CustomerState.Start)
+        {
+            switch (customnum)
+            {
+                case 1:
+                    customerDialog[customerDialog.Count - 1].selectedDialogName = "TextEX3";
+                    break;
+                default:
+                    noDialog = true;
+                    return;
+            }
+            customerDialog[customerDialog.Count - 1].DialogListLoading();
+            return;
+        }
+        else if(!talkStart && cState.Value == CustomerState.End)
+        {
+            switch (customnum)
+            {
+                case 1:
+                    customerDialog[customerDialog.Count - 1].selectedDialogName = "Customer2";
+                    break;
+                default:
+                    noDialog = true;
+                    return;
+            }
+            customerDialog[customerDialog.Count - 1].DialogListLoading();
+            return;
+        }
+        if (ItemManager.Instance.bargainSuccess == true)
+        {
+            
+        }
+        else
+        {
+            switch(customnum)
+            {
+                case 1:
+                    customerDialog[customerDialog.Count - 1].selectedDialogName = "CustomerReject1";
+                    break;
+                default:
+                    noDialog = true;
+                    return;
+            }
+            customerDialog[customerDialog.Count - 1].DialogListLoading();
+            return;
+        }
+    }
+
+
     #endregion
     private void UIon()// UI 일괄 on
     {
@@ -368,10 +499,15 @@ public class Customer : MonoBehaviour
 
     private void CusBargainPointSet(int customnum)
     {
-        initialChance += cusList[customnum].cusBargainChance;
+        initialChance += currentCusList[customnum].cusBargainChance;
+    }
+    private IEnumerator StateChangeDialog(CustomerState _cstate)
+    {
+        yield return DialogPlay();
+        cState.Value = _cstate;
     }
     
-    private void CusBargainReject(int customnum)
+    private bool CusBargainReject(int customnum)
     {
         switch(customnum)
         {
@@ -379,10 +515,26 @@ public class Customer : MonoBehaviour
                 if(ItemManager.Instance.bargainSuccess == false)
                 {
                     StopCoroutine("BargainCycle");
+                    
+                    dialogStop = true;
                     cState.Value = CustomerState.End;
+                    return true;
+                }
+                break;
+            case 4:
+                if(ItemManager.Instance.bargainSuccess == false)
+                {
+                    if (reBargain)
+                        return false;
+                    customerDialog[customerDialog.Count - 1].selectedDialogName = "CustomerReject2";
+                    customerDialog[customerDialog.Count - 1].DialogListLoading();
+                    noDialog = false;
+                    StartCoroutine(StateChangeDialog(CustomerState.Bargain));
+                    return true;
                 }
                 break;
         }
+        return false;
     }
     #endregion
 }

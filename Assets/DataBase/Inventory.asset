@@ -12,14 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35c5001f8009bb4daef159d194c11e1, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  PublicMaxWeight: 1000
-  PublicCurrentWeight: 80
-  inventory:
-  - price: 70
-    stuffName: Grape
-    sort: 0
-    image: {fileID: -270290214, guid: 074db126ffe9c2343bb815ccd49d95ad, type: 3}
-    weight: 10
-    counts: 8
-  UpgradeInfo: {fileID: 11400000, guid: 670bb50a050bc364fa934cb31e4b952c, type: 2}
-  current_Tier: 0
+  inventory: []
+  Upgrade_ID: 0

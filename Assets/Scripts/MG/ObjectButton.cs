@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ObjectButton : MonoBehaviour
+public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public structureType s_Type;
 
@@ -11,29 +12,47 @@ public class ObjectButton : MonoBehaviour
     public Material outline_M;
 
     [SerializeField] private Customer customer;
-    [SerializeField] private QuestSystem quest;
-
+    
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         origin_M = sr.material;
         outline_M.mainTexture = GetComponent<SpriteRenderer>().sprite.texture;
+        
     }
 
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         sr.material = outline_M;
     }
 
-    private void OnMouseDown()
-    {
-        
-    }
-
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
         sr.material = origin_M;
     }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        switch (s_Type)
+        {
+            case structureType.Trade:
+                customer.CustomerStart();
+                break;
+            case structureType.Upgrade:
+                UpgradeManager.Instance.UpdateUI();
+                break;
+            case structureType.Guild:
+                UIManage.Instance.GuildUI.SetActive(true);
+                break;
+            case structureType.Bar:
+                UIManage.Instance.BarUI.SetActive(true);
+                break;
+            case structureType.Bank:
+                UIManage.Instance.BankUI.SetActive(true);
+                break;
+        }
+    }
+    
 }
 
 public enum structureType
@@ -41,5 +60,6 @@ public enum structureType
     Trade,
     Upgrade,
     Bar,
-    Guild
+    Guild,
+    Bank
 }

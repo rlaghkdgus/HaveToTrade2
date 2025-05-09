@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start_Scene.unity
+    guid: 7d1adc664e012bf4ebf2000e5bc2ba39
+  - enabled: 1
     path: Assets/Scenes/Dummy_TownMoveMovw.unity
     guid: 4bf41c59e248a13418cccdd7a4cb026e
   m_configObjects: {}

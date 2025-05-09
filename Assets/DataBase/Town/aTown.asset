@@ -15,9 +15,9 @@ MonoBehaviour:
   TownName: a
   TownType: 1
   TownPrefabs:
-  - {fileID: 6350724525790011638, guid: ad83e69e66202db43a446c53fb817a85, type: 3}
-  - {fileID: 3136945069006094219, guid: f05498b6d4b325c4fae7361c21667ae7, type: 3}
-  - {fileID: 5059678703820474622, guid: ac70f6b175106a84c848edab8c4188ab, type: 3}
+  - {fileID: 5181851120068721351, guid: f06defb450f98d24a927f406fd2daf61, type: 3}
+  - {fileID: 5181851120068721351, guid: 3ae4c23bc2453954dad6728be039aad1, type: 3}
+  - {fileID: 5181851120068721351, guid: a4bef1ca2ffa9a644a464971775bac94, type: 3}
   RoadPrefabs_F:
   - {fileID: 1845644765570509702, guid: d6c95dedbb8c9e24f976e9d093adf525, type: 3}
   RoadPrefabs_M:

@@ -96,6 +96,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6398837505486789772}
   - component: {fileID: 2426567342665012107}
+  - component: {fileID: 5134383020346267816}
+  - component: {fileID: 3041303106529658137}
   m_Layer: 0
   m_Name: ironguild_0
   m_TagString: Untagged
@@ -170,6 +172,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &5134383020346267816
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017450321720867753}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.71, y: 6.29}
+    newSize: {x: 7.71, y: 6.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.12, y: -2.93}
+      - {x: -3.12, y: -1.73}
+      - {x: -3.81, y: -0.5}
+      - {x: -3.13, y: -0.5}
+      - {x: -3.35, y: 1.9}
+      - {x: -2.53, y: 3.13}
+      - {x: 2.55, y: 3.13}
+      - {x: 3.36, y: 1.9}
+      - {x: 3.16, y: -0.5}
+      - {x: 3.8, y: -0.5}
+      - {x: 3.15, y: -1.73}
+      - {x: 3.15, y: -2.93}
+--- !u!114 &3041303106529658137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017450321720867753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s_Type: 3
+  outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
+  customer: {fileID: 0}
 --- !u!1 &5137767159095237495
 GameObject:
   m_ObjectHideFlags: 0

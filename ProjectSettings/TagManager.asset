@@ -11,6 +11,7 @@ TagManager:
   - B_Inven
   - S_Inven
   - FameCheckUI
+  - CustomerManager
   layers:
   - Default
   - TransparentFX

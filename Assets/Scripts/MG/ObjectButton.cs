@@ -11,14 +11,14 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private Material origin_M;
     public Material outline_M;
 
-    [SerializeField] private Customer customer;
+    private Customer customer;
     
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         origin_M = sr.material;
         outline_M.mainTexture = GetComponent<SpriteRenderer>().sprite.texture;
-        
+        customer = GameObject.FindGameObjectWithTag("CustomerManager").GetComponent<Customer>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

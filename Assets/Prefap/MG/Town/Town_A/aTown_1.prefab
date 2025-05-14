@@ -285,7 +285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_Type: 0
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
-  customer: {fileID: 0}
 --- !u!60 &6033373726613104314
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -293,7 +292,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7846324644055217261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

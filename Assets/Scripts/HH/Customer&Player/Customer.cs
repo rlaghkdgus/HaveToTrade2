@@ -267,8 +267,10 @@ public class Customer : MonoBehaviour
     }
     IEnumerator BargainCycle()//ÈïÁ¤°úÁ¤
     {
+        Debug.Log("a");
         if (int.TryParse(bargainField.text, out bargainValue))//ÆÄ½Ì
         {
+            Debug.Log("b");
             if (reBargain == true && buyOrSell == true && preBargainValue > bargainValue)
                 yield break;
             else if (reBargain == true && buyOrSell == false && bargainValue > preBargainValue)

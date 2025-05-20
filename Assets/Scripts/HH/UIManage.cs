@@ -13,6 +13,8 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     private GameObject CurrentUI;
     private bool OnUI = false;
 
+    public GameObject basicUI;
+
     private void Awake()
     {
         foreach(var prefab in uiPrefabs)

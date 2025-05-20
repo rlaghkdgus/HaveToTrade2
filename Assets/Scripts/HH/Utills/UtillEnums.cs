@@ -30,6 +30,7 @@ public enum RoadEventState
     Idle,
     Thief,
     Rock,
+    Shooting
     
 }
 public enum QuestType

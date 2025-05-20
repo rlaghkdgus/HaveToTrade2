@@ -33,6 +33,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Å¬¸¯È®ÀÎ");
         switch (s_Type)
         {
             case structureType.Trade:

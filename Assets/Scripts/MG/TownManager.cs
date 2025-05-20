@@ -8,12 +8,12 @@ public class TownManager : MonoBehaviour
 
     [SerializeField] public TownDB curTown; // 현재 마을 정보
     [SerializeField] private TownDB nextTown; // 다음 마을 정보
-
+    
     public GameObject TownClone; // 현재 마을
     public GameObject ButtonGroup;
     private Travel travel;
     private TownViewChanger changer;
-
+   
     private void Awake()
     {
         if(instance == null)

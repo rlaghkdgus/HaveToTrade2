@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class UpgradeManager : Singleton<UpgradeManager>
 {
     public UpgradeExcelData UpgradeData;
-    public GameObject UpgradeUI;
 
     public List<UpgradeNode> nodes;
 
@@ -28,7 +27,6 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
     public void UpdateUI()
     {
-        UpgradeUI.SetActive(true);
         UpdateName();
         UpdateOutline();
         UpdateUnlock();

@@ -9651,7 +9651,7 @@ GameObject:
   - component: {fileID: 3590140435419875964}
   - component: {fileID: 3590140435419875967}
   m_Layer: 5
-  m_Name: Tree
+  m_Name: UpgradeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10458,7 +10458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeData: {fileID: 11400000, guid: bc126aa2587ca0044a3f91772e2dc75a, type: 2}
-  UpgradeUI: {fileID: 3590140435419875961}
   nodes:
   - {fileID: 3590140434434676709}
   - {fileID: 239409044283346251}

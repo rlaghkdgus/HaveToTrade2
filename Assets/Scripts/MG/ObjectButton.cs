@@ -33,24 +33,24 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Ŭ��Ȯ��");
+        Debug.Log("Å¬¸¯È®ÀÎ");
         switch (s_Type)
         {
             case structureType.Trade:
                 //customer.CustomerStart();
-                
                 break;
             case structureType.Upgrade:
+                UIManage.Instance.ShowUI("UpgradeUI");
                 UpgradeManager.Instance.UpdateUI();
                 break;
             case structureType.Guild:
-                UIManage.Instance.GuildUI.SetActive(true);
+                UIManage.Instance.ShowUI("GuildUI");
                 break;
             case structureType.Bar:
-                UIManage.Instance.BarUI.SetActive(true);
+                UIManage.Instance.ShowUI("BarUI");
                 break;
             case structureType.Bank:
-                UIManage.Instance.BankUI.SetActive(true);
+                UIManage.Instance.ShowUI("BankUI");
                 break;
         }
     }

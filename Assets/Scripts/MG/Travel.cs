@@ -25,7 +25,7 @@ public class Travel : MonoBehaviour
     private int index_B = 1;
 
     [Header("마을 이동, 생성 관련")]
-    [SerializeField] private bool OnMove = false;
+    public bool OnMove = false;
     [SerializeField] private GameObject curTownClone;
     [SerializeField] private GameObject nextTown;
     public GameObject nextTownClone;
@@ -37,15 +37,10 @@ public class Travel : MonoBehaviour
     [SerializeField] private bool isFade = false;
     [SerializeField] private float FadeTime = 1f;
 
-    public Data<RoadEventState> rState = new Data<RoadEventState>();
-    [Header("이벤트 발동용")]
-    [SerializeField] GameObject thiefEvent;
-    [SerializeField] GameObject rockEventOnOff;
-    [SerializeField] RockEvent rockEvent;
-    [Header("여행이벤트 확률")]
-    [SerializeField] float idle;
-    [SerializeField] float thief;
-    [SerializeField] float rock;
+    [Header("이동 이벤트")]
+    [SerializeField] RoadEvent roadEvent;
+    [Header("손님 거래신호용")]
+    [SerializeField] Customer customer;
     private void CombinationRoad(TownDB nextTownDB)
     {
         RandomRoad.Clear();
@@ -53,37 +48,8 @@ public class Travel : MonoBehaviour
         RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_M.Count));
         RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_B.Count));
     }
-    private void Awake()
-    {
-        rState.onChange += SetIdle;
-        rState.onChange += SetThief;
-        rState.onChange += SetRock;
-    }
-    #region 이동 이벤트
-    private void SetIdle(RoadEventState _rState)
-    {
-        if(_rState == RoadEventState.Idle)
-        {
-            if (!OnMove)
-                OnMove = true;
-        }
-    }
-    private void SetThief(RoadEventState _rState)
-    {
-        if(_rState == RoadEventState.Thief)
-        {
-            
-        }
-    }
-    private void SetRock(RoadEventState _rState)
-    {
-        if (_rState == RoadEventState.Rock)
-        {
-            rockEventOnOff.SetActive(true);
-        }
-    }
-
-#endregion
+   
+    
     private void CopyRoad(GameObject clone, int type) // forward = 0, middle = 1, back = 2
     {
         // 길 동적 생성
@@ -175,23 +141,15 @@ public class Travel : MonoBehaviour
         Player.Instance.AnimationChange(true);
         OnMove = true;
         yield return YieldCache.WaitForSeconds(1.0f);
-        //RoadEventSet();
-        if (rState.Value != RoadEventState.Idle)
+        //roadEvent.RoadEventSet();
+        if (roadEvent.rState.Value != RoadEventState.Idle)
         {
             OnMove = false;
         }
         
     }
 
-    private void RoadEventSet()
-    {
-        float Randnum = Random.Range(0, 100f);
 
-        if (Randnum >= idle && Randnum < thief) rState.Value = RoadEventState.Idle;
-        else if (Randnum >= thief && Randnum < rock) rState.Value = RoadEventState.Thief;
-        else if (Randnum >= rock && Randnum <= 100f) rState.Value = RoadEventState.Rock;
-        
-    }
 
    
     private void Update()
@@ -259,8 +217,8 @@ public class Travel : MonoBehaviour
         InitRoad();
 
         TownManager.Instance.UpdateTown();
+        customer.tradeOn();
         isFade = false;
-
         yield return null;
     }
 }

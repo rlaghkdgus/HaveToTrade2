@@ -195,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2482923832108325239}
   - component: {fileID: 6309958561383741338}
+  - component: {fileID: 111026093597788403}
   m_Layer: 0
   m_Name: meatguild_0
   m_TagString: Untagged
@@ -269,3 +270,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &111026093597788403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884102159384439483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s_Type: 3
+  outline_M: {fileID: 0}
+  customer: {fileID: 0}

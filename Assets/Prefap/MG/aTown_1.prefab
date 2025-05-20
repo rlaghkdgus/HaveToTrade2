@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 3712038053051769387}
   - component: {fileID: 6450570493894688369}
   - component: {fileID: 7419176106201879528}
+  - component: {fileID: 3203944363013757316}
   m_Layer: 0
   m_Name: meat2_0
   m_TagString: Untagged
@@ -267,6 +268,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_Type: 0
+  s_Type: 3
   outline_M: {fileID: 0}
   customer: {fileID: 0}
+--- !u!60 &3203944363013757316
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846324644055217261}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.43, y: 5.54}
+    newSize: {x: 10.43, y: 5.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.235, y: 0.34}
+      - {x: 4.205, y: 0.65999997}
+      - {x: 4.1549997, y: 1.05}
+      - {x: 4.1349998, y: 1.3299999}
+      - {x: 4.095, y: 1.88}
+      - {x: 3.995, y: 2.76}
+      - {x: 3.975, y: 2.77}
+      - {x: -2.465, y: 2.77}
+      - {x: -2.485, y: 2.76}
+      - {x: -2.5249999, y: 2.57}
+      - {x: -2.5349998, y: 2.27}
+      - {x: -2.7949998, y: 2.36}
+      - {x: -2.7749999, y: 2.5}
+      - {x: -2.7949998, y: 2.55}
+      - {x: -3.415, y: 2.54}
+      - {x: -3.435, y: 2.52}
+      - {x: -3.445, y: 2.36}
+      - {x: -3.395, y: 2.33}
+      - {x: -3.385, y: 1.39}
+      - {x: -5.2149997, y: -0.44}
+      - {x: -5.2149997, y: -0.48}
+      - {x: -5.205, y: -0.48999998}
+      - {x: -5.035, y: -0.5}
+      - {x: -4.9849997, y: -0.45999998}
+      - {x: -4.9849997, y: -2.75}
+      - {x: -4.9649997, y: -2.77}
+      - {x: 4.095, y: -2.77}
+      - {x: 4.115, y: -2.75}
+      - {x: 4.2149997, y: 0.24}
+      - {x: 4.235, y: 0.25}

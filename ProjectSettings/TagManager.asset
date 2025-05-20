@@ -11,6 +11,9 @@ TagManager:
   - B_Inven
   - S_Inven
   - FameCheckUI
+  - RoadEvent
+  - Wolf
+  - WolfMiniGame
   layers:
   - Default
   - TransparentFX

@@ -11,8 +11,6 @@ public class Resolution : MonoBehaviour
 
     public Toggle fullScreenToggle;
 
-    public GameObject ConfigUI;
-
     UnityEngine.Resolution[] AllResolutions;
     private bool isFullScreen;
     int SelectedResolution;
@@ -40,15 +38,7 @@ public class Resolution : MonoBehaviour
             }
         }
 
-        resolutionDropdown .AddOptions(resolutionStringList);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ConfigUI.SetActive(!ConfigUI.activeSelf);
-        }
+        resolutionDropdown.AddOptions(resolutionStringList);
     }
 
     public void ChangeResolution()

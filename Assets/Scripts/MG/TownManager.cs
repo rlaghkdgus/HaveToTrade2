@@ -84,7 +84,7 @@ public class TownManager : MonoBehaviour
         curTown = nextTown;
         nextTown = null;
         TownClone = GameObject.FindGameObjectWithTag("Town");
-        var MapButton = GameObject.FindWithTag("Canvas").transform.Find("ButtonGroup").transform.Find("OpenMap");
+        var MapButton = GameObject.FindWithTag("Canvas").transform.GetChild(0).Find("ButtonGroup").transform.Find("OpenMap");
         MapButton.gameObject.SetActive(true);
         Debug.Log("업데이트 완료");
         changer.currentIndex = 0;

@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s_Type: 3
-  outline_M: {fileID: 0}
+  outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
 --- !u!1 &8884102159384439483
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,10 +33,12 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("클릭확인");
         switch (s_Type)
         {
             case structureType.Trade:
-                customer.CustomerStart();
+                //customer.CustomerStart();
+                
                 break;
             case structureType.Upgrade:
                 UpgradeManager.Instance.UpdateUI();

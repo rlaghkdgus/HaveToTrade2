@@ -21,7 +21,7 @@ public class RockEvent : MonoBehaviour
         {
             count = 0;
             SysOnOff.SetActive(false);
-            travel.rState.Value = RoadEventState.Idle;
+            //travel.rState.Value = RoadEventState.Idle;
             text.text = "";
         }
     }

@@ -32,7 +32,8 @@ public class Customer : MonoBehaviour
     [SerializeField] CmanageDialog newDialogSys;
     [SerializeField] private GameObject FadeUI;
     [SerializeField] private float FadeTime = 1f;
-  
+    [Header("임시 UI 막기")]
+    [SerializeField] GameObject blockButtonClick;
     [Header("손님수, 현재는 시작시 랜덤 지정")]
     public int cusCount;
     [Header("손님 세부 옵션")]
@@ -168,6 +169,7 @@ public class Customer : MonoBehaviour
     {
         if(_cState == CustomerState.Start)//손님 객체 생성후 이동
         {
+            blockButtonClick.SetActive(true);
             OnTrade = false;
             if(cusCount <= 0)
             {
@@ -413,6 +415,7 @@ public class Customer : MonoBehaviour
             currentCusList.Clear();
             cState.Value = CustomerState.Idle;
             buttonEdit.SetActive(true);
+            blockButtonClick.SetActive(false);
         }
         else
         {

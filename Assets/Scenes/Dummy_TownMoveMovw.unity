@@ -4994,7 +4994,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0001569828
+      value: 0.000035793586
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6477,6 +6477,9 @@ MonoBehaviour:
   - {fileID: 2057325985}
   - {fileID: 834796210}
   basicUI: {fileID: 134301604}
+  FameUI: {fileID: 7211995172801131316}
+  QuestUI: {fileID: 1729286107}
+  BankUI: {fileID: 0}
 --- !u!114 &1601694293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8649,3 +8652,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbae2f11e2135fe40bd5bf90e7f6a6d4, type: 3}
+--- !u!1 &7211995172801131316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7211995174247228617, guid: cbae2f11e2135fe40bd5bf90e7f6a6d4, type: 3}
+  m_PrefabInstance: {fileID: 7211995172801131315}
+  m_PrefabAsset: {fileID: 0}

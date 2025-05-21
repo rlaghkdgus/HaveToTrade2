@@ -4061,9 +4061,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loan: 100000
   loanText: {fileID: 815941262}
+<<<<<<< Updated upstream
   repayField: {fileID: 599121844}
   repayUIButton: {fileID: 1667645720}
   InputObject: {fileID: 1560037596}
+=======
+  repayField: {fileID: 0}
+  repayUIButton: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!4 &446639894
 Transform:
   m_ObjectHideFlags: 0
@@ -7171,6 +7176,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 884702797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7194,6 +7200,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884702797}
+=======
+--- !u!114 &884702799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7211995172993748348, guid: cbae2f11e2135fe40bd5bf90e7f6a6d4, type: 3}
+  m_PrefabInstance: {fileID: 7211995172801131315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -8940,6 +8954,7 @@ MonoBehaviour:
   - {fileID: 1949786926}
   FadeUI: {fileID: 2065649929}
   FadeTime: 1
+  blockButtonClick: {fileID: 0}
   cusCount: 0
   speed: 10
   tradeDelay: 1.5
@@ -9001,7 +9016,7 @@ MonoBehaviour:
   cText: {fileID: 1923462570}
   pTxt: {fileID: 1668853005}
   pcTxt: {fileID: 182509551}
-  bargainField: {fileID: 854042015}
+  bargainField: {fileID: 0}
   pImg: {fileID: 1161286101}
   bargainButton: {fileID: 383621024}
   rejectButton: {fileID: 1293130501}
@@ -10544,7 +10559,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
+<<<<<<< Updated upstream
       value: 0.0006701847
+=======
+      value: 0.000003770266
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15879,10 +15898,16 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< Updated upstream
   m_Children:
   - {fileID: 1891969622}
   m_Father: {fileID: 1667645721}
   m_RootOrder: 0
+=======
+  m_Children: []
+  m_Father: {fileID: 1601669907}
+  m_RootOrder: 3
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

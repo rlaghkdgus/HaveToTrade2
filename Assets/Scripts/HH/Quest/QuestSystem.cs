@@ -8,7 +8,7 @@ public class QuestSystem : Singleton<QuestSystem>
     [Header("손님 참조용")]
     [SerializeField] private Customer customer;
     [Header("퀘스트 테이블")]
-    [SerializeField] private QuestTable questTable;
+    [SerializeField] public QuestTable questTable;
     //public List<TMP_Text> questName = new List<TMP_Text>();
     [Header("퀘스트 버튼")]
     public List<Button> questButtons = new List<Button>();

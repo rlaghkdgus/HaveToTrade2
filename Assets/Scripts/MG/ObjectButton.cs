@@ -44,13 +44,18 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 UpgradeManager.Instance.UpdateUI();
                 break;
             case structureType.Guild:
-                UIManage.Instance.ShowUI("GuildUI");
+                Player.Instance.FameBarCheck();
+                UIManage.Instance.FameUI.SetActive(true);
+                //UIManage.Instance.ShowUI("GuildUI");
                 break;
             case structureType.Bar:
-                UIManage.Instance.ShowUI("BarUI");
+                QuestSystem.Instance.RandomQuest();
+                UIManage.Instance.QuestUI.SetActive(true);
+                //UIManage.Instance.ShowUI("BarUI");
                 break;
             case structureType.Bank:
-                UIManage.Instance.ShowUI("BankUI");
+                UIManage.Instance.BankUI.SetActive(true);
+                //UIManage.Instance.ShowUI("BankUI");
                 break;
         }
     }

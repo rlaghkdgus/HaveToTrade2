@@ -15,6 +15,11 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
 
     public GameObject basicUI;
 
+    [Header("임시 UI 세팅")]
+     public GameObject FameUI;
+    public GameObject QuestUI;
+    public GameObject BankUI;
+
     private void Awake()
     {
         foreach(var prefab in uiPrefabs)

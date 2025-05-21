@@ -10,7 +10,6 @@ public class Bank : MonoBehaviour
     [SerializeField] TMP_Text loanText;
     [SerializeField] TMP_InputField repayField;
     [SerializeField] GameObject repayUIButton;
-    [SerializeField] GameObject InputObject;
     int repayValue;
 
     private void Start()
@@ -54,7 +53,7 @@ public class Bank : MonoBehaviour
     void renewUI()
     {
         repayField.text = "";
-        InputObject.SetActive(false);
+        
         repayUIButton.SetActive(true);
     }
 

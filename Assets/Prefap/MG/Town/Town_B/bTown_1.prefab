@@ -95,7 +95,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5090029676297247695}
   - component: {fileID: 7597980964459391686}
-  - component: {fileID: 5442754019684054965}
   - component: {fileID: 744863031917161112}
   m_Layer: 0
   m_Name: ironStore_0
@@ -171,21 +170,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5442754019684054965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7054594842835261550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s_Type: 0
-  outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
-  customer: {fileID: 0}
 --- !u!60 &744863031917161112
 PolygonCollider2D:
   m_ObjectHideFlags: 0

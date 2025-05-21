@@ -223,7 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_Type: 3
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
-  customer: {fileID: 0}
 --- !u!1 &5137767159095237495
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +233,8 @@ GameObject:
   m_Component:
   - component: {fileID: 958600547714835174}
   - component: {fileID: 2831579929044462796}
+  - component: {fileID: 2945649116091156775}
+  - component: {fileID: 90860731778370832}
   m_Layer: 0
   m_Name: irontown_0
   m_TagString: Untagged
@@ -308,3 +309,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2945649116091156775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137767159095237495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s_Type: 2
+  outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
+--- !u!60 &90860731778370832
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137767159095237495}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8, y: 5.19}
+    newSize: {x: 8, y: 5.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.95, y: -2.34}
+      - {x: -3.95, y: -0.85}
+      - {x: -3.67, y: 1.4}
+      - {x: -2.95, y: 1.4}
+      - {x: -2.95, y: 2.57}
+      - {x: 2.14, y: 2.57}
+      - {x: 2.14, y: 1.3}
+      - {x: 3.33, y: 1.3}
+      - {x: 4, y: 0.1}
+      - {x: 3.86, y: -2.23}
+      - {x: 2.7, y: -2.57}
+      - {x: 0.67, y: -2.57}

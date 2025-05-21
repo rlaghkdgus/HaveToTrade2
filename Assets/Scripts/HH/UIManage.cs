@@ -69,8 +69,13 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (OnUI)
+            if (OnUI && CurrentUI.name != "QuestDescription")
             {
+                if(CurrentUI.tag == "Map")
+                {
+                    TownManager.Instance.ButtonGroup.SetActive(true);
+                    Destroy(CurrentUI);
+                }
                 //Destroy(CurrentUI);
                 CurrentUI.SetActive(false);
                 OnUI = false;

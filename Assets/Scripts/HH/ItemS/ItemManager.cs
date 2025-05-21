@@ -130,6 +130,7 @@ public class ItemManager : Singleton<ItemManager>
             playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight)
         {
             Debug.LogError("인벤토리 용량 초과 : " + playerInventory.sortWeight[itemSO.items[currentProductIndex].sort]);
+            playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight -= itemTotalWeight;
             StartCoroutine("WeightOverPopUp");
             productCount++;
             buyItem = null;

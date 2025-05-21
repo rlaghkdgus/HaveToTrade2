@@ -139,6 +139,8 @@ public class InventoryUI : MonoBehaviour
         {
             Destroy(slot.gameObject);
         }
+        ItemManager.Instance.playerInventory.InitWeight();
+        UpdateWeightText();
     }
 
     private void Update()

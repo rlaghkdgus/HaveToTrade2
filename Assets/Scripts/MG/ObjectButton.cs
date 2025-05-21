@@ -33,7 +33,6 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Å¬¸¯È®ÀÎ");
         switch (s_Type)
         {
             case structureType.Trade:
@@ -45,17 +44,20 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 break;
             case structureType.Guild:
                 Player.Instance.FameBarCheck();
-                UIManage.Instance.FameUI.SetActive(true);
-                //UIManage.Instance.ShowUI("GuildUI");
+                //UIManage.Instance.FameUI.SetActive(true);
+                UIManage.Instance.ShowUI("FameCheckUI");
                 break;
             case structureType.Bar:
-                QuestSystem.Instance.RandomQuest();
-                UIManage.Instance.QuestUI.SetActive(true);
-                //UIManage.Instance.ShowUI("BarUI");
+                if (!QuestSystem.Instance.questSign)
+                {
+                    QuestSystem.Instance.RandomQuest();
+                    //UIManage.Instance.QuestUI.SetActive(true);
+                    UIManage.Instance.ShowUI("QuestDescription");
+                }
                 break;
             case structureType.Bank:
-                UIManage.Instance.BankUI.SetActive(true);
-                //UIManage.Instance.ShowUI("BankUI");
+                //UIManage.Instance.BankUI.SetActive(true);
+                UIManage.Instance.ShowUI("BankUI");
                 break;
         }
     }

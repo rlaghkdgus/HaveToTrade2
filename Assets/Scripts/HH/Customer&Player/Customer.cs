@@ -180,7 +180,7 @@ public class Customer : MonoBehaviour
             //randcusnum = 4; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
-            CusBargainPointSet(currentCusList[randcusnum].customerNum);
+            //CusBargainPointSet(currentCusList[randcusnum].customerNum);
             
             StartCoroutine(MoveCustomerToPosition(newCustomer, customerTransform[1].position));
         }

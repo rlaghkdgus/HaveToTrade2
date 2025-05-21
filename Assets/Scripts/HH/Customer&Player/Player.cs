@@ -26,6 +26,7 @@ public class Player : Singleton<Player>
     public Fame furnFame;
     public Fame clothFame;
     public Fame pFoodFame;
+    public List<Fame> priorityFame;
     [Header("명성 게이지")]
     public Slider foodFameBar;
     public Slider accesoryFameBar;
@@ -61,6 +62,7 @@ public class Player : Singleton<Player>
     public void SkillUp(int sorts)
     {
         FameCheck(GetFameRef((ItemSorts)sorts));
+        UpgradeFameCheck(GetFameRef((ItemSorts)sorts));
     }
     private Fame GetFameRef(ItemSorts sorts)
     {
@@ -83,6 +85,15 @@ public class Player : Singleton<Player>
             }
         }
     }
+
+    private void UpgradeFameCheck(Fame target)
+    {
+        if(priorityFame.Count < 2 && target.tier >= 4 && !priorityFame.Contains(target))
+        {
+            priorityFame.Add(target);
+        }
+    }
+
     public void FameBarCheck()
     {
         if (accesoryFameBar != null)

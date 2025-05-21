@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -124,4 +125,28 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+    #region 디버그용 기능
+    private void InvenClear()
+    {
+        ItemManager.Instance.playerInventory.inventory.Clear();
+        B_uiSlots.Clear();
+        S_uiSlots.Clear();
+        foreach(Transform slot in S_Inven.GetChild(0).GetChild(0))
+        {
+            Destroy(slot.gameObject);
+        }
+        foreach(Transform slot in B_Inven.GetChild(0).GetChild(0))
+        {
+            Destroy(slot.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            InvenClear();
+        }
+    }
+    #endregion
 }

@@ -27,6 +27,8 @@ public class ItemManager : Singleton<ItemManager>
     public pItem buyItem;
     private static ItemManager instance;
 
+    public GameObject weightPopUp;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -128,6 +130,7 @@ public class ItemManager : Singleton<ItemManager>
             playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight)
         {
             Debug.LogError("인벤토리 용량 초과 : " + playerInventory.sortWeight[itemSO.items[currentProductIndex].sort]);
+            StartCoroutine("WeightOverPopUp");
             productCount++;
             buyItem = null;
             BargainClear();
@@ -266,6 +269,13 @@ public class ItemManager : Singleton<ItemManager>
 
         CusProductCountSet();
         customer.productTexts.text = "" + itemCountIndex[productCount];
+    }
+
+    IEnumerator WeightOverPopUp()
+    {
+        GameObject popup = Instantiate(weightPopUp, GameObject.FindGameObjectWithTag("Canvas").transform);
+        yield return new WaitForSeconds(1f);
+        Destroy(popup);
     }
     #endregion
 

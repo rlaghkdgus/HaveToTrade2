@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Build.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -59,12 +60,20 @@ public class UpgradeManager : Singleton<UpgradeManager>
     {
         for(int i = 0; i < nodes.Count; ++i)
         {
-            switch(nodes[i].ID / 10)
+            switch (nodes[i].ID / 10)
             {
                 case 1:
                     if (nodes[i].ID % 10 <= Player.Instance.foodFame.tier)
                     {
-                        nodes[i].GetComponent<Button>().interactable = true;
+                        if (nodes[i].ID % 10 < 4)
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
+                        else if (Player.Instance.priorityFame.Contains(Player.Instance.foodFame))
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
+                        
                     }
                     else
                     {
@@ -74,7 +83,14 @@ public class UpgradeManager : Singleton<UpgradeManager>
                 case 2:
                     if (nodes[i].ID % 10 <= Player.Instance.pFoodFame.tier)
                     {
-                        nodes[i].GetComponent<Button>().interactable = true;
+                        if (nodes[i].ID % 10 < 4)
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
+                        else if (Player.Instance.priorityFame.Contains(Player.Instance.pFoodFame))
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
                     }
                     else
                     {
@@ -84,7 +100,14 @@ public class UpgradeManager : Singleton<UpgradeManager>
                 case 3:
                     if (nodes[i].ID % 10 <= Player.Instance.clothFame.tier)
                     {
-                        nodes[i].GetComponent<Button>().interactable = true;
+                        if (nodes[i].ID % 10 < 4)
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
+                        else if (Player.Instance.priorityFame.Contains(Player.Instance.clothFame))
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
                     }
                     else
                     {
@@ -94,7 +117,14 @@ public class UpgradeManager : Singleton<UpgradeManager>
                 case 4:
                     if (nodes[i].ID % 10 <= Player.Instance.furnFame.tier)
                     {
-                        nodes[i].GetComponent<Button>().interactable = true;
+                        if (nodes[i].ID % 10 < 4)
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
+                        else if (Player.Instance.priorityFame.Contains(Player.Instance.furnFame))
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
                     }
                     else
                     {
@@ -104,7 +134,14 @@ public class UpgradeManager : Singleton<UpgradeManager>
                 case 5:
                     if (nodes[i].ID % 10 <= Player.Instance.accesoryFame.tier)
                     {
-                        nodes[i].GetComponent<Button>().interactable = true;
+                        if (nodes[i].ID % 10 < 4)
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
+                        else if (Player.Instance.priorityFame.Contains(Player.Instance.accesoryFame))
+                        {
+                            nodes[i].GetComponent<Button>().interactable = true;
+                        }
                     }
                     else
                     {

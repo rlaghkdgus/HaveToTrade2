@@ -12,28 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35c5001f8009bb4daef159d194c11e1, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  inventory:
-  - price: 5000
-    stuffName: Necklace
-    sort: 1
-    image: {fileID: 553211419, guid: ae7e6db07b95ba24dbbddb0e70696b5c, type: 3}
-    weight: 10
-    counts: 1
-  - price: 1000
-    stuffName: Gloves
-    sort: 3
-    image: {fileID: 703207372, guid: 6106422052c62944ca882112ec2d5ada, type: 3}
-    weight: 2
-    counts: 2
-  - price: 40
-    stuffName: Fish
-    sort: 0
-    image: {fileID: -1239887968, guid: dff4f919176320a41b73d8daa49a6169, type: 3}
-    weight: 10
-    counts: 1
-  - price: 1000
-    stuffName: Chair
-    sort: 2
-    image: {fileID: -1288827890, guid: 4feb971e74394c04e96b78a5cd871967, type: 3}
-    weight: 50
-    counts: 1
+  inventory: []

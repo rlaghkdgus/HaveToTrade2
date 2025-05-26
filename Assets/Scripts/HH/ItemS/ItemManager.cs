@@ -225,7 +225,7 @@ public class ItemManager : Singleton<ItemManager>
         if (totalChance >= randomValue)
         {
             bargainPrice = bargainValue;
-            customer.costText.text = "price : " + bargainPrice;
+            customer.costText.text = " " + bargainPrice;
             bargainSuccess = true;
         }
         else
@@ -259,13 +259,13 @@ public class ItemManager : Singleton<ItemManager>
             pItem countItem = playerInventory.inventory.Find(item => item.stuffName == buyItem.stuffName);
             customer.playerCountTexts.text = "" + (countItem != null ? countItem.counts : 0);
             customer.productImages.sprite = itemSO.items[currentProductIndex].image;
-            customer.costText.text = "price : " + itemSO.items[currentProductIndex].price;
+            customer.costText.text = " " + itemSO.items[currentProductIndex].price;
         }
         else
         {
             customer.playerCountTexts.text = "" + playerInventory.inventory[currentProductIndex].counts;
             customer.productImages.sprite = playerInventory.inventory[currentProductIndex].image;
-            customer.costText.text = "price : " + playerInventory.inventory[currentProductIndex].price;
+            customer.costText.text = " " + playerInventory.inventory[currentProductIndex].price;
         }
 
         CusProductCountSet();

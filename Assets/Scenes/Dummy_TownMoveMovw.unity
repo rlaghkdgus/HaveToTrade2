@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 88943093}
   - component: {fileID: 88943092}
   - component: {fileID: 88943095}
+  - component: {fileID: 88943096}
   m_Layer: 0
   m_Name: TownManager
   m_TagString: Untagged
@@ -599,6 +600,28 @@ MonoBehaviour:
   FadeUI: {fileID: 3157655087275485958, guid: 3de8581217ca73e4f8f1601a8e9d7def, type: 3}
   Change_R: {fileID: 509992842}
   Change_L: {fileID: 1120182169}
+--- !u!114 &88943096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88943091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1c145cd1994e74cb56ab4fb240c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudSprites:
+  - {fileID: 847744893, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
+  - {fileID: 1916859248, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
+  - {fileID: 165806112, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
+  - {fileID: 526163057, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
+  - {fileID: 38410083, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
+  cloudPrefab: {fileID: 0}
+  cloudCount: 5
+  spawnXRange: {x: -8, y: 8}
+  spawnYRange: {x: 3, y: 4}
 --- !u!1 &123382089
 GameObject:
   m_ObjectHideFlags: 0

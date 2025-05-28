@@ -35,6 +35,25 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private float typingSpeed = 0.1f; // 타이핑 속도
     [SerializeField] private bool isTypingEffect = false; // 타이핑 효과 제어 변수
 
+    [Header("손님 참조 전용")]
+    [SerializeField] Customer customer;
+
+    private Dictionary<string, string> dialogReplacements = new Dictionary<string, string>
+    {
+    { "[물건이름]", "" },
+    { "[흥정제시가]", "" }
+    };
+
+    private string ReplacePlaceholders(string original, Dictionary<string, string> replacements)
+    {
+        foreach (var pair in replacements)
+        {
+            original = original.Replace(pair.Key, pair.Value);
+        }
+        return original;
+    }
+
+    string curDialog;
     private void Awake()
     {
         DialogListLoading();
@@ -124,7 +143,7 @@ public class DialogSystem : MonoBehaviour
                     isTypingEffect = false;
 
                     StopCoroutine("OnTypingText");
-                    Dialog.text = dialogs[currentDialogIndex].dialog;
+                    Dialog.text = curDialog;
                     //speakers[currentSpeakerIndex].Dialog.text = dialogs[currentDialogIndex].dialog;
                     //speakers[currentSpeakerIndex].Cursor.SetActive(true);
 
@@ -189,8 +208,20 @@ public class DialogSystem : MonoBehaviour
         Name.text = dialogs[currentDialogIndex].name;
 
         //speakers[currentSpeakerIndex].Dialog.text = dialogs[currentDialogIndex].dialog;
-        Dialog.text = dialogs[currentDialogIndex].dialog;
 
+        if (customer.Intrade)// 거래중에만 아이템 이름 감지 및 Replace작업으로 최대한 GC부담방지
+        {
+            // dictionary 내부 값만 갱신
+            dialogReplacements["[물건이름]"] = ItemManager.Instance.ItemNameReturn();
+            dialogReplacements["[흥정제시가]"] = "" + customer.bargainValue;
+
+            string itemName = ItemManager.Instance.ItemNameReturn();
+            curDialog = ReplacePlaceholders(dialogs[currentDialogIndex].dialog, dialogReplacements);
+        }
+        else
+        {
+            curDialog = dialogs[currentDialogIndex].dialog;
+        }
         StartCoroutine("OnTypingText");
     }
 
@@ -218,14 +249,12 @@ public class DialogSystem : MonoBehaviour
 
         isTypingEffect = true;
 
-        while (index <= dialogs[currentDialogIndex].dialog.Length)
+        while (index <= curDialog.Length)
         {
             //speakers[currentSpeakerIndex].Dialog.text = dialogs[currentDialogIndex].dialog.Substring(0, index);
-            Dialog.text = dialogs[currentDialogIndex].dialog.Substring(0, index);
-
+            Dialog.text = curDialog.Substring(0, index);
             index++;
-
-            yield return new WaitForSeconds(typingSpeed);
+            yield return YieldCache.WaitForSeconds(typingSpeed);
         }
 
         isTypingEffect = false;

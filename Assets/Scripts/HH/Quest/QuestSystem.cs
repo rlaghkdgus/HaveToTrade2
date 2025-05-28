@@ -34,19 +34,21 @@ public class QuestSystem : Singleton<QuestSystem>
     [Header("퀘스트 진행 신호")]
     public bool questSign; // 퀘스트 진행중인지 확인
     public bool deliveryCheckSign;
+    [Header("동적생성용 랜덤번호 체크")]
+    public int randnum;
     #region 퀘스트 생성 및 관리
     public void RandomQuest()
     {
         for(int i = 0; i < 3; i++)
         {
-            int randnum;
+            
             do
             {
                 randnum = Random.Range(0, questTable.quest.Count);
             }while(questRandIndex.Contains(randnum));
             questRandIndex.Add(randnum);
-            questDescription[i].text = questTable.quest[randnum].questText;
-            questName[i].text = questTable.quest[randnum].questName;
+            //questDescription[i].text = questTable.quest[randnum].questText;
+            //questName[i].text = questTable.quest[randnum].questName;
         }
     }
     public void QuestAccept(int buttonindex)
@@ -63,6 +65,8 @@ public class QuestSystem : Singleton<QuestSystem>
         TextReset();
         questSign = true;
         questRandIndex.Clear();
+        randnum = 0;
+        UIManage.Instance.HideQuest();
     }
     public void QuestClear()
     {

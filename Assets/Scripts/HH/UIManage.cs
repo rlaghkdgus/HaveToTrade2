@@ -10,9 +10,9 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     private Dictionary<string, GameObject> uiDictionary = new Dictionary<string, GameObject>();
     private Dictionary<string, GameObject> uiF_dic = new Dictionary<string, GameObject>();
 
-    private GameObject CurrentUI;
+    public GameObject CurrentUI;
     private bool OnUI = false;
-
+    private bool GUISign = false;
     public GameObject basicUI;
 
     [Header("임시 UI 세팅")]
@@ -51,6 +51,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
             GameObject newUI = Instantiate(prefab, transform);
             CurrentUI = newUI;
             OnUI = true;
+            GUISign = true;
         }
         else
         {
@@ -69,23 +70,38 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (OnUI && CurrentUI.name != "QuestDescription")
+            if (OnUI && GUISign && CurrentUI.name != "QuestDescription(Clone)")
             {
                 if(CurrentUI.tag == "Map")
                 {
                     TownManager.Instance.ButtonGroup.SetActive(true);
                     Destroy(CurrentUI);
                 }
-                //Destroy(CurrentUI);
+                Destroy(CurrentUI);
+                //CurrentUI.SetActive(false);
+                OnUI = false;
+                GUISign = false;
+            }
+            else if(OnUI && !GUISign && CurrentUI.name != "QuestDescription(Clone)")
+            {
                 CurrentUI.SetActive(false);
                 OnUI = false;
             }
-            else
+            else if(!OnUI)
             {
                 ShowUI("Config");
                 OnUI = true;
             }
+            else if(CurrentUI.name == "QuestDescription(Clone)" && !QuestSystem.Instance.questSign)
+            {
+                return;
+            }
         }
+    }
+    public void HideQuest() // 퀘스트 UI 닫을때만.
+    {
+        Destroy(CurrentUI);
+        OnUI = false;
     }
 
     ///public GameObject wolfMiniUI;

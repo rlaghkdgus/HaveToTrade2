@@ -86,7 +86,7 @@ public class Customer : MonoBehaviour
 
     public Data<CustomerState> cState = new Data<CustomerState>();//상태별 이벤트
     private GameObject newCustomer;
-    private int bargainValue;
+    public int bargainValue;
     public int randcusnum = 0;
     public TMP_Text productTexts;
     public Image productImages;
@@ -95,7 +95,8 @@ public class Customer : MonoBehaviour
     public bool buyOrSell;//참일때구매, 거짓일때판매
 
     bool OnTrade = true;
-    
+    [Header("Dialog용")]
+    public bool Intrade; 
     public void tradeOn()
     {
         OnTrade = true;
@@ -171,13 +172,14 @@ public class Customer : MonoBehaviour
         {
             blockButtonClick.SetActive(true);
             OnTrade = false;
+            Intrade = true;
             if(cusCount <= 0)
             {
                 cusCount = Random.Range(3, 6);
             }
             currentCusList = SetRegionCustomer();
             randcusnum = Random.Range(0,currentCusList.Count);
-            //randcusnum = 4; //테스트용, 주석해야함.
+            randcusnum = 0; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
             //CusBargainPointSet(currentCusList[randcusnum].customerNum);
@@ -414,6 +416,7 @@ public class Customer : MonoBehaviour
         {
             currentCusList.Clear();
             cState.Value = CustomerState.Idle;
+            Intrade = false;
             buttonEdit.SetActive(true);
             blockButtonClick.SetActive(false);
         }
@@ -498,6 +501,7 @@ public class Customer : MonoBehaviour
                     return true;
                 }
                 break;
+            case 0:
             case 4:
                 if(ItemManager.Instance.bargainSuccess == false)
                 {

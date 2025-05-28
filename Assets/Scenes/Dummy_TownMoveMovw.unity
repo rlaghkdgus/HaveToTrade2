@@ -4371,29 +4371,22 @@ MonoBehaviour:
     - {fileID: 4228965860727309647, guid: 421ee6d95bcdcf242ae421e71ccb08d4, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
-  GrestarCusList:
-  - customerNum: 3
-    customerName: 
-    customerDescription: 
-    cusPrefab:
-    - {fileID: 6388383263480257102, guid: 23ecac7a9f3da9149950c0c4ee88d6bc, type: 3}
-    cusBargainChance: 0
-    cusProductCount: 0
-  - customerNum: 4
-    customerName: 
-    customerDescription: 
-    cusPrefab:
-    - {fileID: 8012301508408922154, guid: 88d9107084f6a0149a247143e56c2ac2, type: 3}
-    cusBargainChance: 0
-    cusProductCount: 0
   SmokianCusList:
-  - customerNum: 5
+  - customerNum: 3
     customerName: 
     customerDescription: 
     cusPrefab:
     - {fileID: 8309213339656623887, guid: 37e8de217e6fb884cbfa0094cb2c1fd7, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
+  - customerNum: 4
+    customerName: 
+    customerDescription: 
+    cusPrefab:
+    - {fileID: 8309213339656623887, guid: 37e8de217e6fb884cbfa0094cb2c1fd7, type: 3}
+    cusBargainChance: 0
+    cusProductCount: 0
+  GoldBenCusList: []
   customerTransform:
   - {fileID: 362906531}
   - {fileID: 888385202}
@@ -4804,7 +4797,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00032247874
+      value: 0.0002350455
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8256,7 +8249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1953437245
 RectTransform:
   m_ObjectHideFlags: 0

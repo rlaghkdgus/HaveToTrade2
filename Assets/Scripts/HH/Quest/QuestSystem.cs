@@ -78,10 +78,11 @@ public class QuestSystem : Singleton<QuestSystem>
         deliveryCheckSign = false;
         FameUp();
     }
-    public void QuestProgress(pItem ItemCheck, float QuestWeight)
+    public void QuestProgress(pItem ItemCheck, float QuestWeight, VillageType village)
     {
         if (questSign == false || ItemCheck.sort != qTargetItem || customer.buyOrSell != questBuyOrSell)
             return;
+        if(questVillage == VillageType.Idle || village == questVillage)
         questTarget += QuestWeight;
         TextReset();
         if (questTarget >= questGoal)
@@ -93,9 +94,9 @@ public class QuestSystem : Singleton<QuestSystem>
     private void TextReset()
     {
         if (currentQuestType == QuestType.Trade)
-            targetQuestText.text = "target:" + qTargetItem.ToString() + "  " + questTarget + " / " + questGoal;
+            targetQuestText.text = "前格 :" + qTargetItem.ToString() + "\n" +"格利瘤 :" + questVillage.ToString() +"\n" + "  " + questTarget + " / " + questGoal;
         else if (currentQuestType == QuestType.Delivery)
-            targetQuestText.text = "target:" + qTargetItem.ToString() + " destination :" + questVillage.ToString();
+            targetQuestText.text = "前格 :" + qTargetItem.ToString() + " 格利瘤 :" + questVillage.ToString();
         else
             targetQuestText.text = "";
     }
@@ -133,7 +134,7 @@ public class QuestSystem : Singleton<QuestSystem>
             ItemManager.Instance.playerInventory.QuestItemRemove(qTargetItemName);
             QuestClear();
         }
- 
+
 
     }
 }

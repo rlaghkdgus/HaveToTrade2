@@ -27,6 +27,7 @@ public class ItemManager : Singleton<ItemManager>
     public pItem buyItem;
     private static ItemManager instance;
 
+    VillageType curVill;
     public GameObject weightPopUp;
 
     private void Awake()
@@ -48,6 +49,7 @@ public class ItemManager : Singleton<ItemManager>
     #region 거래전 아이템 세팅
     public void RandomSetItem(int sortcount)
     {
+        curVill = TownManager.Instance.curTown.TownType;
         for (int i = 0; i < sortcount; i++)
         {
             int randnum;
@@ -170,8 +172,8 @@ public class ItemManager : Singleton<ItemManager>
             inventoryUI.InitUI(true);
         }
 
-        if (QuestSystem.Instance.currentQuestType == QuestType.Trade)
-            QuestSystem.Instance.QuestProgress(buyItem, itemTotalWeight);
+        if (QuestSystem.Instance.currentQuestType == QuestType.Trade && QuestSystem.Instance.questBuyOrSell)
+            QuestSystem.Instance.QuestProgress(buyItem, itemTotalWeight,curVill);
 
         productCount++;
         buyItem = null;
@@ -205,8 +207,8 @@ public class ItemManager : Singleton<ItemManager>
             playerInventory.sortWeight[itemToRemove.sort].CurrentWeight -= itemTotalWeight;
         }
 
-        if (QuestSystem.Instance.currentQuestType == QuestType.Trade)
-            QuestSystem.Instance.QuestProgress(itemToRemove, itemTotalWeight);
+        if (QuestSystem.Instance.currentQuestType == QuestType.Trade && !QuestSystem.Instance.questBuyOrSell)
+            QuestSystem.Instance.QuestProgress(itemToRemove, itemTotalWeight,curVill);
 
         productCount++;
         BargainClear();

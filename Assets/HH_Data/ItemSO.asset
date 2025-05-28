@@ -149,7 +149,7 @@ MonoBehaviour:
     image: {fileID: 52655627, guid: d11f9e9cfa9669f4696e960c2aac5fee, type: 3}
     weight: 10
   - price: 7500
-    stuffName: "\uADC0\uAE08\uC18D"
+    stuffName: "\uBCF4\uC11D\uC774 \uBC15\uD78C \uBC18\uC9C0"
     sort: 1
     image: {fileID: -1296918528, guid: 0def96de461476d49a3bd96ef0f4f036, type: 3}
     weight: 15

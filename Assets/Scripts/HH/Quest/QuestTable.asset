@@ -14,102 +14,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest:
   - id: 1
-    questName: aa
+    questName: "\uBB3C\uAC74\uC744 \uAD6C\uB9E4\uD558\uC790"
+    sort: 0
+    questStuffName: 
+    questInfo: 15
+    reward: 1
+    questText: "\uC2A4\uBAA8\uD0A4\uC548 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
+      15kg\uCE58 \uC0AC\uB77C!"
+    buyOrSell: 1
+    villageType: 3
+    questType: 1
+  - id: 2
+    questName: "\uBB3C\uAC74\uC744 \uD310\uB9E4\uD558\uC790"
     sort: 0
     questStuffName: 
     questInfo: 30
-    reward: 1
-    questText: Food buy 30kg
-    buyOrSell: 1
-    villageType: 0
-    questType: 1
-  - id: 2
-    questName: bb
-    sort: 0
-    questStuffName: 
-    questInfo: 50
     reward: 2
-    questText: Food buy 50kg
-    buyOrSell: 1
-    villageType: 0
+    questText: "\uACE8\uB4DC\uBCA4 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
+      30kg\uCE58 \uD314\uC544\uB77C!"
+    buyOrSell: 0
+    villageType: 2
     questType: 1
   - id: 3
-    questName: cc
+    questName: "\uBB3C\uAC74\uC744 \uD310\uB9E4\uD558\uC790"
     sort: 0
     questStuffName: 
-    questInfo: 70
+    questInfo: 50
     reward: 3
-    questText: Food buy 70kg
-    buyOrSell: 1
-    villageType: 0
+    questText: "\uC2A4\uBAA8\uD0A4\uC548 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
+      50kg\uCE58 \uD314\uC544\uB77C!"
+    buyOrSell: 0
+    villageType: 3
     questType: 1
   - id: 4
-    questName: dd
+    questName: "\uBB3C\uAC74\uC744 \uAD6C\uB9E4\uD558\uC790"
     sort: 0
     questStuffName: 
-    questInfo: 90
-    reward: 4
-    questText: Food buy 90kg
+    questInfo: 30
+    reward: 2
+    questText: "\uACE8\uB4DC\uBCA4 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
+      30kg\uCE58 \uC0AC\uB77C!"
     buyOrSell: 1
-    villageType: 0
-    questType: 1
-  - id: 5
-    questName: ee
-    sort: 0
-    questStuffName: Oats
-    questInfo: 50
-    reward: 1
-    questText: Food Delivery(GreStar)
-    buyOrSell: 0
-    villageType: 1
-    questType: 2
-  - id: 6
-    questName: ff
-    sort: 0
-    questStuffName: 
-    questInfo: 110
-    reward: 5
-    questText: a
-    buyOrSell: 1
-    villageType: 1
-    questType: 1
-  - id: 7
-    questName: gg
-    sort: 0
-    questStuffName: 
-    questInfo: 130
-    reward: 7
-    questText: b
-    buyOrSell: 1
-    villageType: 0
-    questType: 1
-  - id: 8
-    questName: hh
-    sort: 0
-    questStuffName: 
-    questInfo: 150
-    reward: 6
-    questText: v
-    buyOrSell: 1
-    villageType: 1
-    questType: 1
-  - id: 9
-    questName: jj
-    sort: 0
-    questStuffName: 
-    questInfo: 170
-    reward: 8
-    questText: d
-    buyOrSell: 1
-    villageType: 0
-    questType: 1
-  - id: 10
-    questName: kk
-    sort: 0
-    questStuffName: 
-    questInfo: 200
-    reward: 10
-    questText: e
-    buyOrSell: 1
-    villageType: 0
+    villageType: 2
     questType: 1

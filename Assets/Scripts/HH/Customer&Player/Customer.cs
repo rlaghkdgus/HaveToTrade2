@@ -53,8 +53,8 @@ public class Customer : MonoBehaviour
     [Header("손님 프리팹(손님 별 기능 및 외형),생성 및 퇴장 위치 설정")]
     public List<customerPrefab> currentCusList;
     public List<customerPrefab> cusList;
-    public List<customerPrefab> GrestarCusList;
     public List<customerPrefab> SmokianCusList;
+    public List<customerPrefab> GoldBenCusList;
     public List<Transform> customerTransform;// 생성, 거래위치, 퇴장
 
 
@@ -153,8 +153,8 @@ public class Customer : MonoBehaviour
         list.AddRange(cusList);// 기본손님 리스트 추가
         switch (TownManager.Instance.curTown.TownType)
         {
-            case VillageType.GreStar:
-                list.AddRange(GrestarCusList);
+            case VillageType.GoldBen:
+                list.AddRange(GoldBenCusList);
                 break;
             case VillageType.Smokian:
                 list.AddRange(SmokianCusList);
@@ -179,7 +179,7 @@ public class Customer : MonoBehaviour
             }
             currentCusList = SetRegionCustomer();
             randcusnum = Random.Range(0,currentCusList.Count);
-            randcusnum = 0; //테스트용, 주석해야함.
+            //randcusnum = 0; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
             //CusBargainPointSet(currentCusList[randcusnum].customerNum);

@@ -43,6 +43,7 @@ public enum VillageType
 {
     Idle,
     GreStar,
+    GoldBen,
     Smokian
 }
 

@@ -70,7 +70,7 @@ MonoBehaviour:
   "\uBB34\uB69D\uB69D\uAC70\uB798\uC804\uC7A1\uB2F4":
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uC548\uB155\uD558\uC138\uC694! \uC624\uB298 \uC2DC\uC7A5 \uC0AC\uB78C\uB4E4
       \uB9CE\uC544\uC11C \uC815\uC2E0\uC5C6\uC8E0? \uBB58 \uBCF4\uB7EC \uC624\uC168\uC5B4\uC694?"
   - Type: 
@@ -80,7 +80,7 @@ MonoBehaviour:
       \uAC08 \uAC70\uC57C."
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uC624, \uADF8\uB798\uC694? \uD639\uC2DC \uC81C\uAC00 \uB531 \uB9DE\uB294
       \uAC70 \uCD94\uCC9C\uD574\uB4DC\uB9B4\uAE4C\uC694?"
   - Type: 
@@ -94,7 +94,7 @@ MonoBehaviour:
     Dialog: "\uD765, \uC774\uBC88\uC5D4 \uBCC4\uB85C\uC600\uC5B4. \uB098 \uAC04\uB2E4."
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uADF8\uB7FC \uB2E4\uC74C\uC5D4 \uB354 \uC798 \uB9DE\uCDB0\uBCFC\uAC8C\uC694!"
   - Type: 
     SpeakerIndex: 3
@@ -102,7 +102,7 @@ MonoBehaviour:
     Dialog: "\uBB50, \uB450\uACE0 \uBCF4\uC9C0."
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uD5E4\uD5E4, \uC5B8\uC81C\uB4E0 \uC640\uC8FC\uC138\uC694! \uAE30\uB2E4\uB9B4\uAC8C\uC694!"
   "\uBB34\uB69D\uB69D\uAC70\uB798\uAC70\uC808":
   - Type: 
@@ -111,7 +111,7 @@ MonoBehaviour:
     Dialog: "\uAC00\uACA9\uC774 \uC548 \uB9DE\uC544. \uC548 \uD574."
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uD5C9, \uC9C4\uC9DC\uC694? \uC644\uC804 \uC88B\uC740\uB370, \uC870\uAE08
       \uB354 \uC870\uC815\uD574\uBCFC\uAE4C\uC694?"
   - Type: 
@@ -120,7 +120,7 @@ MonoBehaviour:
     Dialog: "\uB410\uC5B4. \uB2E4\uB978 \uB370 \uAC08\uAC8C."
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uC544\u2026 \uC54C\uACA0\uC5B4\uC694! \uB2E4\uC74C\uC5D4 \uB531 \uB9DE\uAC8C
       \uC900\uBE44\uD560\uAC8C\uC694!"
   "\uC720\uCF8C\uD55C\uC7AC\uD765\uC815":
@@ -131,7 +131,7 @@ MonoBehaviour:
       \uC880 \uAE4E\uC544\uC918\uC57C\uACA0\uC5B4!"
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "\uC9C4\uC9DC\uC694? \uADF8\uB7FC \uC5B4\uB5A4 \uAC00\uACA9\uC774 \uC88B\uC73C\uC2E0\uB370\uC694? "
   "\uC544\uC774\uD15C\uC774\uB984\uCD9C\uB825":
   - Type: 
@@ -142,10 +142,65 @@ MonoBehaviour:
       \uAC70\uB798\uD558\uB294\uAC8C \uC544\uB2C8\uB780 \uAC74 \uC54C\uC544."
   - Type: 
     SpeakerIndex: 0
-    Name: "\uC544\uB9AC\uC0AC"
+    Name: "\uBBF8\uB808\uC0AC"
     Dialog: "(\uC74C\u2026\uB9DD\uD588\uB2E4\u2026)"
   - Type: 
     SpeakerIndex: 2
     Name: "\uC190\uB2D8"
     Dialog: "\uADF8\uB798\uB3C4 [\uD765\uC815\uC81C\uC2DC\uAC00]\uACE8\uB4DC\uBCF4\uB2E4\uB294
-      \uC798 \uCCD0\uC904\uC21C \uC5C6\uACA0\uC5B4? \uB2F9\uC7A5 \uB3C8\uC774 \uAE09\uD574\uC11C\uB9D0\uC774\uC57C."
+      \uC798 \uCCD0\uC904\uC21C \uC5C6\uACA0\uC5B4? \uB2F9\uC7A5 \uAE09\uD574\uC11C\uB9D0\uC774\uC57C."
+  "\uC720\uCF8C\uD55C\uAC70\uB798\uC804\uC778\uC0AC":
+  - Type: 
+    SpeakerIndex: 3
+    Name: "\uC190\uB2D8"
+    Dialog: "\uC624~ \uC0C1\uC778\uC544\uAC00\uC528\uAC00 \uC624\uB79C\uB9CC\uC5D0
+      \uC654\uAD6C\uB9CC."
+  - Type: 
+    SpeakerIndex: 0
+    Name: "\uBBF8\uB808\uC0AC"
+    Dialog: "\uC548\uB155\uD558\uC138\uC694~ \uC694\uC998\uC5D0 \uC81C\uAC00 \uC870\uAE08
+      \uBC14\uBE60\uC11C\u2026."
+  - Type: 
+    SpeakerIndex: 3
+    Name: "\uC190\uB2D8"
+    Dialog: "\uC548\uADF8\uB798\uB3C4 \uB9C8\uCE68 \uC0AC\uACE0 \uD314\uAC8C \uC788\uC5C8\uB294\uB370,
+      \uC798\uB410\uC5B4."
+  - Type: 
+    SpeakerIndex: 0
+    Name: "\uBBF8\uB808\uC0AC"
+    Dialog: "\uD5E4\uD5F7~ \uC81C\uAC00 \uC88B\uC740\uAC00\uACA9\uC5D0 \uB9DE\uCDB0\uB4DC\uB9B4\uAC8C\uC694."
+  "\uC720\uCF8C\uD55C\uAC70\uB798\uD6C4\uC778\uC0AC":
+  - Type: 
+    SpeakerIndex: 3
+    Name: "\uC190\uB2D8"
+    Dialog: "\uC624\uB298\uB3C4 \uC88B\uC740\uAC70\uB798\uC600\uC5B4. \uAC00\uB054\uC529
+      \uC624\uC9C0\uB9D0\uACE0 \uC790\uC8FC\uC790\uC8FC \uB4E4\uB824\uC918."
+  - Type: 
+    SpeakerIndex: 0
+    Name: "\uBBF8\uB808\uC0AC"
+    Dialog: "\uC800\uC57C\uB9D0\uB85C \uC88B\uC740 \uAC70\uB798 \uAC10\uC0AC\uD574\uC694~"
+  "\uC544\uC800\uC528\uAC70\uB798\uC804\uC778\uC0AC":
+  - Type: 
+    SpeakerIndex: 0
+    Name: "\uBBF8\uB808\uC0AC"
+    Dialog: "\uC88B\uC740 \uBB3C\uAC74\uC774 \uB9CE\uC774 \uC788\uC5B4\uC694~ \uB458\uB7EC\uBCF4\uC138\uC694~"
+  - Type: 
+    SpeakerIndex: 2
+    Name: "\uC190\uB2D8"
+    Dialog: "\uC74C, \uADF8\uB798? \uD55C\uBC88 \uB458\uB7EC\uBCF4\uC9C0. \uC544,
+      \uC774\uBB3C\uAC74 \uB300\uCDA9 \uC5BC\uB9C8\uCBE4 \uD560\uAC83\uAC19\uB098?"
+  "\uC544\uC800\uC528\uAC70\uB798\uD6C4\uC778\uC0AC":
+  - Type: 
+    SpeakerIndex: 2
+    Name: "\uC190\uB2D8"
+    Dialog: "\uD06C, \uC80A\uC740 \uC544\uAC00\uC528\uAC00 \uACE0\uC0DD\uC774 \uCC38
+      \uB9CE\uC544, \uB098 \uB54C\uB3C4\u2026..."
+  - Type: 
+    SpeakerIndex: 0
+    Name: "\uBBF8\uB808\uC0AC"
+    Dialog: "\uB124~ \uC190\uB2D8. \uC88B\uC740 \uAC70\uB798 \uAC10\uC0AC\uD569\uB2C8\uB2E4~~"
+  - Type: 
+    SpeakerIndex: 2
+    Name: "\uC190\uB2D8"
+    Dialog: "\uC5B4, \uD06C\uD760. \uADF8\uB798. \uB2E4\uC74C\uC5D0\uB3C4 \uB610
+      \uB4E4\uB824\uC918."

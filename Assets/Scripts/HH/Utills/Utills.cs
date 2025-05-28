@@ -95,9 +95,7 @@ public static class KoreanParticleHelper
         return particle;
     }
 
-    /// <summary>
     /// '을/를' 조사만 반환 (캐싱 포함)
-    /// </summary>
     public static string GetObjectParticle(string word)
     {
         if (string.IsNullOrEmpty(word)) return "";
@@ -110,9 +108,7 @@ public static class KoreanParticleHelper
         return particle;
     }
 
-    /// <summary>
     /// 종성(받침) 유무 확인
-    /// </summary>
     private static bool HasFinalConsonant(string word)
     {
         char lastChar = word[word.Length - 1];
@@ -127,9 +123,7 @@ public static class KoreanParticleHelper
         return false;
     }
 
-    /// <summary>
     /// 한글 음절인지 확인
-    /// </summary>
     private static bool IsHangulSyllable(char c)
     {
         return c >= 0xAC00 && c <= 0xD7A3;

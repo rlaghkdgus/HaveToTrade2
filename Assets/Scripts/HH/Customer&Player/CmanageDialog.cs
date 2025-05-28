@@ -31,8 +31,14 @@ public class CmanageDialog : MonoBehaviour
         {
             switch (customnum)
             {
+                case 0:
+                    SetDialog("아저씨거래전인사");
+                    break;
                 case 1:
                     SetDialog("무뚝뚝거래전잡담");
+                    break;
+                case 4:
+                    SetDialog("유쾌한거래전인사");
                     break;
                 default:
                     InitSign();
@@ -43,11 +49,17 @@ public class CmanageDialog : MonoBehaviour
         {
             switch (customnum)
             {
+                case 0:
+                    SetDialog("아저씨거래후인사");
+                    break;
                 case 1 when !ItemManager.Instance.bargainSuccess && tradefail:
                     SetDialog("무뚝뚝거래거절");
                     break;
                 case 1:
                     SetDialog("화난작별인사");
+                    break;
+                case 4:
+                    SetDialog("유쾌한거래후인사");
                     break;
                 default:
                     InitSign();

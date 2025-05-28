@@ -4411,7 +4411,6 @@ MonoBehaviour:
     - {fileID: 4228965860727309647, guid: 421ee6d95bcdcf242ae421e71ccb08d4, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
-  SmokianCusList:
   - customerNum: 3
     customerName: 
     customerDescription: 
@@ -4426,6 +4425,7 @@ MonoBehaviour:
     - {fileID: 391850099957878561, guid: 52c630af9da28f549af34e6da80a9da8, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
+  SmokianCusList: []
   GoldBenCusList: []
   customerTransform:
   - {fileID: 362906531}
@@ -4838,7 +4838,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000025062598
+      value: 0.00017906957
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5436,7 +5436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 304, y: -722}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491540588
@@ -5468,7 +5468,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5522,7 +5522,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -247.7428, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

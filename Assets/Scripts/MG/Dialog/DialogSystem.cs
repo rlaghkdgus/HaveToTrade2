@@ -41,7 +41,8 @@ public class DialogSystem : MonoBehaviour
     private Dictionary<string, string> dialogReplacements = new Dictionary<string, string>
     {
     { "[물건이름]", "" },
-    { "[흥정제시가]", "" }
+    { "[흥정제시가]", "" },
+    { "[목적어]", "" }
     };
 
     private string ReplacePlaceholders(string original, Dictionary<string, string> replacements)
@@ -209,13 +210,13 @@ public class DialogSystem : MonoBehaviour
 
         //speakers[currentSpeakerIndex].Dialog.text = dialogs[currentDialogIndex].dialog;
 
-        if (customer.Intrade && !(customer.cState.Value == CustomerState.Start))// 거래중에만 아이템 이름 감지 및 Replace작업으로 최대한 GC부담방지
+        if (customer.Intrade && (customer.cState.Value == CustomerState.Bargain))// 거래중에만 아이템 이름 감지 및 Replace작업으로 최대한 GC부담방지
         {
             // dictionary 내부 값만 갱신
-            dialogReplacements["[물건이름]"] = ItemManager.Instance.ItemNameReturn();
-            dialogReplacements["[흥정제시가]"] = "" + customer.bargainValue;
-
             string itemName = ItemManager.Instance.ItemNameReturn();
+            dialogReplacements["[물건이름]"] = itemName;
+            dialogReplacements["[흥정제시가]"] = "" + customer.bargainValue;
+            dialogReplacements["[목적어]"] = KoreanParticleHelper.GetObjectParticle(itemName);
             curDialog = ReplacePlaceholders(dialogs[currentDialogIndex].dialog, dialogReplacements);
         }
         else

@@ -118,6 +118,8 @@ public class ItemManager : Singleton<ItemManager>
         }
         else
         {
+            if (playerInventory.inventory == null)
+                itemName = null;
             itemName = playerInventory.inventory[currentProductIndex].stuffName;
         }
         return itemName;

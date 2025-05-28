@@ -12,7 +12,6 @@ public class CloudManager : MonoBehaviour
     public int cloudCount;
     public Vector2 spawnXRange;
     public Vector2 spawnYRange;
-    public Vector2 durationRange;
 
     private void Awake()
     {
@@ -34,14 +33,10 @@ public class CloudManager : MonoBehaviour
         cloudClone.transform.position = spawnPos;
         cloudClone.GetComponent<SpriteRenderer>().sprite = cloudSprites[index];
 
-        float duration = Random.Range(durationRange.x, durationRange.y);
-
         CloudMove move = cloudClone.GetComponent<CloudMove>();
         if(move != null)
         {
-            move.moveDistance = 11.5f - startX;
-            move.duration = duration;
-            move.InitCloud(11.5f - startX, duration, new Vector3(cloudClone.transform.position.x - 15, cloudClone.transform.position.y, cloudClone.transform.position.z));
+            move.InitCloud(11.5f - startX, new Vector3(cloudClone.transform.position.x - 15, cloudClone.transform.position.y, cloudClone.transform.position.z));
         }
     }
 

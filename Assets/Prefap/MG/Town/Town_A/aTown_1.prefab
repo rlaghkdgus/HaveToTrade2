@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 5181851120068721345}
   - component: {fileID: 5181851120068721344}
   - component: {fileID: 3328023926678429913}
-  - component: {fileID: 3356504624675533367}
   m_Layer: 0
   m_Name: aTown_1
   m_TagString: Town
@@ -186,30 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   sr: {fileID: 5181851120068721344}
---- !u!114 &3356504624675533367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5181851120068721351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1c145cd1994e74cb56ab4fb240c6e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cloudSprites:
-  - {fileID: 847744893, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
-  - {fileID: 1916859248, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
-  - {fileID: 165806112, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
-  - {fileID: 526163057, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
-  - {fileID: 38410083, guid: fb0fb1431db67a44295382d59d07ad1e, type: 3}
-  cloudPrefab: {fileID: 4071492258374999408, guid: e7e2d7b8640316642909db5992d2c21b, type: 3}
-  xPos: []
-  cloudCount: 5
-  spawnXRange: {x: -8, y: 8}
-  spawnYRange: {x: 3, y: 4}
-  durationRange: {x: 30, y: 40}
 --- !u!1 &7846324644055217261
 GameObject:
   m_ObjectHideFlags: 0

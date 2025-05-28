@@ -84,7 +84,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
             }
             else if(!OnUI)
             {
-                ShowUI("Config");
+                GenerateUI("Config");
                 OnUI = true;
             }
             else if(CurrentUI.name == "QuestDescription(Clone)" && !QuestSystem.Instance.questSign)

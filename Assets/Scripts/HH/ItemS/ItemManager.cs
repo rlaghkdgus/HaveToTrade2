@@ -219,7 +219,6 @@ public class ItemManager : Singleton<ItemManager>
     public void SetBargainPrice(float initialChance, int bargainValue, int bargainPoint, float bargainPercent)
     {
         float randomValue = Random.Range(0f, 100f);
-        int diff;
         float chancePoint;
         float totalChance;
 

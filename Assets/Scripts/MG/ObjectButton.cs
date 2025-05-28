@@ -33,6 +33,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        SoundManager.Instance.SFXplay(SoundType.UI_Button);
         switch (s_Type)
         {
             case structureType.Upgrade:
@@ -42,7 +43,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             case structureType.Guild:
                 UIManage.Instance.GenerateUI("FameCheckUI");
                 break;
-            case structureType.Bar:
+            case structureType.Quest:
                 if (!QuestSystem.Instance.questSign)
                 {
                     QuestSystem.Instance.RandomQuest();
@@ -60,7 +61,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 public enum structureType
 {
     Upgrade,
-    Bar,
+    Quest,
     Guild,
     Bank
 }

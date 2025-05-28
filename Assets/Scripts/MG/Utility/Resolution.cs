@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor;
+using UnityEditor.UI;
 
 public class Resolution : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class Resolution : MonoBehaviour
 
     List<UnityEngine.Resolution> SelectedResolutionList = new List<UnityEngine.Resolution>();
 
-    private void Start()
+    public Slider bgmSlider;
+    public Slider sfxSlider;
+
+    private void Awake()
     {
         isFullScreen = true;
         AllResolutions = Screen.resolutions;
@@ -53,6 +57,12 @@ public class Resolution : MonoBehaviour
                 return;
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        SoundManager.Instance.SetBgmVolumeSlider(bgmSlider);
+        SoundManager.Instance.SetSfxVolumeSlider(sfxSlider);
     }
 
     public void ChangeResolution()

@@ -2,39 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public enum SoundType
 {
-    Move,
+    Buy,
+    Sell,
+    Bargain,
+    Reject,
     UI_Button,
-    Trade,
+    HorseUIChange,
+}
+
+public enum BGMtype
+{
+    Main,
+    Meat,
+    Mine,
+    Wheat,
+    Harbor,
+    Cloth,
+    MeatRoad,
+    MineRoad,
+    WheatRoad,
+    HarborRoad,
+    ClothRoad
 }
 
 public class SoundManager : Singleton<SoundManager>
 {
     [Header("BGM")]
-    public AudioClip bgmClip;
+    public AudioClip[] bgmClips;
     AudioSource bgmPlayer;
-    [SerializeField] private Slider bgmVolumeSlider;
 
     [Header("SFX")]
     public AudioClip[] sfxClips;
     public int channels;
     AudioSource[] sfxPlayers;
-    [SerializeField] private Slider sfxVolumeSlider;
     int channelIndex;
 
     private void Awake()
     {
-        bgmVolumeSlider.minValue = 0f;
-        bgmVolumeSlider.maxValue = 1f;
-        bgmVolumeSlider.onValueChanged.AddListener(delegate { OnbgmVolumeSliderChanged(); });
-
-        sfxVolumeSlider.minValue = 0f;
-        sfxVolumeSlider.maxValue = 1f;
-        sfxVolumeSlider.onValueChanged.AddListener(delegate { OnsfxVolumeSliderChanged(); });
-
+        DontDestroyOnLoad(gameObject);
         Init();
     }
 
@@ -46,8 +56,7 @@ public class SoundManager : Singleton<SoundManager>
         bgmPlayer = bgmObject.AddComponent<AudioSource>();
         bgmPlayer.playOnAwake = false;
         bgmPlayer.loop = true;
-        bgmPlayer.volume = bgmVolumeSlider.value;
-        bgmPlayer.clip = bgmClip;
+        BGMplay(true, BGMtype.Main);
 
         // 효과음 플레이어 초기화
         GameObject sfxObject = new GameObject("SfxPlayer");
@@ -58,8 +67,27 @@ public class SoundManager : Singleton<SoundManager>
         {
             sfxPlayers[index] = sfxObject.AddComponent<AudioSource>();
             sfxPlayers[index].playOnAwake = false;
-            sfxPlayers[index].volume = sfxVolumeSlider.value;
         }
+    }
+
+    public void SetBgmVolumeSlider(Slider slider)
+    {
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+
+        slider.value = bgmPlayer.volume;
+
+        slider.onValueChanged.AddListener(delegate { OnbgmVolumeSliderChanged(slider); });
+    }
+
+    public void SetSfxVolumeSlider(Slider slider)
+    {
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+
+        slider.value = sfxPlayers.Length > 0 ? sfxPlayers[0].volume : 1f;
+
+        slider.onValueChanged.AddListener(delegate { OnsfxVolumeSliderChanged(slider); });
     }
 
     public void SFXplay(SoundType sfx)
@@ -80,8 +108,10 @@ public class SoundManager : Singleton<SoundManager>
         }
     }
 
-    public void BGMplay(bool isPlay)
+    public void BGMplay(bool isPlay, BGMtype bgm)
     {
+        bgmPlayer.clip = bgmClips[(int)bgm];
+
         if (isPlay)
         {
             bgmPlayer.Play();
@@ -92,16 +122,16 @@ public class SoundManager : Singleton<SoundManager>
         }
     }
 
-    private void OnbgmVolumeSliderChanged()
+    private void OnbgmVolumeSliderChanged(Slider slider)
     {
-        bgmPlayer.volume = bgmVolumeSlider.value;
+        bgmPlayer.volume = slider.value;
     }
 
-    private void OnsfxVolumeSliderChanged()
+    private void OnsfxVolumeSliderChanged(Slider slider)
     {
         for (int index = 0; index < sfxPlayers.Length; index++)
         {
-            sfxPlayers[index].volume = sfxVolumeSlider.value;
+            sfxPlayers[index].volume = slider.value;
         }
     }
 }

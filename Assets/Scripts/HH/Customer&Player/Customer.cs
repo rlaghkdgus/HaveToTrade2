@@ -129,22 +129,27 @@ public class Customer : MonoBehaviour
     {
         if (!OnTrade)
             return;
+        SoundManager.Instance.SFXplay(SoundType.UI_Button);
         cState.Value = CustomerState.Start;
     }
     public void CustomerBuy()
     {
+        SoundManager.Instance.SFXplay(SoundType.Buy);
         cState.Value = CustomerState.Buy;
     }
     public void CustomerSell()
     {
+        SoundManager.Instance.SFXplay(SoundType.Sell);
         cState.Value = CustomerState.Sell;
     }
     public void CustomerReject()
     {
+        SoundManager.Instance.SFXplay(SoundType.Reject);
         cState.Value = CustomerState.Reject;
     }
     public void CustomerBargain()
     {
+        SoundManager.Instance.SFXplay(SoundType.Bargain);
         cState.Value = CustomerState.Bargain;
     }
     #endregion

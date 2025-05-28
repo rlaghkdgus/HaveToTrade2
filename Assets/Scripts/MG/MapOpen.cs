@@ -12,4 +12,9 @@ public class MapOpen : MonoBehaviour
         map.transform.SetParent(GameObject.FindWithTag("Canvas").transform);
         map.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
     }
+
+    public void mapOpen()
+    {
+        UIManage.Instance.GenerateUI("map");
+    }
 }

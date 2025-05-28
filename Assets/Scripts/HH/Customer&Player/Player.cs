@@ -34,9 +34,8 @@ public class Player : Singleton<Player>
     public Slider clothFameBar;
     public Slider pFoodFameBar;
     [Header("명성별 설명 텍스트")]
-    public TMP_Text FameInfoText;
-    public GameObject FameInfoButton;
-    private int InfoPreIndex;
+    
+    
     [Header("명성 요구량")]
     public int[] tier = new int[4];
     [Header("레벨별 할인율")]
@@ -107,39 +106,5 @@ public class Player : Singleton<Player>
         if (clothFameBar != null)
             clothFameBar.value = clothFame.fame / 15f;
     }
-    public void FameInfo(int buttonIndex)
-    {
-        switch(buttonIndex)
-        {
-            case 0:
-                FameInfoText.text = "할인율 " + tier[0] + "% 증가";
-                break;
-            case 1:
-                FameInfoText.text = "할인율 " + tier[1] + " % 증가";
-                break;
-            case 2:
-                FameInfoText.text = "할인율 " + tier[2] + "% 증가";
-                break;
-            case 3:
-                FameInfoText.text = "할인율 " + tier[3] + "% 증가";
-                break;
-        }
-        
-        if(FameInfoButton.activeSelf == false)
-        {
-            FameInfoButton.SetActive(true);
-        }
-        else
-        {
-            if (InfoPreIndex != buttonIndex)
-            {
-                InfoPreIndex = buttonIndex;
-                return;
-            }
-            else
-                InfoPreIndex = buttonIndex;
-            FameInfoButton.SetActive(false);
-        }
-
-    }
+   
 }

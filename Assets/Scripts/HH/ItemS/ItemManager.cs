@@ -27,6 +27,7 @@ public class ItemManager : Singleton<ItemManager>
     public pItem buyItem;
     private static ItemManager instance;
 
+    VillageType curVill;
     public GameObject weightPopUp;
 
     private void Awake()
@@ -48,6 +49,7 @@ public class ItemManager : Singleton<ItemManager>
     #region 거래전 아이템 세팅
     public void RandomSetItem(int sortcount)
     {
+        curVill = TownManager.Instance.curTown.TownType;
         for (int i = 0; i < sortcount; i++)
         {
             int randnum;
@@ -106,7 +108,22 @@ public class ItemManager : Singleton<ItemManager>
         PutInfo(randCount);
     }
     #endregion
+#region 아이템 이름 반환
+    public string ItemNameReturn()
+    {
+        string itemName;
+        if(customer.buyOrSell)
+        {
+            itemName = itemSO.items[currentProductIndex].stuffName;
+        }
+        else
+        {
+            itemName = playerInventory.inventory[currentProductIndex].stuffName;
+        }
+        return itemName;
+    }
 
+    #endregion
     #region 구매 및 판매 실제 과정
     public void BuyProduct()
     {
@@ -130,6 +147,7 @@ public class ItemManager : Singleton<ItemManager>
             playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].MaxWeight)
         {
             Debug.LogError("인벤토리 용량 초과 : " + playerInventory.sortWeight[itemSO.items[currentProductIndex].sort]);
+            playerInventory.sortWeight[itemSO.items[currentProductIndex].sort].CurrentWeight -= itemTotalWeight;
             StartCoroutine("WeightOverPopUp");
             productCount++;
             buyItem = null;
@@ -154,8 +172,8 @@ public class ItemManager : Singleton<ItemManager>
             inventoryUI.InitUI(true);
         }
 
-        if (QuestSystem.Instance.currentQuestType == QuestType.Trade)
-            QuestSystem.Instance.QuestProgress(buyItem, itemTotalWeight);
+        if (QuestSystem.Instance.currentQuestType == QuestType.Trade && QuestSystem.Instance.questBuyOrSell)
+            QuestSystem.Instance.QuestProgress(buyItem, itemTotalWeight,curVill);
 
         productCount++;
         buyItem = null;
@@ -189,8 +207,8 @@ public class ItemManager : Singleton<ItemManager>
             playerInventory.sortWeight[itemToRemove.sort].CurrentWeight -= itemTotalWeight;
         }
 
-        if (QuestSystem.Instance.currentQuestType == QuestType.Trade)
-            QuestSystem.Instance.QuestProgress(itemToRemove, itemTotalWeight);
+        if (QuestSystem.Instance.currentQuestType == QuestType.Trade && !QuestSystem.Instance.questBuyOrSell)
+            QuestSystem.Instance.QuestProgress(itemToRemove, itemTotalWeight,curVill);
 
         productCount++;
         BargainClear();
@@ -224,7 +242,7 @@ public class ItemManager : Singleton<ItemManager>
         if (totalChance >= randomValue)
         {
             bargainPrice = bargainValue;
-            customer.costText.text = "price : " + bargainPrice;
+            customer.costText.text = " " + bargainPrice;
             bargainSuccess = true;
         }
         else
@@ -258,13 +276,13 @@ public class ItemManager : Singleton<ItemManager>
             pItem countItem = playerInventory.inventory.Find(item => item.stuffName == buyItem.stuffName);
             customer.playerCountTexts.text = "" + (countItem != null ? countItem.counts : 0);
             customer.productImages.sprite = itemSO.items[currentProductIndex].image;
-            customer.costText.text = "price : " + itemSO.items[currentProductIndex].price;
+            customer.costText.text = " " + itemSO.items[currentProductIndex].price;
         }
         else
         {
             customer.playerCountTexts.text = "" + playerInventory.inventory[currentProductIndex].counts;
             customer.productImages.sprite = playerInventory.inventory[currentProductIndex].image;
-            customer.costText.text = "price : " + playerInventory.inventory[currentProductIndex].price;
+            customer.costText.text = " " + playerInventory.inventory[currentProductIndex].price;
         }
 
         CusProductCountSet();

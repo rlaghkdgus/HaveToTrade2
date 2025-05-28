@@ -123,9 +123,23 @@ MonoBehaviour:
     Name: "\uC190\uB2D8"
     Dialog: "\uB9C8 \uB044\uC9C0\uB77C \uADF8\uB0E5"
   CustomerReject2:
-  - SpeakerIndex: 3
+  - Type: 
+    SpeakerIndex: 3
     Name: "\uC190\uB2D8"
     Dialog: "\uADF8\uAC70\uB108\uBB34\uBE44\uC2FC\uB370 \uD765\uC815\uC880\uB2E4\uC2DC\uD560\uAE4C\uC694"
-  - SpeakerIndex: 0
+  - Type: 
+    SpeakerIndex: 0
     Name: "\uC544\uB9AC\uC0AC"
     Dialog: "\uC608\uBB50\uC5BC\uB9C8\uC6D0\uD558\uC2ED\uB2C8\uAEBC"
+  "\uC544\uC774\uD15C\uC774\uB984\uCD9C\uB825":
+  - Type: 
+    SpeakerIndex: 3
+    Name: "\uC190\uB2D8"
+    Dialog: "\uC544\uB2C8 \uC774\uC591\uBC18\uC544, \uC544\uBB34\uB9AC \uADF8\uB798\uB3C4
+      \uADF8\uB807\uC9C0 [\uBB3C\uAC74\uC774\uB984] \uC774\uAC70\uB97C  [\uD765\uC815\uC81C\uC2DC\uAC00]\uACE8\uB4DC\uB85C
+      \uD6C4\uB824\uCE58\uB294\uAC8C \uB9D0\uC774\uB098\uB418\uB294\uACA8?"
+  - Type: 
+    SpeakerIndex: 0
+    Name: "\uC544\uB9AC\uC0AC"
+    Dialog: "\uC544\uB530 \uB9C8 \uC120\uC81C\uC2DC \uD574\uBCF4\uB77C\uB9E4\uC694
+      \uC544\uC9C0\uB9E4"

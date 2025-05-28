@@ -53,8 +53,8 @@ public class Customer : MonoBehaviour
     [Header("손님 프리팹(손님 별 기능 및 외형),생성 및 퇴장 위치 설정")]
     public List<customerPrefab> currentCusList;
     public List<customerPrefab> cusList;
-    public List<customerPrefab> GrestarCusList;
     public List<customerPrefab> SmokianCusList;
+    public List<customerPrefab> GoldBenCusList;
     public List<Transform> customerTransform;// 생성, 거래위치, 퇴장
 
 
@@ -86,7 +86,7 @@ public class Customer : MonoBehaviour
 
     public Data<CustomerState> cState = new Data<CustomerState>();//상태별 이벤트
     private GameObject newCustomer;
-    private int bargainValue;
+    public int bargainValue;
     public int randcusnum = 0;
     public TMP_Text productTexts;
     public Image productImages;
@@ -95,7 +95,8 @@ public class Customer : MonoBehaviour
     public bool buyOrSell;//참일때구매, 거짓일때판매
 
     bool OnTrade = true;
-    
+    [Header("Dialog용")]
+    public bool Intrade; 
     public void tradeOn()
     {
         OnTrade = true;
@@ -152,8 +153,8 @@ public class Customer : MonoBehaviour
         list.AddRange(cusList);// 기본손님 리스트 추가
         switch (TownManager.Instance.curTown.TownType)
         {
-            case VillageType.GreStar:
-                list.AddRange(GrestarCusList);
+            case VillageType.GoldBen:
+                list.AddRange(GoldBenCusList);
                 break;
             case VillageType.Smokian:
                 list.AddRange(SmokianCusList);
@@ -171,16 +172,17 @@ public class Customer : MonoBehaviour
         {
             blockButtonClick.SetActive(true);
             OnTrade = false;
+            Intrade = true;
             if(cusCount <= 0)
             {
                 cusCount = Random.Range(3, 6);
             }
             currentCusList = SetRegionCustomer();
             randcusnum = Random.Range(0,currentCusList.Count);
-            //randcusnum = 4; //테스트용, 주석해야함.
+            //randcusnum = 0; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
-            CusBargainPointSet(currentCusList[randcusnum].customerNum);
+            //CusBargainPointSet(currentCusList[randcusnum].customerNum);
             
             StartCoroutine(MoveCustomerToPosition(newCustomer, customerTransform[1].position));
         }
@@ -414,6 +416,7 @@ public class Customer : MonoBehaviour
         {
             currentCusList.Clear();
             cState.Value = CustomerState.Idle;
+            Intrade = false;
             buttonEdit.SetActive(true);
             blockButtonClick.SetActive(false);
         }
@@ -498,6 +501,7 @@ public class Customer : MonoBehaviour
                     return true;
                 }
                 break;
+            case 0:
             case 4:
                 if(ItemManager.Instance.bargainSuccess == false)
                 {

@@ -14,4 +14,5 @@ public class DialogData : ScriptableObject
     public List<TextData> Customer2;
     public List<TextData> CustomerReject1;
     public List<TextData> CustomerReject2;
+    public List<TextData> 아이템이름출력;
 }

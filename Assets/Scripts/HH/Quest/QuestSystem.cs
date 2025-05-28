@@ -34,19 +34,21 @@ public class QuestSystem : Singleton<QuestSystem>
     [Header("퀘스트 진행 신호")]
     public bool questSign; // 퀘스트 진행중인지 확인
     public bool deliveryCheckSign;
+    [Header("동적생성용 랜덤번호 체크")]
+    public int randnum;
     #region 퀘스트 생성 및 관리
     public void RandomQuest()
     {
         for(int i = 0; i < 3; i++)
         {
-            int randnum;
+            
             do
             {
                 randnum = Random.Range(0, questTable.quest.Count);
             }while(questRandIndex.Contains(randnum));
             questRandIndex.Add(randnum);
-            questDescription[i].text = questTable.quest[randnum].questText;
-            questName[i].text = questTable.quest[randnum].questName;
+            //questDescription[i].text = questTable.quest[randnum].questText;
+            //questName[i].text = questTable.quest[randnum].questName;
         }
     }
     public void QuestAccept(int buttonindex)
@@ -63,6 +65,8 @@ public class QuestSystem : Singleton<QuestSystem>
         TextReset();
         questSign = true;
         questRandIndex.Clear();
+        randnum = 0;
+        UIManage.Instance.HideQuest();
     }
     public void QuestClear()
     {
@@ -74,10 +78,11 @@ public class QuestSystem : Singleton<QuestSystem>
         deliveryCheckSign = false;
         FameUp();
     }
-    public void QuestProgress(pItem ItemCheck, float QuestWeight)
+    public void QuestProgress(pItem ItemCheck, float QuestWeight, VillageType village)
     {
         if (questSign == false || ItemCheck.sort != qTargetItem || customer.buyOrSell != questBuyOrSell)
             return;
+        if(questVillage == VillageType.Idle || village == questVillage)
         questTarget += QuestWeight;
         TextReset();
         if (questTarget >= questGoal)
@@ -89,9 +94,9 @@ public class QuestSystem : Singleton<QuestSystem>
     private void TextReset()
     {
         if (currentQuestType == QuestType.Trade)
-            targetQuestText.text = "target:" + qTargetItem.ToString() + "  " + questTarget + " / " + questGoal;
+            targetQuestText.text = "품목 :" + qTargetItem.ToString() + "\n" +"목적지 :" + questVillage.ToString() +"\n" + "  " + questTarget + " / " + questGoal;
         else if (currentQuestType == QuestType.Delivery)
-            targetQuestText.text = "target:" + qTargetItem.ToString() + " destination :" + questVillage.ToString();
+            targetQuestText.text = "품목 :" + qTargetItem.ToString() + " 목적지 :" + questVillage.ToString();
         else
             targetQuestText.text = "";
     }
@@ -129,7 +134,7 @@ public class QuestSystem : Singleton<QuestSystem>
             ItemManager.Instance.playerInventory.QuestItemRemove(qTargetItemName);
             QuestClear();
         }
- 
+
 
     }
 }

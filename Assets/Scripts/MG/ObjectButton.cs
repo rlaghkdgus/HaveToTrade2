@@ -40,14 +40,13 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 UpgradeManager.Instance.UpdateUI();
                 break;
             case structureType.Guild:
-                Player.Instance.FameBarCheck();
-                UIManage.Instance.ShowUI("FameCheckUI");
+                UIManage.Instance.GenerateUI("FameCheckUI");
                 break;
             case structureType.Bar:
                 if (!QuestSystem.Instance.questSign)
                 {
                     QuestSystem.Instance.RandomQuest();
-                    UIManage.Instance.ShowUI("QuestDescription");
+                    UIManage.Instance.GenerateUI("QuestDescription");
                 }
                 break;
             case structureType.Bank:

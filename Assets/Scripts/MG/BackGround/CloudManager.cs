@@ -7,11 +7,11 @@ public class CloudManager : MonoBehaviour
 {
     public List<Sprite> cloudSprites = new List<Sprite>();
     public GameObject cloudPrefab;
-    public List<float> xPos = new List<float>();
+    private List<float> xPos = new List<float>();
 
     public int cloudCount;
-    public Vector2 spawnXRange;
-    public Vector2 spawnYRange;
+    public Vector2 spawnXRange = new Vector2(-8, 8);
+    public Vector2 spawnYRange = new Vector2(3, 4);
 
     private void Awake()
     {

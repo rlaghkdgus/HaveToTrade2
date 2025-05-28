@@ -75,3 +75,63 @@ static class YieldCache
         return wfsReal;
     }
 }
+public static class KoreanParticleHelper
+{
+    private static Dictionary<string, string> subjectCache = new();
+    private static Dictionary<string, string> objectCache = new();
+
+    /// <summary>
+    /// '이/가' 조사만 반환 (캐싱 포함)
+    /// </summary>
+    public static string GetSubjectParticle(string word)
+    {
+        if (string.IsNullOrEmpty(word)) return "";
+
+        if (subjectCache.TryGetValue(word, out string particle))
+            return particle;
+
+        particle = HasFinalConsonant(word) ? "이" : "가";
+        subjectCache[word] = particle;
+        return particle;
+    }
+
+    /// <summary>
+    /// '을/를' 조사만 반환 (캐싱 포함)
+    /// </summary>
+    public static string GetObjectParticle(string word)
+    {
+        if (string.IsNullOrEmpty(word)) return "";
+
+        if (objectCache.TryGetValue(word, out string particle))
+            return particle;
+
+        particle = HasFinalConsonant(word) ? "을" : "를";
+        objectCache[word] = particle;
+        return particle;
+    }
+
+    /// <summary>
+    /// 종성(받침) 유무 확인
+    /// </summary>
+    private static bool HasFinalConsonant(string word)
+    {
+        char lastChar = word[word.Length - 1];
+
+        if (IsHangulSyllable(lastChar))
+        {
+            int unicode = lastChar - 0xAC00;
+            int jongseongIndex = unicode % 28;
+            return jongseongIndex != 0;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 한글 음절인지 확인
+    /// </summary>
+    private static bool IsHangulSyllable(char c)
+    {
+        return c >= 0xAC00 && c <= 0xD7A3;
+    }
+}

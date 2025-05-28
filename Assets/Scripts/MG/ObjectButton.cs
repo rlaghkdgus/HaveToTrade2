@@ -33,29 +33,25 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Å¬¸¯È®ÀÎ");
         switch (s_Type)
         {
-            case structureType.Trade:
-                //customer.CustomerStart();
-                break;
             case structureType.Upgrade:
                 UIManage.Instance.ShowUI("UpgradeUI");
                 UpgradeManager.Instance.UpdateUI();
                 break;
             case structureType.Guild:
                 Player.Instance.FameBarCheck();
-                UIManage.Instance.FameUI.SetActive(true);
-                //UIManage.Instance.ShowUI("GuildUI");
+                UIManage.Instance.ShowUI("FameCheckUI");
                 break;
             case structureType.Bar:
-                QuestSystem.Instance.RandomQuest();
-                UIManage.Instance.QuestUI.SetActive(true);
-                //UIManage.Instance.ShowUI("BarUI");
+                if (!QuestSystem.Instance.questSign)
+                {
+                    QuestSystem.Instance.RandomQuest();
+                    UIManage.Instance.ShowUI("QuestDescription");
+                }
                 break;
             case structureType.Bank:
-                UIManage.Instance.BankUI.SetActive(true);
-                //UIManage.Instance.ShowUI("BankUI");
+                UIManage.Instance.ShowUI("BankUI");
                 break;
         }
     }
@@ -64,7 +60,6 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
 public enum structureType
 {
-    Trade,
     Upgrade,
     Bar,
     Guild,

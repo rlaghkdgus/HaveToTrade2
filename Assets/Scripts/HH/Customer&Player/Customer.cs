@@ -186,11 +186,10 @@ public class Customer : MonoBehaviour
             }
             currentCusList = SetRegionCustomer();
             randcusnum = Random.Range(0,currentCusList.Count);
-            randcusnum = 0; //테스트용, 주석해야함.
+            //randcusnum = 0; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
             //CusBargainPointSet(currentCusList[randcusnum].customerNum);
-            
             StartCoroutine(MoveCustomerToPosition(newCustomer, customerTransform[1].position));
         }
     }

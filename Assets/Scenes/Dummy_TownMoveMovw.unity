@@ -1537,7 +1537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 0}
+  m_AnchoredPosition: {x: 500, y: 40}
   m_SizeDelta: {x: 50, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312916932
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d4328f3d387f884292a279deaff1015, type: 3}
+  m_Sprite: {fileID: 1521465019, guid: 369bed157f55b414e91850fac009d456, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3234,7 +3234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888385201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.7, z: 0}
+  m_LocalPosition: {x: 0, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4376,14 +4376,14 @@ MonoBehaviour:
     customerName: 
     customerDescription: 
     cusPrefab:
-    - {fileID: 8309213339656623887, guid: 37e8de217e6fb884cbfa0094cb2c1fd7, type: 3}
+    - {fileID: 4228965860727309647, guid: 421ee6d95bcdcf242ae421e71ccb08d4, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
   - customerNum: 4
     customerName: 
     customerDescription: 
     cusPrefab:
-    - {fileID: 8309213339656623887, guid: 37e8de217e6fb884cbfa0094cb2c1fd7, type: 3}
+    - {fileID: 391850099957878561, guid: 52c630af9da28f549af34e6da80a9da8, type: 3}
     cusBargainChance: 0
     cusProductCount: 0
   GoldBenCusList: []
@@ -4416,6 +4416,7 @@ MonoBehaviour:
   playerCountTexts: {fileID: 0}
   costText: {fileID: 0}
   buyOrSell: 0
+  tradeButton: {fileID: 1729823355}
   Intrade: 0
 --- !u!4 &1198146903
 Transform:
@@ -4797,7 +4798,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0002350455
+      value: 0.00010554944
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5420,8 +5421,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 75be79935bdf1a4419e952539d4dc4df, type: 2}
+  m_sharedMaterial: {fileID: -8209562392556834740, guid: 75be79935bdf1a4419e952539d4dc4df, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5919,7 +5920,7 @@ RectTransform:
   m_GameObject: {fileID: 1558584042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.114148, y: 36.822865, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1871747622}
@@ -5927,7 +5928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 301, y: 228}
+  m_AnchoredPosition: {x: 500, y: 70}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558584044
@@ -5950,8 +5951,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1861799606, guid: 27d488cb64f40a8429352e3bd4e2c0b6, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 358980954, guid: 369bed157f55b414e91850fac009d456, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6310,9 +6311,6 @@ MonoBehaviour:
   - {fileID: 7071846750334415866}
   CurrentUI: {fileID: 0}
   basicUI: {fileID: 134301604}
-  FameUI: {fileID: 0}
-  QuestUI: {fileID: 1729286107}
-  BankUI: {fileID: 7071846750334415866}
 --- !u!114 &1601694293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7167,6 +7165,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1729823355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1928720381641884036, guid: 296d5fba70e3bfb4595de08040fa15d0, type: 3}
+  m_PrefabInstance: {fileID: 1638347762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1745616354
 GameObject:
   m_ObjectHideFlags: 0

@@ -209,7 +209,7 @@ public class DialogSystem : MonoBehaviour
 
         //speakers[currentSpeakerIndex].Dialog.text = dialogs[currentDialogIndex].dialog;
 
-        if (customer.Intrade)// 거래중에만 아이템 이름 감지 및 Replace작업으로 최대한 GC부담방지
+        if (customer.Intrade && !(customer.cState.Value == CustomerState.Start))// 거래중에만 아이템 이름 감지 및 Replace작업으로 최대한 GC부담방지
         {
             // dictionary 내부 값만 갱신
             dialogReplacements["[물건이름]"] = ItemManager.Instance.ItemNameReturn();

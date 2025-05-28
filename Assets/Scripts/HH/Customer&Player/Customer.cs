@@ -95,11 +95,13 @@ public class Customer : MonoBehaviour
     public bool buyOrSell;//참일때구매, 거짓일때판매
 
     bool OnTrade = true;
+   [SerializeField] GameObject tradeButton;
     [Header("Dialog용")]
     public bool Intrade; 
     public void tradeOn()
     {
         OnTrade = true;
+        tradeButton.SetActive(true);
     }
     void Start()
     {
@@ -179,7 +181,7 @@ public class Customer : MonoBehaviour
             }
             currentCusList = SetRegionCustomer();
             randcusnum = Random.Range(0,currentCusList.Count);
-            //randcusnum = 0; //테스트용, 주석해야함.
+            randcusnum = 1; //테스트용, 주석해야함.
             int randcusprefab = Random.Range(0, currentCusList[randcusnum].cusPrefab.Length);
             newCustomer = Instantiate(currentCusList[randcusnum].cusPrefab[randcusprefab], customerTransform[0]);
             //CusBargainPointSet(currentCusList[randcusnum].customerNum);
@@ -417,6 +419,7 @@ public class Customer : MonoBehaviour
             currentCusList.Clear();
             cState.Value = CustomerState.Idle;
             Intrade = false;
+            tradeButton.SetActive(false);
             buttonEdit.SetActive(true);
             blockButtonClick.SetActive(false);
         }

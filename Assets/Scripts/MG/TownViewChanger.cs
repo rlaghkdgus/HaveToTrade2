@@ -15,6 +15,7 @@ public class TownViewChanger : MonoBehaviour
     {
         if(currentIndex + index >= 0 && currentIndex + index <= SingleTownList.Count)
         {
+            SoundManager.Instance.SFXplay(SoundType.UI_Button);
             StartCoroutine(ChangeTownViewPrefab(index, SingleTownList));
         }
     }

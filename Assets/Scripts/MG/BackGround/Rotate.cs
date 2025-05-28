@@ -13,4 +13,9 @@ public class Rotate : MonoBehaviour
             .SetEase(Ease.Linear)
             .SetLoops(-1);
     }
+
+    private void OnDisable()
+    {
+        DOTween.Kill(transform);
+    }
 }

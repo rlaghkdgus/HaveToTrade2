@@ -29,6 +29,7 @@ public class Travel : MonoBehaviour
     [SerializeField] private GameObject curTownClone;
     [SerializeField] private GameObject nextTown;
     public GameObject nextTownClone;
+    private VillageType nextTownType;
 
     [SerializeField] private List<int> RandomRoad;
 
@@ -80,6 +81,7 @@ public class Travel : MonoBehaviour
         CopyRoad(nextTownDB.RoadPrefabs_F[RandomRoad[0]], 0);
         CopyRoad(nextTownDB.RoadPrefabs_M[RandomRoad[1]], 1);
         CopyRoad(nextTownDB.RoadPrefabs_B[RandomRoad[2]], 2);
+        nextTownType = nextTownDB.TownType;
         curTownClone = curTown;
         this.nextTown = nextTown;
         StartCoroutine(MoveRoad());
@@ -135,6 +137,15 @@ public class Travel : MonoBehaviour
         GameObject[] clouds = GameObject.FindGameObjectsWithTag("Cloud");
 
         yield return new WaitForSeconds(FadeTime);
+        switch (nextTownType)
+        {
+            case VillageType.Smokian:
+                SoundManager.Instance.BGMplay(true, BGMtype.MeatRoad);
+                break;
+            case VillageType.GoldBen:
+                SoundManager.Instance.BGMplay(true, BGMtype.MineRoad);
+                break;
+        }
         for (int i = 0; i < clouds.Length; ++i)
         {
             Destroy(clouds[i]);
@@ -217,6 +228,15 @@ public class Travel : MonoBehaviour
         yield return new WaitForSeconds(FadeTime);
         nextTownClone = Instantiate<GameObject>(nextTown, Vector3.zero, Quaternion.identity);
         Player.Instance.AnimationChange(false);
+        switch (nextTownType)
+        {
+            case VillageType.Smokian:
+                SoundManager.Instance.BGMplay(true, BGMtype.Meat);
+                break;
+            case VillageType.GoldBen:
+                SoundManager.Instance.BGMplay(true, BGMtype.Mine);
+                break;
+        }
         yield return new WaitForSeconds(FadeTime);
         OnMove = false;
         InitRoad();

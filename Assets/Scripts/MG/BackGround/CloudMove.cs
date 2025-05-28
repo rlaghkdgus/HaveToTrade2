@@ -41,4 +41,9 @@ public class CloudMove : MonoBehaviour
                 MoveCloud();
             });
     }
+
+    private void OnDisable()
+    {
+        DOTween.Kill(transform);
+    }
 }

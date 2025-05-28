@@ -41,7 +41,7 @@ public class FadeLoad : MonoBehaviour
             }
             yield return null;
         }
-
+        SoundManager.Instance.BGMplay(true, BGMtype.Meat);
         yield return StartCoroutine(FadeTo(0f, 1f));
 
         yield return new WaitForSeconds(1f);

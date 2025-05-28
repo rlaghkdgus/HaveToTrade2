@@ -184,9 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_Type: 4
+  s_Type: 3
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
-  customer: {fileID: 0}
 --- !u!60 &3711888233533027616
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -365,6 +364,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_Type: 1
+  s_Type: 0
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
-  customer: {fileID: 0}

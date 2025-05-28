@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Plugins/Borodar/RainbowFolders/Editor/Source/RainbowFolders.src.unitypackage.meta
 guid: 0248e41c3b61f024da11f0cfcc6f055d
+========
+guid: 4fe663f31d2a93b40a3bef152dbfb629
+folderAsset: yes
+>>>>>>>> main:Assets/Sound.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

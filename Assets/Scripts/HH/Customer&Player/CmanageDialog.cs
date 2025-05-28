@@ -58,6 +58,9 @@ public class CmanageDialog : MonoBehaviour
         {
             switch (customnum)
             {
+                case 0 when !ItemManager.Instance.bargainSuccess && tradefail:
+                    SetDialog("아이템이름출력");
+                    break;
                 case 4 when !ItemManager.Instance.bargainSuccess && tradefail:
                     SetDialog("CustomerReject2");
                     break;

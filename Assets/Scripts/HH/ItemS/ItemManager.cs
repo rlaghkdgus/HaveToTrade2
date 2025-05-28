@@ -106,7 +106,22 @@ public class ItemManager : Singleton<ItemManager>
         PutInfo(randCount);
     }
     #endregion
+#region 아이템 이름 반환
+    public string ItemNameReturn()
+    {
+        string itemName;
+        if(customer.buyOrSell)
+        {
+            itemName = itemSO.items[currentProductIndex].stuffName;
+        }
+        else
+        {
+            itemName = playerInventory.inventory[currentProductIndex].stuffName;
+        }
+        return itemName;
+    }
 
+    #endregion
     #region 구매 및 판매 실제 과정
     public void BuyProduct()
     {

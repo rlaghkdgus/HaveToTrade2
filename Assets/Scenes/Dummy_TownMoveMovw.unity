@@ -4416,12 +4416,14 @@ MonoBehaviour:
   textTransform: {fileID: 0}
   typingDelay: 0
   buttonEdit: {fileID: 56003899}
+  bargainValue: 0
   randcusnum: 0
   productTexts: {fileID: 0}
   productImages: {fileID: 0}
   playerCountTexts: {fileID: 0}
   costText: {fileID: 0}
   buyOrSell: 0
+  Intrade: 0
 --- !u!4 &1198146903
 Transform:
   m_ObjectHideFlags: 0
@@ -4802,7 +4804,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00056183164
+      value: 0.00032247874
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8223,6 +8225,7 @@ MonoBehaviour:
   isFirst: 1
   typingSpeed: 0.1
   isTypingEffect: 0
+  customer: {fileID: 1198146902}
 --- !u!4 &1949786927
 Transform:
   m_ObjectHideFlags: 0
@@ -8253,7 +8256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1953437245
 RectTransform:
   m_ObjectHideFlags: 0

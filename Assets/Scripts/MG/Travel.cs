@@ -132,8 +132,13 @@ public class Travel : MonoBehaviour
     private IEnumerator MoveRoad()
     {
         GameObject fadeInOut = Instantiate(fadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
-        
+        GameObject[] clouds = GameObject.FindGameObjectsWithTag("Cloud");
+
         yield return new WaitForSeconds(FadeTime);
+        for (int i = 0; i < clouds.Length; ++i)
+        {
+            Destroy(clouds[i]);
+        }
         if (curTownClone != null)
         {
             Destroy(curTownClone);

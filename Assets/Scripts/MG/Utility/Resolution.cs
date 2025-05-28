@@ -39,6 +39,20 @@ public class Resolution : MonoBehaviour
         }
 
         resolutionDropdown.AddOptions(resolutionStringList);
+
+        UnityEngine.Resolution currentResolution = Screen.currentResolution;
+
+        Screen.SetResolution(currentResolution.width, currentResolution.height, true);
+
+        for(int i = 0; i < resolutionDropdown.options.Count; ++i)
+        {
+            if (resolutionDropdown.options[i].text == currentResolution.width.ToString() + " x " + currentResolution.height.ToString())
+            {
+                resolutionDropdown.value = i;
+                resolutionDropdown.RefreshShownValue();
+                return;
+            }
+        }
     }
 
     public void ChangeResolution()

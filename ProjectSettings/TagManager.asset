@@ -16,6 +16,7 @@ TagManager:
   - WolfMiniGame
   - CustomerManager
   - InvenSlot
+  - Cloud
   layers:
   - Default
   - TransparentFX

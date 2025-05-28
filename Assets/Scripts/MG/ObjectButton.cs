@@ -35,27 +35,21 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         switch (s_Type)
         {
-            case structureType.Trade:
-                //customer.CustomerStart();
-                break;
             case structureType.Upgrade:
                 UIManage.Instance.ShowUI("UpgradeUI");
                 UpgradeManager.Instance.UpdateUI();
                 break;
             case structureType.Guild:
-                //UIManage.Instance.FameUI.SetActive(true);
                 UIManage.Instance.GenerateUI("FameCheckUI");
                 break;
             case structureType.Bar:
                 if (!QuestSystem.Instance.questSign)
                 {
                     QuestSystem.Instance.RandomQuest();
-                    //UIManage.Instance.QuestUI.SetActive(true);
                     UIManage.Instance.GenerateUI("QuestDescription");
                 }
                 break;
             case structureType.Bank:
-                //UIManage.Instance.BankUI.SetActive(true);
                 UIManage.Instance.ShowUI("BankUI");
                 break;
         }
@@ -65,7 +59,6 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
 public enum structureType
 {
-    Trade,
     Upgrade,
     Bar,
     Guild,

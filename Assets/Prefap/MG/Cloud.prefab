@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDistance: 25
-  duration: 0
+  speed: 0.5
   resetPos: {x: 0, y: 0, z: 0}

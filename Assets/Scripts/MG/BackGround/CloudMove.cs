@@ -6,15 +6,22 @@ using UnityEngine;
 public class CloudMove : MonoBehaviour
 {
     public float moveDistance; // 이동거리
-    public float duration; // 이동속도
+    private float duration; // 이동시간
+    public float speed; // 이동속도
     public Vector3 resetPos; // 시작위치
+    private bool isReset = false;
 
-    public void InitCloud(float moveDistance, float duration, Vector3 resetPos)
+    public void InitCloud(float moveDistance, Vector3 resetPos)
     {
         this.moveDistance = moveDistance;
-        this.duration = duration;
         this.resetPos = resetPos;
+        CalDuration();
         MoveCloud();
+    }
+
+    private void CalDuration()
+    {
+        duration = moveDistance / speed;
     }
 
     private void MoveCloud()
@@ -25,6 +32,12 @@ public class CloudMove : MonoBehaviour
             .OnComplete(() =>
             {
                 transform.position = resetPos;
+                if (!isReset)
+                {
+                    moveDistance += 15f;
+                    CalDuration();
+                    isReset = true;
+                }
                 MoveCloud();
             });
     }

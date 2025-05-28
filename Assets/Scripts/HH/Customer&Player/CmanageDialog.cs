@@ -32,7 +32,7 @@ public class CmanageDialog : MonoBehaviour
             switch (customnum)
             {
                 case 1:
-                    SetDialog("TextEX3");
+                    SetDialog("무뚝뚝거래전잡담");
                     break;
                 default:
                     InitSign();
@@ -44,10 +44,10 @@ public class CmanageDialog : MonoBehaviour
             switch (customnum)
             {
                 case 1 when !ItemManager.Instance.bargainSuccess && tradefail:
-                    SetDialog("CustomerReject1");
+                    SetDialog("무뚝뚝거래거절");
                     break;
                 case 1:
-                    SetDialog("Customer2");
+                    SetDialog("화난작별인사");
                     break;
                 default:
                     InitSign();
@@ -62,7 +62,7 @@ public class CmanageDialog : MonoBehaviour
                     SetDialog("아이템이름출력");
                     break;
                 case 4 when !ItemManager.Instance.bargainSuccess && tradefail:
-                    SetDialog("CustomerReject2");
+                    SetDialog("유쾌한재흥정");
                     break;
                 default:
                     InitSign();

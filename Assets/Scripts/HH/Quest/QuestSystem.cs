@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 
 public class QuestSystem : Singleton<QuestSystem>
@@ -63,12 +64,16 @@ public class QuestSystem : Singleton<QuestSystem>
         questBuyOrSell = questTable.quest[currentIndex].buyOrSell;
         currentQuestType = questTable.quest[currentIndex].questType;
         questVillage = questTable.quest[currentIndex].villageType;
-        questUI.SetActive(false);
         TextReset();
         questSign = true;
         questRandIndex.Clear();
         randnum = 0;
-        UIManage.Instance.HideQuest();
+        UIManage.Instance.HideGenerate();
+        Scene curScene = SceneManager.GetActiveScene();
+        if(curScene.name == "Tutorial_Scene")
+        {
+            QuestClear();
+        }
     }
     public void QuestClear()
     {

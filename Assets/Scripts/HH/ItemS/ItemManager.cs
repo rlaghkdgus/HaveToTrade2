@@ -33,7 +33,7 @@ public class ItemManager : Singleton<ItemManager>
     VillageType curVill;
     public GameObject weightPopUp;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (instance != null && instance != this)
         {
@@ -43,7 +43,7 @@ public class ItemManager : Singleton<ItemManager>
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
+    */
     private void Start()
     {
         playerInventory.InitWeight();

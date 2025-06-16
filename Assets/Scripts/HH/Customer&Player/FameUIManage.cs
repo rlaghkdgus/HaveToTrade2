@@ -86,5 +86,8 @@ public class FameUIManage : MonoBehaviour
         }
 
     }
-
+    public void EscFameCheck()
+    {
+        UIManage.Instance.HideGenerate();
+    }
 }

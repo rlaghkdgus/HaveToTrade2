@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해야함.
 {
@@ -26,8 +27,8 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
             _curUI = value;
         }
     }
-    private bool OnUI = false;
-    private bool GUISign = false;
+    public bool OnUI = false;
+    public bool GUISign = false;
     public GameObject basicUI;
 
     private void Awake()
@@ -72,7 +73,8 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
 
     public void ShowUI(string uiName)
     {
-        if (uiName == "BankUI")
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (uiName == "BankUI" && !(currentScene.name == "Tutorial_Scene"))
         {
             StartCoroutine(BankActive(uiName));
             return;
@@ -121,7 +123,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
             }
         }
     }
-    public void HideQuest() // 퀘스트 UI 닫을때만.
+    public void HideGenerate() // 퀘스트 UI 닫을때만.
     {
         Destroy(CurrentUI);
         CurrentUI = null;
@@ -133,6 +135,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
         CurrentUI.SetActive(false);
         OnUI = false; 
     }
+
     IEnumerator BankActive(string uiName)
     {
         GameObject fade = Instantiate(FadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);

@@ -20,6 +20,15 @@ public class pItem //플레이어가 들고있는 아이템
         this.image = itemData.image;
         this.weight = itemData.weight;
     }
+    public pItem(pItem other)
+    {
+        this.stuffName = other.stuffName;
+        this.counts = other.counts;
+        this.image = other.image;
+        this.price = other.price;
+        this.weight = other.weight;
+        this.sort = other.sort;
+    }
 }
 
 

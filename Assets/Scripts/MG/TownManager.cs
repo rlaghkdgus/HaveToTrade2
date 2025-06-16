@@ -44,6 +44,8 @@ public class TownManager : Singleton<TownManager>
             // Map 力芭
             var Map = GameObject.FindWithTag("Map");
             Destroy(Map);
+            UIManage.Instance.OnUI = false;
+            UIManage.Instance.GUISign = false;
             // 辨 积己 角青
             travel.LoadRoad(TownClone, nextTown.TownPrefabs[0], nextTown);
         }

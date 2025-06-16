@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class ItemManager : Singleton<ItemManager>
 {
     [Header("아이템데이터")]
@@ -17,7 +17,9 @@ public class ItemManager : Singleton<ItemManager>
     [Header("데이터 교환시 사용할 리스트(UI포함)")]
     public List<int> productIndex;
     public List<int> itemCountIndex;
-
+    private int maxItemCount;
+    [SerializeField] TMP_InputField itemCountInputField;
+    private int tempItemcount;
     [Header("디버그용")]
     public int productCount = 0;
     private List<int> randIndex = new List<int>();
@@ -25,6 +27,7 @@ public class ItemManager : Singleton<ItemManager>
     public bool bargainSuccess = false;
     public int currentProductIndex = 0;
     public pItem buyItem;
+    public List<pItem> SelledItems;
     private static ItemManager instance;
 
     VillageType curVill;
@@ -70,14 +73,15 @@ public class ItemManager : Singleton<ItemManager>
             sortcount = playerInventory.inventory.Count;
         for (int i = 0; i < sortcount; i++)
         {
-            int randnum;
+            /*int randnum;
             do
             {
                 randnum = Random.Range(0, playerInventory.inventory.Count);
             }
             while (randIndex.Contains(randnum) || playerInventory.inventory.Count - 1 < randnum);
             randIndex.Add(randnum);
-            productIndex.Add(randnum);
+            */
+            productIndex.Add(0);
         }
         randIndex.Clear();
     }
@@ -100,17 +104,38 @@ public class ItemManager : Singleton<ItemManager>
     public void SetSellUI()
     {
         int randCount;
-        if (productIndex[productCount] >= playerInventory.inventory.Count)
+        pItem candidate;
+        int tryCount = 0;
+        const int maxTries = 30; // 무한 루프 방지용
+        do
+        {
             productIndex[productCount] = Random.Range(0, playerInventory.inventory.Count);
-        currentProductIndex = productIndex[productCount];
-        if (playerInventory.inventory[currentProductIndex].counts > itemCountLimit)
+            currentProductIndex = productIndex[productCount];
+            candidate = playerInventory.inventory[currentProductIndex];
+            tryCount++;
+
+            // 무한 루프 방지 조건
+            if (tryCount > maxTries)
+            {
+                Debug.LogWarning("판매 아이템 설정에 너무 많은 반복 발생. 중복이더라도 강제 선택.");
+                break;
+            }
+
+        } while (SelledItems.Exists(item => item.stuffName == candidate.stuffName));
+
+        // 유효한 아이템 선택 완료
+        SelledItems.Add(candidate);
+
+        // 수량 결정
+        if (candidate.counts > itemCountLimit)
         {
             randCount = Random.Range(1, itemCountLimit + 1);
         }
         else
         {
-            randCount = Random.Range(1, playerInventory.inventory[currentProductIndex].counts + 1);
+            randCount = Random.Range(1, candidate.counts + 1);
         }
+
         PutInfo(randCount);
     }
     #endregion
@@ -238,9 +263,27 @@ public class ItemManager : Singleton<ItemManager>
         else
         {
             if (bargainValue < 0)
-                bargainValue = 0;
-            chancePoint = ((float)bargainValue / playerInventory.inventory[currentProductIndex].price - 1) * 100f;
-                 
+                bargainValue = 0; // 음수 흥정시 바로 0으로 변경
+
+            float basePrice = playerInventory.inventory[currentProductIndex].price;
+            float ratio = (float)bargainValue / basePrice;
+
+            if (ratio >= 2f)
+            {
+                // 2배 이상이면 확률 0%
+                chancePoint = 100f;
+            }
+            else if (ratio <= 1f)
+            {
+                // 원가 이하이면 확률 100%
+                chancePoint = 0f;
+            }
+            else
+            {
+                // 선형적으로 감소: 1배일 때 0%, 2배일 때 100%
+                chancePoint = (ratio - 1f) * 100f;
+            }
+
         }
         totalChance = initialChance - chancePoint;
 
@@ -263,8 +306,13 @@ public class ItemManager : Singleton<ItemManager>
     public void ListClear()
     {
         productIndex.Clear();
+        if (SelledItems != null)
+        {
+            SelledItems.Clear();
+        }
         itemCountIndex.Clear();
         productCount = 0;
+        
     }
 
     public void BargainClear()
@@ -276,7 +324,7 @@ public class ItemManager : Singleton<ItemManager>
     public void PutInfo(int randCount)
     {
         itemCountIndex.Add(randCount);
-
+        maxItemCount = itemCountIndex[productCount];
         if (customer.buyOrSell)
         {
             buyItem = new pItem(itemSO.items[currentProductIndex]);
@@ -311,13 +359,13 @@ public class ItemManager : Singleton<ItemManager>
             case 1:
                 if (customer.buyOrSell == true && buyItem.sort == ItemSorts.food)
                 {
-                    itemCountIndex[productCount] += 5;
+                    maxItemCount = itemCountIndex[productCount] += 5;
                 }
                 else if (customer.buyOrSell == false && playerInventory.inventory[currentProductIndex].sort == ItemSorts.food)
                 {
-                    itemCountIndex[productCount] += 5;
+                    maxItemCount = itemCountIndex[productCount] += 5;
                     if (itemCountIndex[productCount] >= playerInventory.inventory[currentProductIndex].counts)
-                        itemCountIndex[productCount] = playerInventory.inventory[currentProductIndex].counts;
+                        maxItemCount = itemCountIndex[productCount] = playerInventory.inventory[currentProductIndex].counts;
                 }
                 break;
         }
@@ -345,5 +393,48 @@ public class ItemManager : Singleton<ItemManager>
                 break;
         }
         return salePercent;
+    }
+    public void PlusItemCount()
+    {
+        if (maxItemCount > itemCountIndex[productCount])
+        {
+            itemCountIndex[productCount]++;
+            customer.productTexts.text = "" + itemCountIndex[productCount];
+        }   
+    }
+    public void MinusItemCount()
+    {
+        if (itemCountIndex[productCount] > 1)
+        {
+            itemCountIndex[productCount]--;
+            customer.productTexts.text = "" + itemCountIndex[productCount];
+        }
+    }
+    public void SetItemCount()
+    {
+        StartCoroutine(SetItemCountCycle());
+    }
+    IEnumerator SetItemCountCycle()
+    {
+        Debug.Log("a");
+        if (int.TryParse(itemCountInputField.text, out tempItemcount))//파싱
+        {
+            if(tempItemcount < 1 || tempItemcount > maxItemCount)
+            {
+                yield break;
+            }
+            else
+            {
+                itemCountIndex[productCount] = tempItemcount;
+                customer.productTexts.text = "" + itemCountIndex[productCount];
+            }
+            itemCountInputField.text = "";
+        }
+        else
+        {
+            Debug.Log("Error");
+            yield return null;
+            //정수 이외 다른 값일시 돌아가도록
+        }
     }
 }

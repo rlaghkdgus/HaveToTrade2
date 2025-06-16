@@ -6,9 +6,11 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
 {
     [SerializeField] private List<GameObject> uiPrefabs;
     [SerializeField] private List<GameObject> uiField;
-
+    [SerializeField] private GameObject FadeUI;
+    [SerializeField] private float FadeTime = 1f;
     private Dictionary<string, GameObject> uiDictionary = new Dictionary<string, GameObject>();
     private Dictionary<string, GameObject> uiF_dic = new Dictionary<string, GameObject>();
+
 
     private GameObject _curUI;
     public GameObject CurrentUI 
@@ -70,6 +72,11 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
 
     public void ShowUI(string uiName)
     {
+        if (uiName == "BankUI")
+        {
+            StartCoroutine(BankActive(uiName));
+            return;
+        }
         uiF_dic[uiName].SetActive(true);
         CurrentUI = uiF_dic[uiName];
         OnUI = true;
@@ -85,7 +92,11 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
                 {
                     TownManager.Instance.ButtonGroup.SetActive(true);
                     Destroy(CurrentUI);
+                    OnUI = false;
+                    GUISign = false;
+                    return;
                 }
+               
                 Destroy(CurrentUI);
                 CurrentUI = null;
                 //CurrentUI.SetActive(false);
@@ -102,6 +113,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
             {
                 GenerateUI("Config");
                 OnUI = true;
+                GUISign = true;
             }
             else if(CurrentUI.name == "QuestDescription(Clone)" && !QuestSystem.Instance.questSign)
             {
@@ -114,8 +126,20 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
         Destroy(CurrentUI);
         CurrentUI = null;
         OnUI = false;
+        GUISign = false;
     }
-
+    public void HideBank()
+    {
+        CurrentUI.SetActive(false);
+        OnUI = false; 
+    }
+    IEnumerator BankActive(string uiName)
+    {
+        GameObject fade = Instantiate(FadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
+        yield return new WaitForSeconds(FadeTime);
+        uiF_dic[uiName].SetActive(true);
+        CurrentUI = uiF_dic[uiName];
+    }
     ///public GameObject wolfMiniUI;
 
     public void wolfMinigame(bool gameState)

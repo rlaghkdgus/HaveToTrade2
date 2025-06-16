@@ -10,7 +10,7 @@ public class Bank : MonoBehaviour
     [SerializeField] TMP_InputField repayField;
     [SerializeField] GameObject repayUIButton;
     int repayValue;
-
+    [SerializeField] GameObject repayPopUp;
     private void Start()
     {
         loanText.text = "" + loan;
@@ -21,7 +21,7 @@ public class Bank : MonoBehaviour
     }
     IEnumerator LoanRepayment()
     {
-        if (int.TryParse(repayField.text, out repayValue))//ÆÄ½Ì
+        if (int.TryParse(repayField.text, out repayValue))//íŒŒì‹±
         {
             
             if(repayValue <= 0 || (Player.Instance.money - repayValue) < 0)
@@ -39,6 +39,9 @@ public class Bank : MonoBehaviour
             loanText.text = "" + loan;
             Player.Instance.RenewMoney();
             renewUI();
+
+            StartCoroutine(RePayPopUp());
+
             if (loan == 0)
             {
                 EventManager.OnLoanClearCall();
@@ -49,10 +52,17 @@ public class Bank : MonoBehaviour
             renewUI();
             Debug.Log("Error");
             yield break;
-            //Á¤¼ö ÀÌ¿Ü ´Ù¸¥ °ªÀÏ½Ã µ¹¾Æ°¡µµ·Ï
+            //ì •ìˆ˜ ì´ì™¸ ë‹¤ë¥¸ ê°’ì¼ì‹œ ëŒì•„ê°€ë„ë¡
         }
     }
-
+    IEnumerator RePayPopUp()
+    {
+        yield return YieldCache.WaitForSeconds(0.1f);
+        GameObject popup = Instantiate(repayPopUp, GameObject.FindGameObjectWithTag("Canvas").transform);
+        yield return YieldCache.WaitForSeconds(1f);
+        Destroy(popup);
+    }
+    
     void renewUI()
     {
         repayField.text = "";

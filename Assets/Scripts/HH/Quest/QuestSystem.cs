@@ -96,11 +96,22 @@ public class QuestSystem : Singleton<QuestSystem>
     private void TextReset()
     {
         if (currentQuestType == QuestType.Trade)
-            targetQuestText.text = "前格 :" + qTargetItem.ToString() + "\n" +"格利瘤 :" + questVillage.ToString() +"\n" + "  " + questTarget + " / " + questGoal;
+            targetQuestText.text = "前格 :" + qTargetItem.ToString() + "\n" +"格利瘤 :" + questVillage.ToString() +"\n" + "  " + questTarget + " / " + questGoal + "  " + BuyOrSellText();
         else if (currentQuestType == QuestType.Delivery)
             targetQuestText.text = "前格 :" + qTargetItem.ToString() + " 格利瘤 :" + questVillage.ToString();
         else
             targetQuestText.text = "";
+    }
+    private string BuyOrSellText()
+    {
+        if(questBuyOrSell)
+        {
+            return "备概";
+        }
+        else
+        {
+            return "魄概";
+        }
     }
     private void FameUp()
     {

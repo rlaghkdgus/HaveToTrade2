@@ -7,7 +7,7 @@ public class Rotate : MonoBehaviour
 {
     public float RotateTime;
 
-    private void Start()
+    private void Awake()
     {
         transform.DORotate(new Vector3(0, 0, 360), RotateTime, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)

@@ -6,8 +6,10 @@ public class TutorialController : MonoBehaviour
 {
     [SerializeField] private List<TutorialBase> tutorials;
 
-    private TutorialBase currentTutorial = null;
+    [SerializeField] private TutorialBase currentTutorial = null;
     private int currentIndex = -1;
+
+    public FadeLoad loadManager;
 
     private void Start()
     {
@@ -44,5 +46,6 @@ public class TutorialController : MonoBehaviour
     public void CompletedAllTutorials()
     {
         currentTutorial = null;
+        loadManager.StartFadeLoad();
     }
 }

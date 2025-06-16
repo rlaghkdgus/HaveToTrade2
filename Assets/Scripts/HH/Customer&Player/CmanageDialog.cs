@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CmanageDialog : MonoBehaviour
@@ -40,6 +41,9 @@ public class CmanageDialog : MonoBehaviour
                 case 4:
                     SetDialog("유쾌한거래전인사");
                     break;
+                case 91:
+                    SetDialog("BreadShop_B");
+                    break;
                 default:
                     InitSign();
                     break;
@@ -60,6 +64,9 @@ public class CmanageDialog : MonoBehaviour
                     break;
                 case 4:
                     SetDialog("유쾌한거래후인사");
+                    break;
+                case 91:
+                    SetDialog("BreadShop_A");
                     break;
                 default:
                     InitSign();

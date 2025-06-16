@@ -7,6 +7,7 @@ public class TownDB : ScriptableObject
 {
     public string TownName; // 마을 이름
     public VillageType TownType;
+    public bool UseCloud;
 
     public List<GameObject> TownPrefabs; // 마을 프리팹
 

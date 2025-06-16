@@ -29,7 +29,7 @@ public class Travel : MonoBehaviour
     [SerializeField] private GameObject curTownClone;
     [SerializeField] private GameObject nextTown;
     public GameObject nextTownClone;
-    private VillageType nextTownType;
+    private TownDB nextTownDB;
 
     [SerializeField] private List<int> RandomRoad;
 
@@ -42,6 +42,7 @@ public class Travel : MonoBehaviour
     [SerializeField] RoadEvent roadEvent;
     [Header("손님 거래신호용")]
     [SerializeField] Customer customer;
+
     private void CombinationRoad(TownDB nextTownDB)
     {
         RandomRoad.Clear();
@@ -49,7 +50,6 @@ public class Travel : MonoBehaviour
         RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_M.Count));
         RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_B.Count));
     }
-   
     
     private void CopyRoad(GameObject clone, int type) // forward = 0, middle = 1, back = 2
     {
@@ -81,7 +81,7 @@ public class Travel : MonoBehaviour
         CopyRoad(nextTownDB.RoadPrefabs_F[RandomRoad[0]], 0);
         CopyRoad(nextTownDB.RoadPrefabs_M[RandomRoad[1]], 1);
         CopyRoad(nextTownDB.RoadPrefabs_B[RandomRoad[2]], 2);
-        nextTownType = nextTownDB.TownType;
+        this.nextTownDB = nextTownDB;
         curTownClone = curTown;
         this.nextTown = nextTown;
         StartCoroutine(MoveRoad());
@@ -137,7 +137,7 @@ public class Travel : MonoBehaviour
         GameObject[] clouds = GameObject.FindGameObjectsWithTag("Cloud");
 
         yield return new WaitForSeconds(FadeTime);
-        switch (nextTownType)
+        switch (nextTownDB.TownType)
         {
             case VillageType.Smokian:
                 SoundManager.Instance.BGMplay(true, BGMtype.MeatRoad);
@@ -227,8 +227,9 @@ public class Travel : MonoBehaviour
 
         yield return new WaitForSeconds(FadeTime);
         nextTownClone = Instantiate<GameObject>(nextTown, Vector3.zero, Quaternion.identity);
+        EventManager.OnGenerateTownCall_Cloud(nextTownDB.UseCloud);
         Player.Instance.AnimationChange(false);
-        switch (nextTownType)
+        switch (nextTownDB.TownType)
         {
             case VillageType.Smokian:
                 SoundManager.Instance.BGMplay(true, BGMtype.Meat);
@@ -240,7 +241,8 @@ public class Travel : MonoBehaviour
         yield return new WaitForSeconds(FadeTime);
         OnMove = false;
         InitRoad();
-
+        
+        Player.Instance._MoveCount++;
         TownManager.Instance.UpdateTown();
         customer.tradeOn();
         isFade = false;

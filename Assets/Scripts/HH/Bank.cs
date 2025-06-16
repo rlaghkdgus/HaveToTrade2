@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 public class Bank : MonoBehaviour
 {
-
     public int loan;
     [SerializeField] TMP_Text loanText;
     [SerializeField] TMP_InputField repayField;
@@ -40,6 +39,10 @@ public class Bank : MonoBehaviour
             loanText.text = "" + loan;
             Player.Instance.RenewMoney();
             renewUI();
+            if (loan == 0)
+            {
+                EventManager.OnLoanClearCall();
+            }
         }
         else
         {

@@ -81,6 +81,12 @@ public class ItemManager : Singleton<ItemManager>
         }
         randIndex.Clear();
     }
+
+    public void FixedSetItem(int setIndex)
+    {
+        productIndex.Clear();
+        productIndex.Add(setIndex);    
+    }
     #endregion
 
     #region 거래 UI세팅

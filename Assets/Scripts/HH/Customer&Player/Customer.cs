@@ -97,19 +97,32 @@ public class Customer : MonoBehaviour
     bool OnTrade = true;
    [SerializeField] GameObject tradeButton;
     [Header("Dialog용")]
-    public bool Intrade; 
+    public bool Intrade;
+
+    [Header("Tutorial용")]
+    public TutorialTrade T3_trade;
+    public TutorialTradeEnd T5_tradeEnd;
+
     public void tradeOn()
     {
         OnTrade = true;
         tradeButton.SetActive(true);
     }
+
     void Start()
     {
         productTexts = pTxt;
         productImages = pImg;
         playerCountTexts = pcTxt;
         costText = cText;
-        cusCount = Random.Range(3, 6);
+        if(T3_trade != null)
+        {
+            cusCount = 1;
+        }
+        else
+        {
+            cusCount = Random.Range(3, 6);
+        }
         Player.Instance.RenewMoney();
         //cState.Value = CustomerState.Start;
     }
@@ -201,7 +214,17 @@ public class Customer : MonoBehaviour
             int randsort = Random.Range(1, tradeSortCount+1);
             BuyOrSell();//구매 or 판매 랜덤으로 돌리기
             if (buyOrSell == true)
-                ItemManager.Instance.RandomSetItem(randsort);
+            {
+                if (T3_trade != null && T3_trade.fixItem)
+                {
+                    ItemManager.Instance.FixedSetItem(7);
+                    Debug.Log("아이템 고정됨");
+                }
+                else
+                {
+                    ItemManager.Instance.RandomSetItem(randsort);
+                }
+            }
             else
                 ItemManager.Instance.RandomSetItemSell(randsort);
             cState.Value = CustomerState.SetUI;
@@ -426,6 +449,11 @@ public class Customer : MonoBehaviour
             tradeButton.SetActive(false);
             buttonEdit.SetActive(true);
             blockButtonClick.SetActive(false);
+            T5_tradeEnd.isEnd = true;
+            if (Player.Instance.isMaxCount && Player.Instance.money < 100000)
+            {
+                EventManager.OnTownMoveMaxCall();
+            }
         }
         else
         {

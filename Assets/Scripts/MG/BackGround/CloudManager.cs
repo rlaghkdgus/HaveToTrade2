@@ -16,10 +16,31 @@ public class CloudManager : MonoBehaviour
     private void Awake()
     {
         xPos = CertainDistanceXpos(cloudCount, spawnXRange);
+    }
 
-        for (int i = 0; i < cloudCount; ++i)
+    private void OnEnable()
+    {
+        EventManager.OnGenerateTown += SpawnAllCloud;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnGenerateTown -= SpawnAllCloud;
+    }
+
+    private void SpawnAllCloud(bool cloud)
+    {
+        if (!cloud)
         {
-            SpawnCloud(i);
+            return;
+        }
+        else
+        {
+            for (int i = 0; i < cloudCount; ++i)
+            {
+                SpawnCloud(i);
+            }
+            Debug.Log("구름 생성 완료");
         }
     }
 

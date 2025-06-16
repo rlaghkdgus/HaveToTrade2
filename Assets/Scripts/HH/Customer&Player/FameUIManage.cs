@@ -29,6 +29,7 @@ public class FameUIManage : MonoBehaviour
                 clothFameBar.value = Player.Instance.clothFame.fame / 15f;
         
     }
+
     private void Start()
     {
         for (int i = 0; i < fameSkillButton.Count; i++)

@@ -60,6 +60,7 @@ public class Customer : MonoBehaviour
 
     [Header("손님 거래창")]
     public GameObject CustomerUI;
+    [SerializeField] TMP_Text tradeSignUI;
     public GameObject BuyUI;
     public GameObject SellUI;
     [Header("흥정 창")]
@@ -303,9 +304,15 @@ public class Customer : MonoBehaviour
             //buyOrSell = false;
         else
             buyOrSell = false;
-
+        
     }
-    
+    void ResetTradeSignText()
+    {
+        if (buyOrSell)
+            tradeSignUI.text = "상품 구매중...";
+        else
+            tradeSignUI.text = "상품 판매중...";
+    }
     public void BargainStart()//버튼으로 흥정시작
     {
         StartCoroutine("BargainCycle");
@@ -506,6 +513,7 @@ public class Customer : MonoBehaviour
     #endregion
     private void UIon()// UI 일괄 on
     {
+        ResetTradeSignText();
         rejectButton.SetActive(true);
         bargainButton.SetActive(true);
         CustomerUI.SetActive(true);

@@ -10,7 +10,20 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     private Dictionary<string, GameObject> uiDictionary = new Dictionary<string, GameObject>();
     private Dictionary<string, GameObject> uiF_dic = new Dictionary<string, GameObject>();
 
-    public GameObject CurrentUI;
+    private GameObject _curUI;
+    public GameObject CurrentUI 
+    {
+        get => _curUI;
+        set
+        {
+            if(_curUI != null && value == null)
+            {
+                EventManager.OnTownBuildingUIOff();
+            }
+
+            _curUI = value;
+        }
+    }
     private bool OnUI = false;
     private bool GUISign = false;
     public GameObject basicUI;
@@ -43,7 +56,8 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     {
         if(uiDictionary.TryGetValue(uiName, out GameObject prefab))
         {
-            GameObject newUI = Instantiate(prefab, transform);
+            GameObject newUI = Instantiate(prefab, transform.GetChild(0));
+            newUI.transform.SetSiblingIndex(transform.GetChild(0).childCount - 3);
             CurrentUI = newUI;
             OnUI = true;
             GUISign = true;
@@ -73,6 +87,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
                     Destroy(CurrentUI);
                 }
                 Destroy(CurrentUI);
+                CurrentUI = null;
                 //CurrentUI.SetActive(false);
                 OnUI = false;
                 GUISign = false;
@@ -80,6 +95,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
             else if(OnUI && !GUISign && CurrentUI.name != "QuestDescription(Clone)")
             {
                 CurrentUI.SetActive(false);
+                CurrentUI = null;
                 OnUI = false;
             }
             else if(!OnUI)
@@ -96,6 +112,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
     public void HideQuest() // 퀘스트 UI 닫을때만.
     {
         Destroy(CurrentUI);
+        CurrentUI = null;
         OnUI = false;
     }
 

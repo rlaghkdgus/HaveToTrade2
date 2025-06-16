@@ -54,6 +54,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 UIManage.Instance.ShowUI("BankUI");
                 break;
         }
+        EventManager.OnTownBuildingClick();
     }
     
 }

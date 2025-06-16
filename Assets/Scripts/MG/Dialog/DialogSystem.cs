@@ -156,16 +156,17 @@ public class DialogSystem : MonoBehaviour
                     SetNextDialog();
                 }
                 else
-                {/*
+                {
                     for (int i = 0; i < speakers.Length; ++i)
                     {
                         SetActiveSpeakers(speakers[i], false);
                         speakers[i].SpeakerImage.gameObject.SetActive(false);
                     }
                     dialogUI.gameObject.SetActive(false);
-                    DialogBG.SetActive(false);*/
+                    DialogBG.SetActive(false);
 
                     TestInit();
+                    Debug.Log("Á¾·á");
                     return true;
                 }
             }
@@ -200,7 +201,7 @@ public class DialogSystem : MonoBehaviour
         SetActiveSpeakers(speakers[currentSpeakerIndex], false);
 
         currentDialogIndex++;
-
+        Debug.Log(currentDialogIndex);
         currentSpeakerIndex = dialogs[currentDialogIndex].speakerIndex;
 
         SetActiveSpeakers(speakers[currentSpeakerIndex], true);

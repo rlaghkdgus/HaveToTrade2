@@ -11117,7 +11117,7 @@ PrefabInstance:
     - target: {fileID: 8160591208107035238, guid: bb94b1d4ed131e9499aeb16e23edd2c3, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 483096641}
     - target: {fileID: 8160591208107035238, guid: bb94b1d4ed131e9499aeb16e23edd2c3, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeResolution
@@ -11245,7 +11245,7 @@ PrefabInstance:
     - target: {fileID: 8160591209491530421, guid: bb94b1d4ed131e9499aeb16e23edd2c3, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 483096641}
     - target: {fileID: 8160591209491530421, guid: bb94b1d4ed131e9499aeb16e23edd2c3, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeFullScreen
@@ -11900,7 +11900,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00008992132
+      value: 0.00005755122
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12017,11 +12017,11 @@ PrefabInstance:
     - target: {fileID: 6977296054842378027, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 483096638}
     - target: {fileID: 6977296054842378027, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 483096639}
     - target: {fileID: 6977296054842378027, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -12029,6 +12029,10 @@ PrefabInstance:
     - target: {fileID: 6977296054842378027, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977296054842378027, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: UpdateWeightText
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054842378027, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -13258,7 +13262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1343350112
 RectTransform:
   m_ObjectHideFlags: 0

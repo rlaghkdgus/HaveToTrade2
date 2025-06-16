@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class TownManager : MonoBehaviour
+public class TownManager : Singleton<TownManager>
 {
-    private static TownManager instance;
-
     [SerializeField] public TownDB curTown; // 현재 마을 정보
     [SerializeField] private TownDB nextTown; // 다음 마을 정보
     
@@ -16,32 +15,14 @@ public class TownManager : MonoBehaviour
    
     private void Awake()
     {
-        if(instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
         travel = GetComponent<Travel>();
         changer = GetComponent<TownViewChanger>();
-        TownGenerate();
         changer.ButtonUIUpdate(curTown.TownPrefabs);
     }
 
-    public static TownManager Instance
+    private void Start()
     {
-        get
-        {
-            if(instance == null)
-            {
-                return null;
-            }
-            return instance;
-        }
+        TownGenerate();
     }
 
     private void OnEnable() // Town 버튼 이벤트 구독
@@ -78,6 +59,7 @@ public class TownManager : MonoBehaviour
     {
         // 현재 마을 동적 생성
         TownClone = Instantiate<GameObject>(curTown.TownPrefabs[changer.currentIndex], new Vector3(0, 0, 0), Quaternion.identity);
+        EventManager.OnGenerateTownCall_Cloud(curTown.UseCloud);
         Debug.Log("타운 생성 완료");
     }
 
@@ -92,6 +74,10 @@ public class TownManager : MonoBehaviour
         changer.currentIndex = 0;
         changer.ButtonUIUpdate(curTown.TownPrefabs);
         ButtonGroup.SetActive(true);
+        if (Player.Instance.isMaxCount)
+        {
+            ButtonGroup.transform.GetChild(2).gameObject.SetActive(false);
+        }
     }
     
     public void ViewChangeButtonAction(int index)

@@ -57,6 +57,20 @@ public class Resolution : MonoBehaviour
                 return;
             }
         }
+
+        #region 해상도, 전체화면 버튼 이벤트 추가
+        if (resolutionDropdown != null)
+        {
+            resolutionDropdown.onValueChanged.AddListener((_) => ChangeResolution());
+        }
+        else Debug.Log("DropDown Null");
+
+        if (fullScreenToggle != null)
+        {
+            fullScreenToggle.onValueChanged.AddListener((_) => ChangeFullScreen());
+        }
+        else Debug.Log("fullScreenToggle Null");
+        #endregion
     }
 
     private void OnEnable()

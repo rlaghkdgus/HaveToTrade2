@@ -6,17 +6,26 @@ using UnityEngine;
 [ExcelAsset]
 public class DialogData : ScriptableObject
 {
-    // public List<TextData> ºÎºĞ±îÁö´Â °íÁ¤
-    // µÚ¿¡ º¯¼ö ÀÌ¸§¸¸ °¢ ½ÃÆ®º° ÀÌ¸§°ú µ¿ÀÏÇÏ°Ô ¼³Á¤
-    public List<TextData> TextEX; 
-	public List<TextData> TextEX2;
-    public List<TextData> ¹«¶Ò¶Ò°Å·¡ÀüÀâ´ã;
-    public List<TextData> È­³­ÀÛº°ÀÎ»ç;
-    public List<TextData> ¹«¶Ò¶Ò°Å·¡°ÅÀı;
-    public List<TextData> À¯ÄèÇÑÀçÈïÁ¤;
-    public List<TextData> ¾ÆÀÌÅÛÀÌ¸§Ãâ·Â;
-    public List<TextData> À¯ÄèÇÑ°Å·¡ÀüÀÎ»ç;
-    public List<TextData> À¯ÄèÇÑ°Å·¡ÈÄÀÎ»ç;
-    public List<TextData> ¾ÆÀú¾¾°Å·¡ÀüÀÎ»ç;
-    public List<TextData> ¾ÆÀú¾¾°Å·¡ÈÄÀÎ»ç;
+	public List<TextData> Tutorial_1; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Tutorial_2; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> BreadShop_B; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> BreadShop_A;
+	public List<TextData> Tutorial_3; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Bank; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> MerchantGuild_B; // Replace 'EntityType' to an actual type that is serializable.
+    public List<TextData> MerchantGuild_A;
+    public List<TextData> TownHall_B; // Replace 'EntityType' to an actual type that is serializable.
+    public List<TextData> TownHall_A;
+    public List<TextData> Blacksmith_B; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Blacksmith_A;
+    public List<TextData> Tutorial_4;
+	public List<TextData> ë¬´ëšëšê±°ë˜ì „ì¡ë‹´; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> í™”ë‚œì‘ë³„ì¸ì‚¬; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ë¬´ëšëšê±°ë˜ê±°ì ˆ; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ìœ ì¾Œí•œì¬í¥ì •; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ì•„ì´í…œì´ë¦„ì¶œë ¥; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ìœ ì¾Œí•œê±°ë˜ì „ì¸ì‚¬; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ìœ ì¾Œí•œê±°ë˜í›„ì¸ì‚¬; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ì•„ì €ì”¨ê±°ë˜ì „ì¸ì‚¬; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> ì•„ì €ì”¨ê±°ë˜í›„ì¸ì‚¬; // Replace 'EntityType' to an actual type that is serializable.
 }

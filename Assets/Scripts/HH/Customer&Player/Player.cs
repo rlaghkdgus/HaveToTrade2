@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using System.Runtime.CompilerServices;
 
 [System.Serializable]
 public class Fame
@@ -19,6 +19,21 @@ public class Player : Singleton<Player>
     public int money;
     public TMP_Text moneyText;
     public int Upgrade_ID;
+    [SerializeField] private int TownMoveCount = 0;
+    public int _MoveCount
+    {
+        get => TownMoveCount;
+        set
+        {
+            TownMoveCount = value;
+            if(TownMoveCount >= 70)
+            {
+                isMaxCount = true;
+            }
+        }
+    }
+
+    public bool isMaxCount { get; private set; } = false;
     
     [Header("¸í¼º")]
     public Fame foodFame;
@@ -44,6 +59,17 @@ public class Player : Singleton<Player>
     {
        
     }
+
+    private void OnEnable()
+    {
+        EventManager.ChangeFame += TierUp;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.ChangeFame -= TierUp;
+    }
+
     public void RenewMoney()
     {
         moneyText.text = "" + money;
@@ -61,8 +87,13 @@ public class Player : Singleton<Player>
     public void SkillUp(int sorts)
     {
         FameCheck(GetFameRef((ItemSorts)sorts));
-        UpgradeFameCheck(GetFameRef((ItemSorts)sorts));
     }
+
+    private void TierUp(ItemSorts sort)
+    {
+        FameCheck(GetFameRef(sort));
+    }
+
     private Fame GetFameRef(ItemSorts sorts)
     {
         if (sorts == ItemSorts.food) return foodFame;
@@ -83,6 +114,7 @@ public class Player : Singleton<Player>
                 break;
             }
         }
+        UpgradeFameCheck(target);
     }
 
     private void UpgradeFameCheck(Fame target)

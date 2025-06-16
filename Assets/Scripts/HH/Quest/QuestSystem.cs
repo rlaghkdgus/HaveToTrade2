@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
+
 public class QuestSystem : Singleton<QuestSystem>
 {   
     [Header("손님 참조용")]
@@ -131,6 +133,8 @@ public class QuestSystem : Singleton<QuestSystem>
                 Player.Instance.pFoodFame.fame += questReward;
                 break;
         }
+
+        EventManager.OnChangeFameCall_Tier(qTargetItem);
     }
     public void DeliveryQuestCheck()
     {

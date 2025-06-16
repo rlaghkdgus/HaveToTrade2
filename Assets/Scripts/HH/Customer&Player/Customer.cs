@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening;
 /*
@@ -308,6 +309,9 @@ public class Customer : MonoBehaviour
     }
     void ResetTradeSignText()
     {
+        Scene curScene = SceneManager.GetActiveScene();
+        if (curScene.name == "Tutorial_Scene")
+            return;
         if (buyOrSell)
             tradeSignUI.text = "상품 구매중...";
         else

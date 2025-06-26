@@ -1559,7 +1559,7 @@ GameObject:
   - component: {fileID: 279662660}
   - component: {fileID: 279662659}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SortInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1730,6 +1730,8 @@ MonoBehaviour:
     weight: 0
     counts: 0
   SelledItems: []
+  itemSortInfo: {fileID: 279662659}
+  itemNameInfo: {fileID: 1723168340}
   weightPopUp: {fileID: 466060452060724038, guid: a02df2d719aa0504892852ed712d0a3b, type: 3}
 --- !u!4 &300237492
 Transform:
@@ -5539,7 +5541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00008891934
+      value: 0.000008547817
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6276,6 +6278,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475167481}
   m_CullTransparentMesh: 1
+--- !u!1001 &1487637635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5755905927957670174, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755905927957670176, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5553f849c1a33924c97ce83089f18252, type: 3}
 --- !u!1 &1491540586
 GameObject:
   m_ObjectHideFlags: 0
@@ -7946,7 +8005,7 @@ GameObject:
   - component: {fileID: 1723168341}
   - component: {fileID: 1723168340}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: NameInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8002,7 +8061,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9119,7 +9178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1953437245
 RectTransform:
   m_ObjectHideFlags: 0

@@ -129,3 +129,33 @@ public static class KoreanParticleHelper
         return c >= 0xAC00 && c <= 0xD7A3;
     }
 }
+
+public static class InGameUtills
+{
+    public static string RetStuffName(ItemSorts sorts)
+    {
+        string hangeulStuffName;
+        switch(sorts)
+        {
+            case ItemSorts.food:
+                hangeulStuffName = "음식";
+                break;
+            case ItemSorts.accesory:
+                hangeulStuffName = "악세서리";
+                break;
+            case ItemSorts.furniture:
+                hangeulStuffName = "가구";
+                break;
+            case ItemSorts.clothes:
+                hangeulStuffName = "옷";
+                break;
+            case ItemSorts.pFood:
+                hangeulStuffName = "가공 식품";
+                break;
+            default:
+                hangeulStuffName = string.Empty;
+                break;
+        }
+        return hangeulStuffName;
+    }
+}

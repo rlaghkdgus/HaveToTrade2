@@ -29,7 +29,9 @@ public class ItemManager : Singleton<ItemManager>
     public pItem buyItem;
     public List<pItem> SelledItems;
     private static ItemManager instance;
-
+    [Header("아이템 정보용 UI")]
+    public TMP_Text itemSortInfo;
+    public TMP_Text itemNameInfo;
     VillageType curVill;
     public GameObject weightPopUp;
 
@@ -332,12 +334,16 @@ public class ItemManager : Singleton<ItemManager>
             customer.playerCountTexts.text = "" + (countItem != null ? countItem.counts : 0);
             customer.productImages.sprite = itemSO.items[currentProductIndex].image;
             customer.costText.text = " " + itemSO.items[currentProductIndex].price;
+            itemSortInfo.text = "" + InGameUtills.RetStuffName(itemSO.items[currentProductIndex].sort);
+            itemNameInfo.text = "" + itemSO.items[currentProductIndex].stuffName;
         }
         else
         {
             customer.playerCountTexts.text = "" + playerInventory.inventory[currentProductIndex].counts;
             customer.productImages.sprite = playerInventory.inventory[currentProductIndex].image;
             customer.costText.text = " " + playerInventory.inventory[currentProductIndex].price;
+            itemSortInfo.text = "" + InGameUtills.RetStuffName(playerInventory.inventory[currentProductIndex].sort);
+            itemNameInfo.text = "" + playerInventory.inventory[currentProductIndex].stuffName;
         }
 
         CusProductCountSet();

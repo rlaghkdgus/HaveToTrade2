@@ -76,13 +76,7 @@ public class Customer : MonoBehaviour
     [Header("흥정시 On/Off 오브젝트")]
     [SerializeField] private GameObject bargainButton;
     [SerializeField] private GameObject rejectButton;
-    [Header("마을 버튼")]
-    [SerializeField] GameObject GoTownButton;
 
-    [Header("손님 대화")]
-    public TMP_Text talkText; // 대화텍스트
-    [SerializeField] Transform textTransform;//대화생성위치
-    [SerializeField] float typingDelay;//타이핑 간격
     [Header("거래 후 버튼 관리")]
     [SerializeField] GameObject buttonEdit;
 
@@ -310,8 +304,6 @@ public class Customer : MonoBehaviour
     void ResetTradeSignText()
     {
         Scene curScene = SceneManager.GetActiveScene();
-        if (curScene.name == "Tutorial_Scene")
-            return;
         if (buyOrSell)
             tradeSignUI.text = "상품 구매중...";
         else
@@ -486,17 +478,7 @@ public class Customer : MonoBehaviour
             cState.Value = CustomerState.SetUI;
     }
     #region 손님 대사 효과
-    IEnumerator Typing(string talk)
-    {
-        talkText.text = null;
-        for(int i = 0; i< talk.Length; i++)
-        {
-            talkText.text += talk[i];
-            yield return YieldCache.WaitForSeconds(typingDelay);
-        }
-        talkText.text = null;
-        
-    }
+
     private IEnumerator DialogPlay()
     {
         newDialogSys.DialogBranch(currentCusList[randcusnum].customerNum);

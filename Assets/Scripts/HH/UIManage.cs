@@ -60,7 +60,7 @@ public class UIManage : Singleton<UIManage>//동적생성으로 싹다 변경해
         if(uiDictionary.TryGetValue(uiName, out GameObject prefab))
         {
             GameObject newUI = Instantiate(prefab, transform.GetChild(0));
-            newUI.transform.SetSiblingIndex(transform.GetChild(0).childCount - 3);
+            newUI.transform.SetAsLastSibling();
             CurrentUI = newUI;
             OnUI = true;
             GUISign = true;

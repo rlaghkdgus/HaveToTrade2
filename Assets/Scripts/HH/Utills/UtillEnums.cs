@@ -47,3 +47,12 @@ public enum VillageType
     Smokian
 }
 
+public enum ClimateState
+{
+    Idle,
+    BumperCrop,
+    FakeJewel,
+    ClothEvent,
+    FurnEvent
+}
+

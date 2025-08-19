@@ -9,6 +9,8 @@ public class Bank : MonoBehaviour
     [SerializeField] TMP_Text loanText;
     [SerializeField] TMP_InputField repayField;
     [SerializeField] GameObject repayUIButton;
+    [SerializeField] GameObject selectUIOnOff;
+    [SerializeField] GameObject repayUIOnOff;
     int repayValue;
     [SerializeField] GameObject repayPopUp;
     private void Start()
@@ -50,6 +52,7 @@ public class Bank : MonoBehaviour
         else
         {
             renewUI();
+            
             Debug.Log("Error");
             yield break;
             //정수 이외 다른 값일시 돌아가도록
@@ -66,7 +69,8 @@ public class Bank : MonoBehaviour
     void renewUI()
     {
         repayField.text = "";
-        
+        repayUIOnOff.SetActive(false);
+        selectUIOnOff.SetActive(true);
         repayUIButton.SetActive(true);
     }
 

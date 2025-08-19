@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 6326091806248784022}
   - component: {fileID: 6326091806248784041}
   - component: {fileID: 6326091806248784040}
+  - component: {fileID: 6295398717070172751}
   m_Layer: 5
   m_Name: Q1
   m_TagString: QuestAcceptButton
@@ -345,6 +346,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6295398717070172751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326091806248784042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6326091806357845882
 GameObject:
   m_ObjectHideFlags: 0

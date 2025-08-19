@@ -7,18 +7,19 @@ using UnityEngine;
 public class DialogData : ScriptableObject
 {
 	public List<TextData> Tutorial_1; // Replace 'EntityType' to an actual type that is serializable.
-	public List<TextData> Tutorial_2; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> BreadShop_B; // Replace 'EntityType' to an actual type that is serializable.
-	public List<TextData> BreadShop_A;
+	public List<TextData> Tutorial_2; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> Tutorial_3; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> BreadShop_A; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Tutorial_4; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> Bank; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Blacksmith_B; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Blacksmith_A; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> MerchantGuild_B; // Replace 'EntityType' to an actual type that is serializable.
-    public List<TextData> MerchantGuild_A;
-    public List<TextData> TownHall_B; // Replace 'EntityType' to an actual type that is serializable.
-    public List<TextData> TownHall_A;
-    public List<TextData> Blacksmith_B; // Replace 'EntityType' to an actual type that is serializable.
-	public List<TextData> Blacksmith_A;
-    public List<TextData> Tutorial_4;
+	public List<TextData> MerchantGuild_A; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> TownHall_B; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> TownHall_A; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> Tutorial_5; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> 무뚝뚝거래전잡담; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> 화난작별인사; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> 무뚝뚝거래거절; // Replace 'EntityType' to an actual type that is serializable.

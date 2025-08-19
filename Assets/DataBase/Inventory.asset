@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35c5001f8009bb4daef159d194c11e1, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  inventory: []
+  inventory:
+  - price: 80
+    stuffName: "\uBE75"
+    sort: 4
+    image: {fileID: 387129194, guid: dff4f919176320a41b73d8daa49a6169, type: 3}
+    weight: 10
+    counts: 2

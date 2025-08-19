@@ -6,7 +6,7 @@ public class TutorialTradeEnd : TutorialBase
 {
     public bool isEnd = false;
 
-    public override void Enter()
+    public override void Enter(TutorialController controller)
     {
         
     }
@@ -19,7 +19,7 @@ public class TutorialTradeEnd : TutorialBase
         }
     }
 
-    public override void Exit()
+    public override void Exit(TutorialController contorller)
     {
         
     }

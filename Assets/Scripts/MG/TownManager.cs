@@ -37,22 +37,20 @@ public class TownManager : Singleton<TownManager>
 
     private void HandleTownSelected(TownDB town) // 맵에서 마을 버튼을 누르면 이동을 실행
     {
-        if(curTown != town)
-        {
-            // 다음 마을 정보를 Town에서 받아옴
-            nextTown = town;
-            // Map 제거
-            var Map = GameObject.FindWithTag("Map");
-            Destroy(Map);
-            UIManage.Instance.OnUI = false;
-            UIManage.Instance.GUISign = false;
-            // 길 생성 실행
-            travel.LoadRoad(TownClone, nextTown.TownPrefabs[0], nextTown);
-        }
-        else
-        {
-            Debug.Log("현재 마을과 동일한 목적지");
-        }
+        // 다음 마을 정보를 Town에서 받아옴
+        nextTown = town;
+        // Map 제거
+        var Map = GameObject.FindWithTag("Map");
+        Destroy(Map);
+        UIManage.Instance.OnUI = false;
+        UIManage.Instance.GUISign = false;
+        // 길 생성 실행
+        travel.LoadRoad(TownClone, nextTown.TownPrefabs[0], nextTown);
+    }
+
+    public TownDB curTownDataCall()
+    {
+        return curTown;
     }
 
     public void TownGenerate()

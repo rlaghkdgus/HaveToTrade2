@@ -17,6 +17,12 @@ TagManager:
   - CustomerManager
   - InvenSlot
   - Cloud
+  - QuestAcceptButton
+  - BlackSmith
+  - Bank
+  - TownHall
+  - Guild
+  - FameCheckExit
   layers:
   - Default
   - TransparentFX

@@ -369,9 +369,10 @@ GameObject:
   - component: {fileID: 6210661132222768009}
   - component: {fileID: 1516803812194754129}
   - component: {fileID: 1602570341365393587}
+  - component: {fileID: 4650423901397303622}
   m_Layer: 0
   m_Name: meattownhall_0
-  m_TagString: Untagged
+  m_TagString: TownHall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -455,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_Type: 1
+  s_Type: 2
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
 --- !u!60 &1602570341365393587
 PolygonCollider2D:
@@ -657,6 +658,21 @@ PolygonCollider2D:
       - {x: 0.06, y: 4.0099998}
       - {x: 0.06, y: 2.9099998}
       - {x: -0.61, y: 2.9099998}
+--- !u!114 &4650423901397303622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681986092619832527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8052602440765292263
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,9 +769,10 @@ GameObject:
   - component: {fileID: 6309958561383741338}
   - component: {fileID: 1664537016092260110}
   - component: {fileID: 3970425537893010154}
+  - component: {fileID: 7556933316673439505}
   m_Layer: 0
   m_Name: meatguild_0
-  m_TagString: Untagged
+  m_TagString: Guild
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2d649d6c5daa4087a150b03f6f7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_Type: 2
+  s_Type: 1
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
 --- !u!60 &3970425537893010154
 PolygonCollider2D:
@@ -881,3 +898,18 @@ PolygonCollider2D:
       - {x: 4.16, y: -1.65}
       - {x: 3.8, y: -1.7}
       - {x: 3.39, y: -3.98}
+--- !u!114 &7556933316673439505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884102159384439483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []

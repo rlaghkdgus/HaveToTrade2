@@ -13521,8 +13521,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1584844461
-RectTransform:
+--- !u!114 &1326690479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326690478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac3fa7019348514283fbec16751dce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSO: {fileID: 11400000, guid: d03b67ef44d7d2c418b43c38c62afce8, type: 2}
+  customer: {fileID: 745815725}
+  playerInventory: {fileID: 11400000, guid: 17243b7e48435c941b8a6b5f363612c1, type: 2}
+  inventoryUI: {fileID: 483096638}
+  itemCountLimit: 3
+  productIndex: 
+  itemCountIndex: 
+  itemCountInputField: {fileID: 329280148}
+  productCount: 0
+  bargainSuccess: 0
+  currentProductIndex: 0
+  currentPrice: 0
+  buyItem:
+    price: 0
+    stuffName: 
+    sort: 0
+    image: {fileID: 0}
+    weight: 0
+    counts: 0
+  SelledItems: []
+  itemSortInfo: {fileID: 425238442}
+  itemNameInfo: {fileID: 276459597}
+  weightPopUp: {fileID: 466060452060724038, guid: a02df2d719aa0504892852ed712d0a3b, type: 3}
+  climate: {fileID: 0}
+  EventSale: 0
+--- !u!4 &1326690480
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}

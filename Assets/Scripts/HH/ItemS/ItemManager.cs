@@ -26,6 +26,7 @@ public class ItemManager : Singleton<ItemManager>
     private int bargainPrice = 0;
     public bool bargainSuccess = false;
     public int currentProductIndex = 0;
+    public int currentPrice = 0;
     public pItem buyItem;
     public List<pItem> SelledItems;
     private static ItemManager instance;
@@ -34,7 +35,9 @@ public class ItemManager : Singleton<ItemManager>
     public TMP_Text itemNameInfo;
     VillageType curVill;
     public GameObject weightPopUp;
-
+    [Header("날씨 이벤트")]
+    [SerializeField] ClimateEvent climate;
+    public float EventSale;
     /*private void Awake()
     {
         if (instance != null && instance != this)
@@ -100,6 +103,10 @@ public class ItemManager : Singleton<ItemManager>
     {
         currentProductIndex = productIndex[productCount];
         int randCount = Random.Range(1, itemCountLimit + 1);
+        currentPrice = itemSO.items[currentProductIndex].price;
+        buyItem = new pItem(itemSO.items[currentProductIndex]);
+        if(climate != null)
+        climate.SetEventPrice(currentPrice ,buyItem);
         PutInfo(randCount);
     }
 
@@ -137,7 +144,9 @@ public class ItemManager : Singleton<ItemManager>
         {
             randCount = Random.Range(1, candidate.counts + 1);
         }
-
+        currentPrice = playerInventory.inventory[currentProductIndex].price;
+        if (climate != null)
+            climate.SetEventPrice(currentPrice , playerInventory.inventory[currentProductIndex]);
         PutInfo(randCount);
     }
     #endregion
@@ -162,11 +171,10 @@ public class ItemManager : Singleton<ItemManager>
     #region 구매 및 판매 실제 과정
     public void BuyProduct()
     {
-        int currentPrice;
         if (bargainSuccess)
             currentPrice = bargainPrice * itemCountIndex[productCount] * (int)salePoint(buyItem.sort) / 100;
         else
-            currentPrice = itemSO.items[currentProductIndex].price * itemCountIndex[productCount] * (int)salePoint(buyItem.sort) / 100;
+            currentPrice = currentPrice * itemCountIndex[productCount] * (int)salePoint(buyItem.sort) / 100;
 
         if (Player.Instance.money < currentPrice)
         {
@@ -217,13 +225,13 @@ public class ItemManager : Singleton<ItemManager>
 
     public void SellProduct()
     {
-        int currentPrice;
+        
         pItem itemToRemove = playerInventory.inventory[currentProductIndex];
 
         if (bargainSuccess)
             currentPrice = bargainPrice * itemCountIndex[productCount];
         else
-            currentPrice = playerInventory.inventory[currentProductIndex].price * itemCountIndex[productCount];
+            currentPrice = currentPrice * itemCountIndex[productCount];
 
         Player.Instance.money += currentPrice;
         playerInventory.inventory[currentProductIndex].counts -= itemCountIndex[productCount];
@@ -329,11 +337,11 @@ public class ItemManager : Singleton<ItemManager>
         maxItemCount = itemCountIndex[productCount];
         if (customer.buyOrSell)
         {
-            buyItem = new pItem(itemSO.items[currentProductIndex]);
+            
             pItem countItem = playerInventory.inventory.Find(item => item.stuffName == buyItem.stuffName);
             customer.playerCountTexts.text = "" + (countItem != null ? countItem.counts : 0);
             customer.productImages.sprite = itemSO.items[currentProductIndex].image;
-            customer.costText.text = " " + itemSO.items[currentProductIndex].price;
+            customer.costText.text = " " + currentPrice;
             itemSortInfo.text = "" + InGameUtills.RetStuffName(itemSO.items[currentProductIndex].sort);
             itemNameInfo.text = "" + itemSO.items[currentProductIndex].stuffName;
         }
@@ -341,7 +349,7 @@ public class ItemManager : Singleton<ItemManager>
         {
             customer.playerCountTexts.text = "" + playerInventory.inventory[currentProductIndex].counts;
             customer.productImages.sprite = playerInventory.inventory[currentProductIndex].image;
-            customer.costText.text = " " + playerInventory.inventory[currentProductIndex].price;
+            customer.costText.text = " " + currentPrice;
             itemSortInfo.text = "" + InGameUtills.RetStuffName(playerInventory.inventory[currentProductIndex].sort);
             itemNameInfo.text = "" + playerInventory.inventory[currentProductIndex].stuffName;
         }

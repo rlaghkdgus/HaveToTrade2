@@ -1,0 +1,2282 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5432796605596082360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605596082359}
+  - component: {fileID: 5432796605596082357}
+  - component: {fileID: 5432796605596082358}
+  m_Layer: 0
+  m_Name: "T21_Dialog(\uB9C8\uC744\uD68C\uAD00 \uC124\uBA85)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605596082359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605596082360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605596082357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605596082360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: TownHall_A
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 0
+    name: "\uBC31\uD638"
+    dialog: "\uC5EC\uAE30\uB294 \uB9C8\uC744\uD68C\uAD00\uC774\uC57C, \uC5B8\uB2C8!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC5EC\uAE30\uC11C\uB294 \uBB58 \uD558\uB294\uAC70\uC57C?"
+  - speakerIndex: 0
+    name: "\uBC31\uD638"
+    dialog: "\uBB34\uC5ED\uC5D0\uC11C \uBB3C\uB860 \uD765\uC815\uB3C4 \uC911\uC694\uD558\uC9C0\uB9CC
+      \uB354 \uC911\uC694\uD55C \uAC74 \uBA85\uC131\uC774\uB77C\uACE0. \uC5EC\uAE30\uC120
+      \uBA85\uC131\uC744 \uD1B5\uD574 \uC5EC\uB7EC \uD61C\uD0DD\uB4E4\uC744 \uC5BB\uC744
+      \uC218 \uC788\uC5B4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uD61C\uD0DD\uC774\uB77C\uBA74\u2026 \uD788\uD788 \uBB3C\uAC74\uC744
+      \uC880 \uB354 \uC2F8\uAC8C \uC0B4 \uC218 \uC788\uB2E4\uAC70\uB098?"
+  - speakerIndex: 0
+    name: "\uBC31\uD638"
+    dialog: "\uB9DE\uC544! \uBA85\uC131\uC774 \uB192\uC544\uC9C0\uBA74 \uD2B9\uC815
+      \uBB3C\uAC74\uC5D0 \uB300\uD574 \uC2F8\uAC8C \uC0AC\uAC70\uB098 \uBE44\uC2F8\uAC8C
+      \uD314 \uC218 \uC788\uC744 \uAC70\uC57C."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uAC70\uB798\uD560\uC218\uB85D \uC720\uB9AC\uD574\uC9C0\uB294 \uAC70\uC57C?
+      \uBA85\uC131 \uC313\uC544\uC11C \uAF2D \uC640\uBD10\uC57C\uACA0\uB124!"
+  - speakerIndex: 0
+    name: "\uBC31\uD638"
+    dialog: "\uC88B\uC544! \uC798\uD574\uBCF4\uB294\uAC70\uC57C!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uADF8\uB798! \uC794\uB729 \uC313\uC544\uC11C \uC624\uC790."
+  - speakerIndex: 0
+    name: 
+    dialog: "\uBC31\uD638\uAC00 \uC5B4\uAE68\uC5D0\uC11C \uD0A5\uD0A5 \uC6C3\uC5C8\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796605596082358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605596082360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796605601161972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605601161971}
+  - component: {fileID: 5432796605601161969}
+  - component: {fileID: 5432796605601161970}
+  m_Layer: 0
+  m_Name: "T18_Dialog(\uB9C8\uC744\uD68C\uAD00 \uBC29\uBB38)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605601161971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605601161972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605601161969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605601161972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: TownHall_B
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uB2E4\uC74C\uC740 \uB9C8\uC744\uD68C\uAD00\uC73C\uB85C \uAC00\uBCF4\uC790!
+      \uAC70\uAE30\uC11C \uBA85\uC131\uC5D0 \uAD00\uD574 \uC54C \uC218 \uC788\uC5B4!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uC640 \uBC31\uD638\uB294 \uC2DC\uC7A5 \uD55C\uCABD\uC5D0
+      \uC790\uB9AC\uD55C \uB9C8\uC744\uD68C\uAD00\uC73C\uB85C \uD5A5\uD588\uB2E4.
+      \uAC74\uBB3C\uC740 \uD654\uB824\uD55C \uBB38\uC591\uC73C\uB85C \uC7A5\uC2DD\uB418\uC5B4
+      \uC788\uC5C8\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796605601161970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605601161972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796605610636267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605610636266}
+  - component: {fileID: 5432796605610636265}
+  m_Layer: 0
+  m_Name: "T19_Click(\uB9C8\uC744 \uAD6C\uC5ED \uC774\uB3D9)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605610636266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605610636267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605610636265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605610636267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796605662298954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605662298952}
+  - component: {fileID: 5432796605662298953}
+  m_Layer: 0
+  m_Name: T3_Trade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605662298952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605662298954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605662298953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605662298954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb110fc9521af140acec83d0785470f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  T_event: {fileID: 0}
+  fixItem: 0
+--- !u!1 &5432796605816327403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605816327402}
+  - component: {fileID: 5432796605816327400}
+  - component: {fileID: 5432796605816327401}
+  m_Layer: 0
+  m_Name: "T14_Dialog(\uB300\uC7A5\uAC04 \uBC29\uBB38)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605816327402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605816327403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605816327400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605816327403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Blacksmith_B
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC5B8\uB2C8, \uC740\uD589 \uC5B8\uB2C8 \uCE5C\uC808\uD558\uB124! \uB2E4\uC74C\uC5D4
+      \uB300\uC7A5\uAC04\uC73C\uB85C \uAC00\uBCF4\uC790!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uC640 \uBC31\uD638\uB294 \uC2DC\uC7A5 \uD55C\uCABD\uC5D0
+      \uC790\uB9AC\uD55C \uB300\uC7A5\uAC04\uC73C\uB85C \uD5A5\uD588\uB2E4. \uB9DD\uCE58
+      \uC18C\uB9AC\uAC00 \uC6B8\uB824 \uD37C\uC84C\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796605816327401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605816327403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796605844780716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605844780715}
+  - component: {fileID: 5432796605844780714}
+  m_Layer: 0
+  m_Name: "T13_Click(\uC740\uD589 \uB2EB\uAE30 \uBC84\uD2BC)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605844780715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605844780716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605844780714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605844780716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796605936960970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796605936960969}
+  - component: {fileID: 5432796605936960968}
+  m_Layer: 0
+  m_Name: "T5_Click(\uAC1C\uC218 \uC870\uC808)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796605936960969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605936960970}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796605936960968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796605936960970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796606180593818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606180593817}
+  - component: {fileID: 5432796606180593816}
+  m_Layer: 0
+  m_Name: "T10_Click(\uB9C8\uC744 \uAD6C\uC5ED \uC774\uB3D9)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606180593817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606180593818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606180593816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606180593818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796606310005441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606310005440}
+  - component: {fileID: 5432796606310005439}
+  m_Layer: 0
+  m_Name: "T7_Click(\uAD6C\uB9E4 \uBC84\uD2BC)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606310005440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606310005441}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606310005439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606310005441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796606372691779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606372691778}
+  - component: {fileID: 5432796606372691777}
+  m_Layer: 0
+  m_Name: "T20_Click(\uB9C8\uC744 \uD68C\uAD00 \uD074\uB9AD)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606372691778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606372691779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606372691777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606372691779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: TownHall
+  clicked: 0
+--- !u!1 &5432796606426325358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606426325357}
+  - component: {fileID: 5432796606426325355}
+  - component: {fileID: 5432796606426325356}
+  m_Layer: 0
+  m_Name: "T16_Dialog(\uB300\uC7A5\uAC04 \uC124\uBA85)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606426325357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606426325358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606426325355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606426325358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Blacksmith_A
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 0
+    name: "\uBC31\uD638"
+    dialog: "\uC5EC\uAE34 \uB300\uC7A5\uAC04\uC774\uC57C, \uC5B8\uB2C8! \uC5EC\uAE30\uC11C
+      \uC9D0\uCE78\uC744 \uAD50\uCCB4\uD574\uC11C \uB354 \uB9CE\uC740 \uBB3C\uAC74\uC744
+      \uB4E4\uACE0 \uB2E4\uB2D0 \uC218 \uC788\uC5B4. \uBB34\uC5ED\uD560 \uB54C \uC9D0\uCE78
+      \uD06C\uAE30\uB294 \uC911\uC694\uD558\uAC70\uB4E0!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC9D0\uCE78 \uB298\uB9AC\uB294 \uAC70? \uC644\uC804 \uC720\uC6A9\uD574
+      \uBCF4\uC774\uB124! \uC7A0\uAE50 \uAD6C\uACBD\uD560\uAE4C?"
+  - speakerIndex: 0
+    name: "\uB300\uC7A5\uC7A5\uC774"
+    dialog: "\uC74C, \uC190\uB2D8\uC778\uAC00? \uC5EC\uAE34 \uB300\uC7A5\uAC04\uC774\uB2E4.
+      \uC9D0\uCE78\uC744 \uAD50\uCCB4\uD574\uC11C \uC6A9\uB7C9\uC744 \uB298\uB9B4
+      \uC218 \uC788\uC9C0. \uC9C0\uAE08 \uD544\uC694\uD55C \uAC8C \uC788\uB098?"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC548\uB155\uD558\uC138\uC694! \uC624\uB298\uC740 \uAD6C\uACBD\uC654\uC5B4\uC694.
+      \uC544\uC9C1 \uC774\uAC83\uB3C4 \uC4F8\uB9CC \uD558\uB2E4\uACE0\uC694."
+  - speakerIndex: 0
+    name: "\uB300\uC7A5\uC7A5\uC774"
+    dialog: "\uC9D0\uCE78\uC744 \uB354 \uD070 \uAC78\uB85C \uBC14\uAFB8\uBA74 \uB354
+      \uB9CE\uC740 \uBB3C\uAC74\uC744 \uB4E4\uACE0 \uB2E4\uB2D0 \uC218 \uC788\uC744\uAC70\uB2E4.
+      \uB098\uC911\uC5D0 \uC640\uC11C \uAD50\uCCB4\uD574 \uBD10."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uAF2D \uCFE0\uD37C \uBAA8\uC544\uC11C \uB2E4\uC2DC \uC62C\uAC8C\uC694!"
+  - speakerIndex: 0
+    name: "\uB300\uC7A5\uC7A5\uC774"
+    dialog: "\uC88B\uC544, \uC5B8\uC81C\uB4E0\uC9C0 \uC624\uAC70\uB77C."
+  - speakerIndex: 0
+    name: 
+    dialog: "\uBC31\uD638\uAC00 \uC5B4\uAE68\uC5D0\uC11C \uAF2C\uB9AC\uB97C \uC0B4\uB791\uAC70\uB838\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796606426325356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606426325358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796606598797554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606598797553}
+  - component: {fileID: 5432796606598797552}
+  m_Layer: 0
+  m_Name: "T24_Click(\uC0C1\uC778\uAE38\uB4DC \uD074\uB9AD)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606598797553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606598797554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606598797552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606598797554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Guild
+  clicked: 0
+--- !u!1 &5432796606601032022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606601032021}
+  - component: {fileID: 5432796606601032020}
+  m_Layer: 0
+  m_Name: "T17_Click(\uB300\uC7A5\uAC04 \uB098\uAC00\uAE30)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606601032021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606601032022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606601032020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606601032022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796606661280318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606661280317}
+  - component: {fileID: 5432796606661280315}
+  - component: {fileID: 5432796606661280316}
+  m_Layer: 0
+  m_Name: "T25_Dialog(\uC0C1\uC778\uAE38\uB4DC \uC124\uBA85)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606661280317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606661280318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606661280315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606661280318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: MerchantGuild_A
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uD018\uC2A4\uD2B8? \uC644\uC804 \uC7AC\uBC0C\uC5B4 \uBCF4\uC778\uB2E4!
+      \uC5B4\uB5A4 \uAC8C \uC788\uB294\uC9C0 \uBCF4\uC5EC\uC918!"
+  - speakerIndex: 0
+    name: "\uAE38\uB4DC\uC6D0"
+    dialog: "\uC548\uB155, \uC544\uAC00\uC528! \uC5EC\uAE34 \uC0C1\uC778\uAE38\uB4DC\uC57C.
+      \uD018\uC2A4\uD2B8\uB85C \uB2E4\uB978 \uB9C8\uC744\uC5D0\uC11C \uBB3C\uAC74\uC744
+      \uC0AC\uC624\uAC70\uB098 \uAC70\uB798\uD558\uBA74 \uBCF4\uC0C1\uC744 \uC918.
+      \uAC8C\uC2DC\uD310\uC5D0 \uBB50 \uC788\uB294\uC9C0 \uBCFC\uB798?"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC751, \uBCF4\uC5EC\uC918! \uC5B4\uB514 \uC5B4\uB514\u2026 \uC640!
+      \uB2E4\uC591\uD55C \uD018\uC2A4\uD2B8\uAC00 \uC788\uB124?"
+  - speakerIndex: 0
+    name: "\uAE38\uB4DC\uC6D0"
+    dialog: "\uB9DE\uC544. \uC9C0\uAE08 \uC900\uBE44\uAC00 \uBD80\uC871\uD574\uB3C4
+      \uAD1C\uCC2E\uC544. \uC5B8\uC81C\uB4E0 \uC218\uC8FC\uD560 \uC218 \uC788\uC9C0."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC774\uB807\uAC8C \uD018\uC2A4\uD2B8 \uBC1B\uB294 \uAC70\uAD6C\uB098!
+      \uB098\uC911\uC5D0 \uAF2D \uB3C4\uC804\uD574\uBCFC\uAC8C\uC694!"
+  - speakerIndex: 0
+    name: "\uAE38\uB4DC\uC6D0"
+    dialog: "\uC88B\uC544, \uAE30\uB300\uD560\uAC8C! \uD018\uC2A4\uD2B8\uB97C \uD558\uB2E4\uBCF4\uBA74
+      \uC790\uC5F0\uC2A4\uB7FD\uAC8C \uBA85\uC131\uC774 \uC624\uB97C\uAC70\uC57C!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uACE0\uB9C8\uC6CC, \uC544\uC800\uC528! \uB2E4\uC74C\uC5D4 \uD018\uC2A4\uD2B8
+      \uAC00\uC9C0\uB7EC \uC62C\uAC8C\uC694!"
+  - speakerIndex: 0
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uB294 \uC0C1\uC778\uAE38\uB4DC\uC5D0\uC11C \uD018\uC2A4\uD2B8\uC5D0
+      \uB300\uD574 \uC54C\uC558\uB2E4. \uBC31\uD638\uAC00 \uC5B4\uAE68\uC5D0\uC11C
+      \uAF2C\uB9AC\uB97C \uC0B4\uB791\uC600\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796606661280316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606661280318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796606735150818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606735150817}
+  - component: {fileID: 5432796606735150816}
+  m_Layer: 0
+  m_Name: "T10.5_Stay(\uB9C8\uC744 \uC0DD\uC131 \uB300\uAE30)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606735150817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606735150818}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606735150816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606735150818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beabdd56de43f344ae5ba1617e7ac32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 1.2
+--- !u!1 &5432796606860237801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606860237800}
+  - component: {fileID: 5432796606860237798}
+  - component: {fileID: 5432796606860237799}
+  m_Layer: 0
+  m_Name: "T4_Dialog(\uAC1C\uC218 \uC870\uC808 \uC18C\uAC1C)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606860237800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606860237801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606860237798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606860237801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Tutorial_2
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uAC70\uB798\uC5D0\uC11C\uB294 \uAD6C\uB9E4, \uD310\uB9E4\uAC00 \uAC00\uC7A5
+      \uAE30\uBCF8\uC774\uC57C!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uAC70\uB798 \uC0C1\uB300\uAC00 \uB098\uD55C\uD14C \uC6D0\uD558\uB294
+      \uBB3C\uAC74\uC744 \uD310\uB9E4\uD560 \uC218\uB3C4 \uC788\uACE0, \uB0B4\uAC00
+      \uAC00\uC9C0\uACE0 \uC788\uB294 \uAC83 \uC911 \uC6D0\uD558\uB294 \uAC83\uC744
+      \uC0AC\uB824 \uD560 \uC218\uB3C4 \uC788\uC5B4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uAD6C\uB9E4\uB098 \uD310\uB9E4 \uC2DC\uC5D0 \uC6D0\uD558\uB294 \uAC1C\uC218\uB85C
+      \uC870\uC808\uD558\uB294 \uAC8C \uAC00\uB2A5\uD574."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC88B\uC544, \uADF8\uB7FC \uD55C \uBC88 \uD574\uBCFC\uAE4C?"
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796606860237799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606860237801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796606893991846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606893991845}
+  - component: {fileID: 5432796606893991844}
+  m_Layer: 0
+  m_Name: "T22_Click(\uB9C8\uC744\uD68C\uAD00 \uB098\uAC00\uAE30)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606893991845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606893991846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606893991844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606893991846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: FameCheckExit
+  clicked: 0
+--- !u!1 &5432796606957042983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606957042982}
+  - component: {fileID: 5432796606957042980}
+  - component: {fileID: 5432796606957042981}
+  m_Layer: 0
+  m_Name: "T12_Dialog(\uC740\uD589 \uC124\uBA85)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606957042982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606957042983}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606957042980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606957042983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Bank
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC5EC\uAE30\uAC00 \uC740\uD589\uC774\uC57C! \uBB54\uAC00 \uADFC\uC0AC\uD55C
+      \uBD84\uC704\uAE30\uB124."
+  - speakerIndex: 1
+    name: 
+    dialog: "\uC740\uD589 \uC548\uC73C\uB85C \uB4E4\uC5B4\uC11C\uC790, \uC740\uD589\uC6D0\uC774
+      \uB530\uB73B\uD55C \uBBF8\uC18C\uB85C \uC8FC\uC778\uACF5\uC744 \uB9DE\uC774\uD588\uB2E4."
+  - speakerIndex: 1
+    name: "\uC740\uD589\uC9C1\uC6D0"
+    dialog: "\uC548\uB155\uD558\uC138\uC694. \uC0C8 \uBB34\uC5ED\uC0C1\uC774\uC2DC\uC8E0?
+      \uC5EC\uAE34 \uC740\uD589\uC774\uC5D0\uC694. \uCFE0\uD37C \uB300\uCD9C\uC744
+      \uAD00\uB9AC\uD558\uACE0, \uBE5A\uC744 \uC0C1\uD658\uD558\uB294 \uACF3\uC774\uC8E0.
+      \uB3C8\uC740 \uC800\uD76C\uAC00 \uC5B8\uC81C\uB098 \uC548\uC804\uD558\uAC8C
+      \uC9C0\uD0A4\uACE0 \uC788\uC2B5\uB2C8\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC548\uB155\uD558\uC138\uC694! \uC740\uD589\uC5D0\uC11C \uCFE0\uD37C\uB97C
+      \uBE4C\uB838\uB294\uB370, \uC5EC\uAE30\uC11C \uC0C1\uD658\uD558\uB294 \uAC70
+      \uB9DE\uC8E0? \uBA85\uC131\uB3C4 \uC54C\uB824\uC8FC\uC138\uC694!"
+  - speakerIndex: 1
+    name: "\uC740\uD589\uC9C1\uC6D0"
+    dialog: "\uB9DE\uC544\uC694, \uB300\uCD9C \uC0C1\uD658\uC740 \uC5EC\uAE30\uC11C
+      \uD558\uBA74 \uB3FC\uC694. \uC9C0\uAE08 \uC0C1\uD658\uD560 \uCFE0\uD37C \uC788\uC73C\uC2DC\uBA74
+      \uAE30\uB85D\uD560\uAC8C\uC694."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC0C1\uD658\uC740 \uC544\uC9C1 \uCFE0\uD37C\uAC00 \uBAA8\uC790\uB77C\uC11C
+      \uB098\uC911\uC5D0 \uB2E4\uC2DC \uC624\uB3C4\uB85D \uD560\uAC8C\uC694!"
+  - speakerIndex: 1
+    name: "\uC740\uD589\uC9C1\uC6D0"
+    dialog: "\uD558\uD558, \uCC9C\uCC9C\uD788 \uD574\uB3C4 \uAD1C\uCC2E\uC544\uC694.
+      \uBA85\uC131 \uC313\uACE0, \uBB34\uC5ED \uC131\uACF5\uD574\uC11C \uC740\uD589\uC5D0\uC11C
+      \uC790\uC8FC \uBCF4\uC790\uACE0\uC694!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uACE0\uB9C8\uC6CC\uC694, \uC5B8\uB2C8! \uB2E4\uC74C\uC5D4 \uC0C1\uD658\uD558\uACE0
+      \uBA85\uC131\uB3C4 \uC313\uC544\uC11C \uC62C \uAC70\uC57C!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uB294 \uC740\uD589\uC5D0\uC11C \uBE5A \uC0C1\uD658\uACFC
+      \uBA85\uC131 \uC2DC\uC2A4\uD15C\uC744 \uBC30\uC6B0\uACE0, \uBB34\uC5ED\uC758
+      \uD070 \uADF8\uB9BC\uC744 \uADF8\uB838\uB2E4. \uBC31\uD638\uAC00 \uC5B4\uAE68\uC5D0\uC11C
+      \uD0A5\uD0A5 \uC6C3\uC5C8\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796606957042981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606957042983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796606978253944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796606978253943}
+  - component: {fileID: 5432796606978253941}
+  - component: {fileID: 5432796606978253942}
+  m_Layer: 0
+  m_Name: "T23_Dialog(\uC0C1\uC778\uAE38\uB4DC \uBC29\uBB38)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796606978253943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606978253944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796606978253941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606978253944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: MerchantGuild_B
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uB2E4\uC74C\uC740 \uC0C1\uC778\uAE38\uB4DC\uC5D0 \uAC00\uBCF4\uC790!
+      \uAC70\uAE30\uC11C \uD018\uC2A4\uD2B8 \uBC1B\uC744 \uC218 \uC788\uC5B4!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uC640 \uBC31\uD638\uB294 \uC2DC\uC7A5 \uD55C\uCABD\uC5D0
+      \uC790\uB9AC\uD55C \uC0C1\uC778\uAE38\uB4DC \uAC74\uBB3C\uB85C \uD5A5\uD588\uB2E4.
+      \uBB38 \uC704\uC5D4 \uC0C1\uC120\uACFC \uC218\uB808 \uBB38\uC591\uC774 \uC0C8\uACA8\uC838
+      \uC788\uC5C8\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796606978253942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796606978253944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796607078937732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607078937731}
+  - component: {fileID: 5432796607078937729}
+  - component: {fileID: 5432796607078937730}
+  m_Layer: 0
+  m_Name: "T27_Dialog(\uD29C\uD1A0\uB9AC\uC5BC \uB05D)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607078937731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607078937732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607078937729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607078937732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Tutorial_5
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC5B8\uB2C8, \uC0C1\uC778\uAE38\uB4DC\uB3C4 \uB05D! \uC774\uC81C \uC2DC\uC7A5
+      \uB3CC\uC544\uAC00\uC11C \uAC70\uB798\uD558\uB7EC \uAC00\uC790! "
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC88B\uC544, \uBC31\uD638! \uC2DC\uC7A5\uC5D0\uC11C \uB354 \uD070 \uAC70\uB798\uB97C
+      \uD558\uC790!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uC640 \uBC31\uD638\uB294 \uC2DC\uC7A5\uC758 \uD65C\uAE30
+      \uC18D\uC5D0\uC11C \uB3CC\uC544\uAC14\uB2E4. \uD587\uC0B4 \uC544\uB798 \uB9C8\uC744\uC774
+      \uC0DD\uAE30\uB85C \uBE5B\uB0AC\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uBC31\uD638, \uC624\uB298 \uD558\uB8E8 \uC9C4\uC9DC \uB300\uBC15\uC774\uC5C8\uC5B4!
+      \uBB3C\uB860 \uC2E4\uD328\uB3C4 \uC788\uC5C8\uC9C0\uB9CC, \uC131\uACF5\uD560
+      \uB54C \uC2EC\uC7A5\uC774 \uCFF5\uCFF5 \uB6F0\uC5C8\uC5B4!"
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC5B8\uB2C8, \uCD08\uBCF4\uCE58\uACE4 \uC798\uD588\uC5B4! \uC5B4\uC5FF\uD55C
+      \uBB34\uC5ED\uC0C1 \uAC19\uC558\uB294\uAC78?"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uBC31\uD638, \uC624\uB298 \uD558\uB8E8 \uC5B4\uB560\uC5B4? \uB098\uB294
+      \uB108\uB791 \uAC19\uC774 \uC788\uC5B4\uC11C \uC9C4\uC9DC \uC7AC\uBC0C\uC5C8\uC5B4!"
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uB098\uB3C4 \uC88B\uC558\uC5B4! \uC55E\uC73C\uB85C\uB3C4 \uCB49\uCB49
+      \uAC70\uB798\uD558\uACE0 \uD6CC\uB96D\uD55C \uC0C1\uC778\uC774 \uB418\uB294
+      \uAC70\uC57C!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uC640 \uBC31\uD638\uB294 \uC2DC\uC7A5 \uB05D\uCABD
+      \uB178\uC810\uC744 \uD5A5\uD574 \uC2DC\uC120\uC744 \uB3CC\uB838\uB2E4. \uD587\uC0B4
+      \uC544\uB798 \uC0C8\uB85C\uC6B4 \uAE30\uD68C\uAC00 \uAE30\uB2E4\uB9B0\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796607078937730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607078937732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796607110008515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607110008514}
+  - component: {fileID: 5432796607110008513}
+  m_Layer: 0
+  m_Name: "T26_Click(\uD018\uC2A4\uD2B8 \uD074\uB9AD)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607110008514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607110008515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607110008513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607110008515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796607242832613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607242832612}
+  - component: {fileID: 5432796607242832611}
+  m_Layer: 0
+  m_Name: "T11_Click(\uC740\uD589 \uD074\uB9AD)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607242832612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607242832613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607242832611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607242832613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: Bank
+  clicked: 0
+--- !u!1 &5432796607280126646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607280126645}
+  - component: {fileID: 5432796607280126643}
+  - component: {fileID: 5432796607280126644}
+  m_Layer: 0
+  m_Name: "T9_Dialog(\uBC31\uD638 \uB4F1\uC7A5, \uAC74\uBB3C \uC124\uBA85 \uC2DC\uC791)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607280126645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607280126646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607280126643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607280126646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Tutorial_4
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uB294 \uBE75\uC744 \uD558\uB098 \uC785\uC5D0 \uBB3C\uBA70
+      \uC2DC\uC7A5\uC758 \uD65C\uAE30\uB97C \uB290\uAF08\uB2E4. \uCCAB \uAC70\uB798
+      \uC131\uACF5\uC758 \uC124\uB818\uC774 \uAC00\uC2B4\uC744 \uCC44\uC6E0\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uBB3C\uD488\uC774 \uB9C8\uC74C\uC5D0 \uB4E4\uC9C0 \uC54A\uC73C\uBA74
+      \uAC70\uC808\uD574\uB3C4 \uAD1C\uCC2E\uB2E4\uB294 \uC810\uB3C4 \uD655\uC778\uD574\uB450\uACE0\u2026"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC774\uC81C \uB610 \uB2E4\uB978 \uBB3C\uAC74\uC744 \uCC3E\uC544\uBCFC\uAE4C?
+      \uC800\uAE30 \uACFC\uC77C \uB178\uC810, \uC0AC\uACFC\uAC00 \uC2F1\uC2F1\uD574
+      \uBCF4\uC5EC!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uB610 \uB2E4\uB978 \uAC70\uB798\uB97C \uC704\uD574 \uAC00\uBC29\uC744
+      \uC5EC\uB294 \uC21C\uAC04, \uBC30\uB0AD \uC548\uC5D0\uC11C \uD76C\uBBF8\uD55C
+      \uBE5B\uC774 \uC0C8\uC5B4 \uB098\uC654\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC774\uAC8C \uBB50\uC9C0? \uAC00\uBC29\uC744 \uC5F4\uC5C8\uB294\uB370
+      \uC65C \uBE5B\uC774 \uB098\uB294 \uAC70\uC57C?"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uCFE0\uD37C\uAC00 \uBD80\uB52A\uD788\uB294 \uC18C\uB9AC \uC0AC\uC774\uB85C
+      \uAE30\uBB18\uD55C \uAE30\uC6B4\uC774 \uD37C\uC84C\uB2E4. \uBE5B\uC774 \uC810\uCC28
+      \uAC15\uD574\uC9C0\uBA70, \uD3F4\uC9DD! \uC190\uBC14\uB2E5\uB9CC \uD55C \uD770
+      \uD638\uB791\uC774 \uC18C\uB140\uAC00 \uD280\uC5B4\uB098\uC654\uB2E4."
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC9DC\uC794! \uBB34\uC5ED\uC0C1 \uC5B8\uB2C8. \uB4DC\uB514\uC5B4 \uB9CC\uB0AC\uB124!
+      \uBC29\uAE08 \uADF8 \uBE75 \uD765\uC815, \uB05D\uB0B4\uC92C\uC5B4! \uC774 \uBC31\uD638\uAC00
+      \uC774\uC81C\uBD80\uD130 \uB4E0\uB4E0\uD558\uAC8C \uB3C4\uC640\uC904\uAC8C!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uAC11\uC790\uAE30 \uBB50\uC57C, \uC774 \uADC0\uC5EC\uC6B4 \uD638\uB791\uC774\uB294
+      \uC5B4\uB514\uC11C \uD280\uC5B4\uB098\uC628 \uAC70\uC9C0?! \uB0B4 \uD765\uC815
+      \uBD24\uB2E4\uACE0?"
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uD765, \uADC0\uC5FD\uB2E4\uB2C8 \uBB34\uB840\uD574! \uB09C \uBC31\uD638.
+      \uCD08! \uD2B9! \uAE09! \uC2E0\uBE44\uB85C\uC6B4 \uBB34\uC5ED \uAC00\uC774\uB4DC\uC57C!
+      \uC5B8\uB2C8\uC758 \uCFE0\uD37C\uC5D0 \uB2F4\uAE34 \uBB34\uC5ED\uC758 \uAE30\uC6B4\uC774
+      \uB0A0 \uBD88\uB800\uC9C0!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uBB34\uC5ED\uC758 \uAE30\uC6B4? \uADF8\uAC8C \uBB50\uC57C? \uC740\uD589
+      \uCFE0\uD37C\uAC00 \uD2B9\uBCC4\uD55C \uAC70\uC600\uC5B4?"
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uB9DE\uC544, \uC5B8\uB2C8! \uC774 \uCFE0\uD37C\uB4E4\uC740 \uC774 \uB9C8\uC744\uC758
+      \uBB34\uC5ED \uAE30\uC6B4\uC774 \uB2F4\uAE34 \uAC70\uC57C. \uB124 \uD765\uC815
+      \uC131\uACF5\uC774 \uADF8 \uAE30\uC6B4\uC744 \uAE68\uC6E0\uACE0, \uADF8\uB798\uC11C
+      \uB0B4\uAC00 \uD280\uC5B4\uB098\uC628 \uAC70\uC9C0!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uADF8\uB7FC \uB10C \uB0B4 \uD30C\uD2B8\uB108\uC57C? \uC88B\uC544, \uBC31\uD638!
+      \uAC19\uC774 \uB300\uBC15 \uB098\uBCF4\uC790!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBC31\uD638\uAC00 \uC8FC\uC778\uACF5\uC758 \uC5B4\uAE68\uC5D0 \uD3F4\uC9DD
+      \uC62C\uB77C\uD0C0\uBA70 \uCF54\uB97C \uD081\uD081\uAC70\uB838\uB2E4. \uD070
+      \uB208\uC774 \uD587\uC0B4\uC744 \uBC1B\uC544 \uBC18\uC9DD\uC774\uACE0, \uB9AC\uBCF8
+      \uAF2C\uB9AC\uAC00 \uC0B4\uB791\uC600\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uBC31\uD638, \uC774 \uBE75 \uB0C4\uC0C8 \uB9E1\uC544\uBD10! \uD55C
+      \uC785 \uBA39\uC5B4\uBCFC\uB798?"
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC778\uAC04 \uC74C\uC2DD\uC740 \uC548 \uBA39\uC5B4! \uB0C4\uC0C8\uB9CC
+      \uB9E1\uC744\uAC8C! \uC5B8\uB2C8, \uC2DC\uC7A5 \uB9D0\uACE0 \uC911\uC694\uD55C
+      \uAC74\uBB3C\uB4E4 \uBA3C\uC800 \uB458\uB7EC\uBCFC\uAE4C?"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC624 \uADF8\uAC70 \uC88B\uC740 \uC0DD\uAC01! \uC774 \uB9C8\uC744\uC5D0
+      \uC740\uD589\uC774\uB791 \uAE38\uB4DC \uAC19\uC740 \uAC74\uBB3C\uB4E4 \uC788\uC796\uC544.
+      \uC5B4\uB514\uBD80\uD130 \uAC08\uAE4C?"
+  - speakerIndex: 2
+    name: "\uBC31\uD638"
+    dialog: "\uC5B8\uB2C8, \uBA3C\uC800 \uC740\uD589 \uAC00\uBCF4\uC790! \uAC74\uBB3C\uC774
+      \uC73C\uB9AC\uC73C\uB9AC\uD55C \uAC8C \uAC00\uBCF4\uACE0 \uC2F6\uC5B4!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uC640 \uBC31\uD638\uB294 \uC2DC\uC7A5 \uD55C\uCABD\uC5D0
+      \uC790\uB9AC\uD55C \uC740\uD589 \uAC74\uBB3C\uB85C \uD5A5\uD588\uB2E4. \uB2E8\uB2E8\uD55C
+      \uB3CC\uBB38 \uC704\uC5D0 \uCFE0\uD37C \uBAA8\uC591\uC774 \uC0C8\uACA8\uC838
+      \uC788\uC5C8\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796607280126644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607280126646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796607294648928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607294648927}
+  - component: {fileID: 5432796607294648926}
+  m_Layer: 0
+  m_Name: "T2_Click(Trade \uBC84\uD2BC)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607294648927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607294648928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607294648926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607294648928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  clicked: 0
+--- !u!1 &5432796607340068938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607340068937}
+  - component: {fileID: 5432796607340068936}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607340068937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607340068938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 890.92444, y: 554.3977, z: -5.787103}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5432796607379177956}
+  - {fileID: 5432796607294648927}
+  - {fileID: 5432796605662298952}
+  - {fileID: 5432796606860237800}
+  - {fileID: 5432796605936960969}
+  - {fileID: 5432796607342873820}
+  - {fileID: 5432796606310005440}
+  - {fileID: 5432796607623446797}
+  - {fileID: 5432796607280126645}
+  - {fileID: 5432796606180593817}
+  - {fileID: 5432796606735150817}
+  - {fileID: 5432796607242832612}
+  - {fileID: 5432796606957042982}
+  - {fileID: 5432796605844780715}
+  - {fileID: 5432796605816327402}
+  - {fileID: 5432796607502754992}
+  - {fileID: 5432796606426325357}
+  - {fileID: 5432796606601032021}
+  - {fileID: 5432796605601161971}
+  - {fileID: 5432796605610636266}
+  - {fileID: 5432796607560281483}
+  - {fileID: 5432796606372691778}
+  - {fileID: 5432796605596082359}
+  - {fileID: 5432796606893991845}
+  - {fileID: 5432796606978253943}
+  - {fileID: 5432796606598797553}
+  - {fileID: 5432796606661280317}
+  - {fileID: 5432796607110008514}
+  - {fileID: 5432796607078937731}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607340068936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607340068938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d7223d7d2420143b661865eba92c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorials:
+  - {fileID: 5432796607379177955}
+  - {fileID: 5432796607294648926}
+  - {fileID: 5432796605662298953}
+  - {fileID: 5432796606860237799}
+  - {fileID: 5432796605936960968}
+  - {fileID: 5432796607342873819}
+  - {fileID: 5432796606310005439}
+  - {fileID: 5432796607623446796}
+  - {fileID: 5432796607280126644}
+  - {fileID: 5432796606180593816}
+  - {fileID: 5432796606735150816}
+  - {fileID: 5432796607242832611}
+  - {fileID: 5432796606957042981}
+  - {fileID: 5432796605844780714}
+  - {fileID: 5432796605816327401}
+  - {fileID: 5432796607502754991}
+  - {fileID: 5432796606426325356}
+  - {fileID: 5432796606601032020}
+  - {fileID: 5432796605601161970}
+  - {fileID: 5432796605610636265}
+  - {fileID: 5432796607560281482}
+  - {fileID: 5432796606372691777}
+  - {fileID: 5432796605596082358}
+  - {fileID: 5432796606893991844}
+  - {fileID: 5432796606978253942}
+  - {fileID: 5432796606598797552}
+  - {fileID: 5432796606661280316}
+  - {fileID: 5432796607110008513}
+  - {fileID: 5432796607078937730}
+  highlighter: {fileID: 0}
+  currentTutorial: {fileID: 0}
+  onTutorialFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  loadManager: {fileID: 0}
+--- !u!1 &5432796607342873821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607342873820}
+  - component: {fileID: 5432796607342873818}
+  - component: {fileID: 5432796607342873819}
+  m_Layer: 0
+  m_Name: "T6_Dialog(\uD765\uC815 \uC124\uBA85)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607342873820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607342873821}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607342873818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607342873821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Tutorial_3
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC88B\uC544, \uADF8\uB7F0 \uC2DD\uC73C\uB85C \uB0B4 \uD604\uC7AC \uC790\uAE08
+      \uC0C1\uD669\uC5D0 \uB9DE\uAC8C \uB054 \uAC1C\uC218\uB97C \uC870\uC808\uD574\uC57C
+      \uB3FC."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC "
+    dialog: "\uC22B\uC790 \uCE78\uC744 \uB204\uB974\uBA74 \uC9C1\uC811 \uAC12 \uC785\uB825\uB3C4
+      \uAC00\uB2A5\uD574."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uADF8\uB7FC \uB2E4\uC74C\uC73C\uB85C \uAC70\uB798\uC5D0\uC11C \uC81C\uC77C
+      \uC911\uC694\uD55C \uC694\uC18C! \uD765\uC815\uC774\uC57C."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uD765\uC815\uC740 \uD604\uC7AC \uBB3C\uD488\uC758 \uAC00\uACA9\uC5D0\uC11C
+      \uAD6C\uB9E4 \uC2DC\uC5D0\uB294 \uAC00\uACA9\uC744 \uC904\uC774\uACE0, \uD310\uB9E4
+      \uC2DC\uC5D0\uB294 \uAC00\uACA9\uC744 \uB298\uB9B4 \uC218 \uC788\uB294 \uC218\uB2E8\uC774\uC57C"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uD765\uC815 \uD654\uBA74\uC5D0\uC11C \uBCF8\uC778\uC774 \uC6D0\uD558\uB294
+      \uAC12\uC744 \uC785\uB825\uD558\uACE0 \uD765\uC815\uC744 \uC2DC\uB3C4\uD558\uBA74
+      \uB3FC!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uB2E4\uB9CC \uC0C1\uB300\uB3C4 \uC774\uC724\uC774 \uC788\uC5B4\uC57C
+      \uD558\uB294 \uB9CC\uD07C \uAE30\uC874 \uAC00\uACA9\uACFC \uB108\uBB34 \uCC28\uC774\uAC00
+      \uB098\uBA74 \uB2F9\uC5F0\uD788 \uAC70\uC808\uD560 \uD655\uB960\uC774 \uB192\uACA0\uC9C0?"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC0C1\uB300\uAC00 \uBC1B\uC544\uB4E4\uC77C \uC218 \uC788\uB294 \uC801\uC808\uD55C
+      \uAE08\uC561\uC744 \uC81C\uC2DC\uD558\uB294 \uAC8C \uD575\uC2EC\uC774\uC57C!"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC774\uBC88\uC5D0\uB294 \uC77C\uB2E8 \uAD6C\uB9E4\uD574\uBCFC\uAE4C?
+      \uBE75\uC774 \uBA39\uACE0 \uC2F6\uC5B4\uC84C\uC5B4!"
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796607342873819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607342873821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796607379177957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607379177956}
+  - component: {fileID: 5432796607379177954}
+  - component: {fileID: 5432796607379177955}
+  m_Layer: 0
+  m_Name: "T1_Dialog(\uC2DC\uC791)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607379177956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607379177957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607379177954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607379177957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1befaad8f08734caa185b6464094c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogDB: {fileID: 11400000, guid: 9f60775824b7cf642a61f287c5878bcf, type: 2}
+  branch: 0
+  selectedDialogName: Tutorial_1
+  speakers:
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  - SpeakerImage: {fileID: 0}
+  dialogs:
+  - speakerIndex: 1
+    name: 
+    dialog: "\uB300\uBB34\uC5ED\uC2DC\uB300\uC758 \uC6C5\uC7A5\uD55C \uAE30\uC6B4\uC774
+      \uC138\uC0C1\uC744 \uD718\uAC10\uC558\uB2E4. \uBC14\uB2E4\uB97C \uAC00\uB85C\uC9C0\uB974\uB294
+      \uC0C1\uC120\uACFC \uB300\uB959\uC744 \uC787\uB294 \uC218\uB808\uAC00 \uB04A\uC784\uC5C6\uC774
+      \uC624\uAC14\uB2E4. \uACE1\uBB3C, \uD5A5\uC2E0\uB8CC, \uBCF4\uC11D\uC774 \uC2DC\uC7A5\uC744
+      \uCC44\uC6B0\uBA70, \uBAA8\uB450\uAC00 \uBD80\uC640 \uBA85\uC608\uB97C \uAFC8\uAFE8\uB2E4."
+  - speakerIndex: 1
+    name: 
+    dialog: "\uC774 \uB9C8\uC744\uC758 \uC2DC\uC7A5\uC740 \uADF8 \uAFC8\uC758 \uC2EC\uC7A5\uC774\uC5C8\uB2E4.
+      \uD587\uC0B4 \uC544\uB798 \uD669\uAE08\uBE5B \uBC00 \uD5A5\uAE30\uAC00 \uD37C\uC9C0\uACE0,
+      \uC0C1\uC778\uB4E4\uC758 \uD65C\uAE30\uCC2C \uC678\uCE68\uC774 \uACE8\uBAA9\uC744
+      \uBA54\uC6E0\uB2E4."
+  - speakerIndex: 1
+    name: 
+    dialog: "\uC624\uB298, \uC0C8\uB85C\uC6B4 \uBB34\uC5ED\uC0C1\uC774 \uC2DC\uC7A5
+      \uD55C\uBCF5\uD310\uC5D0 \uC130\uB2E4. \uB2A6\uC740 \uCD9C\uBC1C\uC774\uC5C8\uC9C0\uB9CC,
+      \uADF8\uB140\uC758 \uB208\uBE5B\uC740 \uB728\uAC70\uC6B4 \uC758\uC9C0\uB85C
+      \uBD88\uD0C0\uC62C\uB790\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC640, \uC774 \uC2DC\uC7A5 \uC9C4\uC9DC \uC0B4\uC544\uC788\uB124! \uC5EC\uAE30\uC11C
+      \uB0B4 \uBB34\uC5ED \uBAA8\uD5D8\uC774 \uC2DC\uC791\uB420 \uAC70\uC57C! (\uB108\uBB34
+      \uC124\uB80C\uB2E4!)"
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC880 \uB2A6\uAC8C \uB6F0\uC5B4\uB4E4\uC5C8\uC9C0\uB9CC, \uC9C0\uAE08\uBD80\uD130
+      \uC5F4\uC2EC\uD788 \uD558\uBA74 \uB2E4 \uB530\uB77C\uC7A1\uC744 \uC218 \uC788\uC744
+      \uAC70\uC57C!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uB294 \uB0A1\uC740 \uAC00\uC8FD \uBC30\uB0AD\uC744
+      \uBA54\uACE0 \uC2DC\uC7A5\uC758 \uC18C\uC74C \uC18D\uC5D0 \uC130\uB2E4. \uBC30\uB0AD
+      \uC548\uC5D0\uB294 \uC740\uD589\uC5D0\uC11C \uBE4C\uB9B0 \uB3C8\uACFC \uD488\uC9C8
+      \uC88B\uC740 \uBC00 \uC790\uB8E8\uAC00 \uB4E4\uC5B4 \uC788\uC5C8\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC774 \uB3C8\uC73C\uB85C \uC791\uC740 \uAC70\uB798\uBD80\uD130 \uC2DC\uC791\uD574\uC11C
+      \uC810\uC810 \uD0A4\uC6B8 \uAC70\uC57C. \uCCAB \uAC70\uB798, \uAF2D \uD574\uB0BC
+      \uAC70\uC57C!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uC2DC\uC7A5\uC5D0\uB294 \uD587\uC0B4\uC774 \uBE44\uCE58\uBA70 \uC0DD\uAE30\uAC00
+      \uB118\uCCE4\uB2E4. \uC0C1\uC778\uB4E4\uC758 \uD638\uAC1D \uC18C\uB9AC, \uD765\uC815
+      \uB300\uD654, \uC9D0\uC218\uB808\uC758 \uBC14\uD034 \uAD74\uB7EC\uAC00\uB294
+      \uC18C\uB9AC\uAC00 \uC5B4\uC6B0\uB7EC\uC838 \uD65C\uB825\uC744 \uBFDC\uC5B4\uB0C8\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uACE1\uBB3C, \uC0DD\uC120, \uD5A5\uC2E0\uB8CC \uB0C4\uC0C8\uAC00 \uB4A4\uC11E\uC5EC\uC11C
+      \uBA38\uB9AC\uAC00 \uC5B4\uC9C0\uB7EC\uC6B8 \uC815\uB3C4\uC57C. \uC774\uACF3\uC5D0\uC11C
+      \uBB34\uC5ED \uC2DC\uC791\uD558\uB294 \uAC70, \uC9C4\uC9DC \uBA4B\uC9C0\uB2E4!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uC2DC\uC7A5 \uB178\uC810\uC5D4 \uD654\uB824\uD55C \uBB3C\uAC74\uB4E4\uC774
+      \uAC00\uB4DD\uD588\uB2E4. \uBD89\uC740 \uD5A5\uC2E0\uB8CC \uD56D\uC544\uB9AC,
+      \uBC18\uC9DD\uC774\uB294 \uC7A5\uC2E0\uAD6C, \uC2E0\uC120\uD55C \uCC44\uC18C\uC640
+      \uC0DD\uC120\uC774 \uB208\uC744 \uC0AC\uB85C\uC7A1\uC558\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC0AC\uB78C\uB4E4\uC774 \uC5B4\uB5A4 \uBB3C\uAC74\uC744 \uC88B\uC544\uD558\uB294\uC9C0
+      \uC54C\uC544\uB0B4\uC57C \uD574. \uB0B4 \uBC00\uC740 \uC5B4\uB514\uC11C \uC81C\uC77C
+      \uBE44\uC2F8\uAC8C \uD314 \uC218 \uC788\uC744\uAE4C?"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uB294 \uB178\uC810 \uAC04\uD310\uC744 \uAF3C\uAF3C\uD788
+      \uC77D\uC73C\uBA70 \uC0C1\uC778\uB4E4\uC758 \uB300\uD654\uB97C \uADC0 \uAE30\uC6B8\uC5EC
+      \uB4E4\uC5C8\uB2E4. \uBA54\uBAA8\uC7A5\uC5D0 \uBC00 \uAC00\uACA9\uACFC \uC2DC\uC7A5
+      \uD750\uB984\uC744 \uAE30\uB85D\uD588\uB2E4."
+  - speakerIndex: 0
+    name: "\uBBF8\uB808\uC0AC"
+    dialog: "\uC815\uBCF4\uAC00 \uBB34\uC5ED\uC758 \uD575\uC2EC\uC774\uB77C\uB358\uB370,
+      \uC544\uC9C1\uC740 \uC880 \uBCF5\uC7A1\uD558\uB2E4. \uADF8\uB798\uB3C4 \uD558\uB098\uC529
+      \uBC30\uC6B0\uBA74\uC11C \uB2E4 \uD574\uB0BC \uAC70\uC57C!"
+  - speakerIndex: 1
+    name: 
+    dialog: "\uBBF8\uB808\uC0AC\uAC00 \uC2DC\uC7A5 \uC18C\uC74C\uC5D0 \uC775\uC219\uD574\uC9C8
+      \uBB34\uB835, \uD56D\uC544\uB9AC\uB97C \uC815\uB9AC\uD558\uB358 \uACE1\uBB3C\uC0C1\uC778\uC774
+      \uBBF8\uC18C\uB97C \uC9C0\uC5C8\uB2E4."
+  Name: {fileID: 0}
+  Dialog: {fileID: 0}
+  dialogUI: {fileID: 0}
+  DialogBG: {fileID: 0}
+  isAutoStart: 1
+  isFirst: 1
+  typingSpeed: 0.1
+  isTypingEffect: 0
+  customer: {fileID: 0}
+--- !u!114 &5432796607379177955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607379177957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e221b87d6bafc2640b1772da7f8cb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5432796607502754993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607502754992}
+  - component: {fileID: 5432796607502754991}
+  m_Layer: 0
+  m_Name: "T15_Click(\uB300\uC7A5\uAC04 \uD074\uB9AD)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607502754992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607502754993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607502754991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607502754993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f9f4dad55589542bdb540f3d233cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: BlackSmith
+  clicked: 0
+--- !u!1 &5432796607560281484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607560281483}
+  - component: {fileID: 5432796607560281482}
+  m_Layer: 0
+  m_Name: "T19.5_Stay(\uB9C8\uC744 \uC0DD\uC131 \uB300\uAE30)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607560281483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607560281484}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607560281482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607560281484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2beabdd56de43f344ae5ba1617e7ac32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 1.2
+--- !u!1 &5432796607623446798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432796607623446797}
+  - component: {fileID: 5432796607623446796}
+  m_Layer: 0
+  m_Name: T8_Trade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432796607623446797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607623446798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5432796607340068937}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5432796607623446796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5432796607623446798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae225b1182872a341a961c6d68053b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnd: 0

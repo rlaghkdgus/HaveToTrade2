@@ -7,7 +7,7 @@ public class TutorialDialog : TutorialBase
 {
     private DialogSystem dialogSystem;
 
-    public override void Enter()
+    public override void Enter(TutorialController controller)
     {
         dialogSystem = GetComponent<DialogSystem>();
     }
@@ -22,7 +22,7 @@ public class TutorialDialog : TutorialBase
         }
     }
 
-    public override void Exit()
+    public override void Exit(TutorialController contorller)
     {
 
     }

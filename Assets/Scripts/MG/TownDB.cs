@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "NewTownDB", menuName = "DataBase/TownDB")]
 public class TownDB : ScriptableObject
 {
     public string TownName; // 마을 이름
+    public Sprite TownImage;
     public VillageType TownType;
     public bool UseCloud;
 

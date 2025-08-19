@@ -7,7 +7,7 @@ public class TutorialTrade : TutorialBase
     [SerializeField] private TutorialOnEvent T_event;
     public bool fixItem = false;
 
-    public override void Enter()
+    public override void Enter(TutorialController controller)
     {
         fixItem = true;
     }
@@ -20,7 +20,7 @@ public class TutorialTrade : TutorialBase
         }
     }
 
-    public override void Exit()
+    public override void Exit(TutorialController contorller)
     {
         
     }

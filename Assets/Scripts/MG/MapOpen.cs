@@ -16,6 +16,6 @@ public class MapOpen : MonoBehaviour
     public void mapOpen()
     {
         SoundManager.Instance.SFXplay(SoundType.UI_Button);
-        UIManage.Instance.GenerateUI("map");
+        UIManage.Instance.GenerateUI("mapBG");
     }
 }

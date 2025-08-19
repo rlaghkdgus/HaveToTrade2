@@ -1,135 +1,87 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialClick : TutorialBase
 {
-    //[SerializeField] private GameObject ClickTrigger;
-    [SerializeField] private GameObject blockPanel;
+    [SerializeField] private T_Clickable target;
+    private RectTransform rect;
 
-    private Material hole;
-    private RaycastBlock RayB;
-
-    [SerializeField] private bool isClick = false;
-    private bool isUIClick = false;
-    [SerializeField] private bool isUI;
-    [SerializeField] private bool isDelay;
-
-    public float xPos;
-    public float yPos;
-    public float width;
-    public float height;
-
-    private void Awake()
-    {
-        if(blockPanel != null)
-        {
-            hole = blockPanel.transform.GetChild(0).GetComponent<RawImage>().material;
-            RayB = blockPanel.transform.GetChild(1).GetComponent<RaycastBlock>();
-        }
-        else
-        {
-            Debug.LogError("blockPanel 없음");
-        }
-    }
+    public string targetTag;
+    [SerializeField] private bool clicked = false;
 
     private void OnEnable()
     {
-        EventManager.TownBuildingClick += OnClick;
-        EventManager.TownBuildingUIOff += nextTu;
+        EventManager.TownBuildingClick += BuildingClick;
     }
 
     private void OnDisable()
     {
-        EventManager.TownBuildingClick -= OnClick;
-        EventManager.TownBuildingUIOff -= nextTu;
+        EventManager.TownBuildingClick -= BuildingClick;
     }
 
-    public void OnClick()
+    public override void Enter(TutorialController controller)
     {
-        isClick = true;
-    }
-
-    public void nextTu()
-    {
-        isUIClick = true;
-    }
-    
-    public IEnumerator DelaySetActive()
-    {
-        yield return new WaitForSeconds(1f);
-        blockPanel.SetActive(true);
-    }
-
-    public override void Enter()
-    {
-        if (hole != null)
+        if(target == null)
         {
-            hole.SetVector("_HoleRect", new Vector4(xPos, yPos, width, height));
+            GameObject tagtarget = GameObject.FindGameObjectWithTag(targetTag);
+            target = tagtarget?.GetComponent<T_Clickable>();
+
+            if(target == null)
+            {
+                Debug.Log("target 없음");
+                return;
+            }
+
+            Debug.Log("target 찾음");
+        }
+
+        rect = target.GetComponent<RectTransform>();
+
+        if (rect != null)
+        {
+            controller.highlighter?.Highlight(rect);
+            Debug.Log("UI 인지");
         }
         else
         {
-            Debug.LogError("hole 없음");
+            controller.highlighter?.Highlight(target.gameObject, Camera.main);
+            Debug.Log("Object 인지");
         }
 
-        if(RayB != null)
-        {
-            RayB.xPos = xPos;
-            RayB.yPos = yPos;
-            RayB.width = width;
-            RayB.height = height;
-        }
-        else
-        {
-            Debug.LogError("RayB 없음");
-        }
-
-        //ClickTrigger.SetActive(true);
-        if (!isDelay)
-        {
-            blockPanel.SetActive(true);
-        }
-        else
-        {
-            StartCoroutine(DelaySetActive());
-        }
-
-        isClick = false;
-        isUIClick = false;
+        clicked = false;
+        target.onClicked.AddListener(() => OnTargetClicked(controller));
     }
 
     public override void Execute(TutorialController controller)
     {
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-
-            if(hit.collider != null)
-            {
-                if(hit.collider.gameObject == ClickTrigger)
-                {
-                    controller.SetNextTutorial();
-                }
-            }
-        }*/
-
-        if (isClick && !isUI)
+        if (clicked)
         {
             controller.SetNextTutorial();
-            Debug.Log("클릭 튜토리얼 완료");
-        }
-        else if(isUIClick && isUI)
-        {
-            controller.SetNextTutorial();
-            Debug.Log("UI 닫기 튜토리얼 완료");
         }
     }
 
-    public override void Exit()
+    public void BuildingClick()
     {
-        blockPanel.SetActive(false);
+        clicked = true;
+    }
+
+    private void OnTargetClicked(TutorialController controller)
+    {
+        Debug.Log("Object 클릭");
+        controller.SetNextTutorial();
+    }
+
+    public override void Exit(TutorialController controller)
+    {
+        if(target != null)
+        {
+            target.onClicked.RemoveAllListeners();
+        }
+
+        clicked = false;
+        controller.highlighter?.Hide();
     }
 }

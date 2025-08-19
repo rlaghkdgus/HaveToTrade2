@@ -95,10 +95,11 @@ GameObject:
   - component: {fileID: 7624564257186812343}
   - component: {fileID: 8688575145859641509}
   - component: {fileID: 391142036531503377}
+  - component: {fileID: 7471230339322893895}
   - component: {fileID: 3186256111805279937}
   m_Layer: 0
   m_Name: meatblacksmith_0
-  m_TagString: Untagged
+  m_TagString: BlackSmith
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,6 +185,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_Type: 0
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
+--- !u!114 &7471230339322893895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204915216604408779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!60 &3186256111805279937
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -229,10 +245,11 @@ GameObject:
   - component: {fileID: 18312754041725594}
   - component: {fileID: 6437502410806362605}
   - component: {fileID: 5418703102960048519}
+  - component: {fileID: 1416608194273340799}
   - component: {fileID: 6748592610009552644}
   m_Layer: 0
   m_Name: meatbank_0
-  m_TagString: Untagged
+  m_TagString: Bank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,6 +335,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_Type: 3
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
+--- !u!114 &1416608194273340799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857877439352565276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &6748592610009552644
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -247,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 195491259
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e931ff091bf9b644ab477a588b7cefa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0154cae52d464a489f3be86bed321f5, type: 3}
   m_Color: {r: 0.7137255, g: 0.7881123, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 9167483691660092844}
   - component: {fileID: 2764966272633745346}
   - component: {fileID: 3711888233533027616}
+  - component: {fileID: 4805656565027596146}
   m_Layer: 0
   m_Name: ironBank_0
   m_TagString: Untagged
@@ -486,6 +487,21 @@ PolygonCollider2D:
       - {x: 2.315454, y: -1.2607534}
       - {x: 2.7, y: -2.17}
       - {x: 1.27, y: -2.38}
+--- !u!114 &4805656565027596146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461026598295252501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6469540751027748630
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +598,7 @@ GameObject:
   - component: {fileID: 4247416585674883406}
   - component: {fileID: 1947517010454945489}
   - component: {fileID: 55167263371865715}
+  - component: {fileID: 2003958404627105617}
   m_Layer: 0
   m_Name: IronBlackSmith_0
   m_TagString: Untagged
@@ -707,3 +724,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_Type: 0
   outline_M: {fileID: 2100000, guid: 00847af0e763fce498a14bb43c106829, type: 2}
+--- !u!114 &2003958404627105617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001458652857105445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a391669301d84e91fd78691ac63cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClicked:
+    m_PersistentCalls:
+      m_Calls: []

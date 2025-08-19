@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: aTown
   m_EditorClassIdentifier: 
   TownName: a
+  TownImage: {fileID: 203421428, guid: a6c1e7e4f04dbbd4aaaf74287a57dad0, type: 3}
   TownType: 3
   UseCloud: 1
   TownPrefabs:

@@ -13058,7 +13058,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012403962
+      value: 0.00011672173
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14197,6 +14197,7 @@ MonoBehaviour:
   productCount: 0
   bargainSuccess: 0
   currentProductIndex: 0
+  currentPrice: 0
   buyItem:
     price: 0
     stuffName: 
@@ -14208,6 +14209,8 @@ MonoBehaviour:
   itemSortInfo: {fileID: 425238442}
   itemNameInfo: {fileID: 276459597}
   weightPopUp: {fileID: 466060452060724038, guid: a02df2d719aa0504892852ed712d0a3b, type: 3}
+  climate: {fileID: 0}
+  EventSale: 0
 --- !u!4 &1326690480
 Transform:
   m_ObjectHideFlags: 0
@@ -21934,6 +21937,8 @@ MonoBehaviour:
   loanText: {fileID: 2003508799}
   repayField: {fileID: 1990473157}
   repayUIButton: {fileID: 1994900118}
+  selectUIOnOff: {fileID: 0}
+  repayUIOnOff: {fileID: 0}
   repayPopUp: {fileID: 466060452060724038, guid: 1c1e8937a020f304290ec3b1862dcf25, type: 3}
 --- !u!4 &2068305174
 Transform:

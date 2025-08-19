@@ -303,7 +303,6 @@ public class Customer : MonoBehaviour
     }
     void ResetTradeSignText()
     {
-        Scene curScene = SceneManager.GetActiveScene();
         if (buyOrSell)
             tradeSignUI.text = "상품 구매중...";
         else
@@ -452,6 +451,7 @@ public class Customer : MonoBehaviour
             tradeButton.SetActive(false);
             buttonEdit.SetActive(true);
             blockButtonClick.SetActive(false);
+            if(T5_tradeEnd != null)
             T5_tradeEnd.isEnd = true;
             if (Player.Instance.isMaxCount && Player.Instance.money < 100000)
             {

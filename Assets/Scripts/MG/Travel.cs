@@ -42,7 +42,8 @@ public class Travel : MonoBehaviour
     [SerializeField] RoadEvent roadEvent;
     [Header("손님 거래신호용")]
     [SerializeField] Customer customer;
-
+    [Header("날씨 이벤트")]
+    [SerializeField] ClimateEvent climate;
     private void CombinationRoad(TownDB nextTownDB)
     {
         RandomRoad.Clear();
@@ -241,7 +242,8 @@ public class Travel : MonoBehaviour
         yield return new WaitForSeconds(FadeTime);
         OnMove = false;
         InitRoad();
-        
+        if(climate != null)
+        climate.ChangeState();
         Player.Instance._MoveCount++;
         TownManager.Instance.UpdateTown();
         customer.tradeOn();

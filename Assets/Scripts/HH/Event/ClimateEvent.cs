@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 [System.Serializable]
 public class SaleInfo
 {
@@ -9,12 +10,20 @@ public class SaleInfo
     public float minSale = 60f;
     public ItemSorts sort;
 }
+[System.Serializable]
+public class SortImg
+{
+    public string name;
+    public Sprite sprite;
+}
 public class ClimateEvent : MonoBehaviour
 {
     public List<SaleInfo> sortSales;
     public Data<ClimateState> c_State = new Data<ClimateState>();
     public TMP_Text climateText;
     public float curEventSale;
+    public Image newsImg;
+    public List<SortImg> sortImgList;
     [Header("디버그용")]
     public ClimateState curClimate;
     private void Awake()
@@ -41,7 +50,8 @@ public class ClimateEvent : MonoBehaviour
         if(_cState == ClimateState.BumperCrop)
         {
             curEventSale = GetRandomSaleBySort(ItemSorts.food);
-            climateText.text = "풍년";
+            climateText.text = "풍년이 일어났다! 폭락 해버린 식자재!";
+            newsImg.sprite = RetImage("BumperCrop");
         }
     }
     private void ChangeFakeJewel(ClimateState _cState)
@@ -49,7 +59,8 @@ public class ClimateEvent : MonoBehaviour
         if (_cState == ClimateState.FakeJewel)
         {
             curEventSale = GetRandomSaleBySort(ItemSorts.accesory);
-            climateText.text = "이 보석은 가짜다 !";
+            climateText.text = "가짜 귀금속 유행, 소비 위축으로 가격하락.";
+            newsImg.sprite = RetImage("FakeJewel");
         }
     }
     private void ChangeFurnEvent(ClimateState _cState)
@@ -57,15 +68,17 @@ public class ClimateEvent : MonoBehaviour
         if (_cState == ClimateState.FurnEvent)
         {
             curEventSale = GetRandomSaleBySort(ItemSorts.furniture);
-            climateText.text = "유적 발견!";
+            climateText.text = "유적 발견!!";
+            newsImg.sprite = RetImage("FurnEvent");
         }
     }
     private void ChangeClothEvent(ClimateState _cState)
-    {
+    { 
         if (_cState == ClimateState.ClothEvent)
         {
             curEventSale = GetRandomSaleBySort(ItemSorts.clothes);
-            climateText.text = "의류 기술 개발";
+            climateText.text = "의류 기술 개발, 넘쳐나는 의류들 ...";
+            newsImg.sprite = RetImage("ClothEvent");
         }
     }
     public void SetEventPrice(int curPrice,pItem curItem)
@@ -91,5 +104,10 @@ public class ClimateEvent : MonoBehaviour
             return Random.Range(info.minSale, info.maxSale); // min 이상 max 미만
         }
         return 100f; // 못 찾았을 경우
+    }
+    public Sprite RetImage(string name)
+    {
+        SortImg img = sortImgList.Find(s => s.name == name);
+        return img.sprite;
     }
 }

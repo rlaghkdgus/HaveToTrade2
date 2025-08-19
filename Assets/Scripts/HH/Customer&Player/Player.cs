@@ -59,7 +59,18 @@ public class Player : Singleton<Player>
     {
        
     }
-
+    private void Start()
+    {
+        //야매로 해금 다풀기
+        for(int i = 0; i < 4; i ++)
+        {
+            FameCheck(furnFame);
+            FameCheck(clothFame);
+            FameCheck(pFoodFame);
+            FameCheck(accesoryFame);
+            FameCheck(foodFame);
+        }
+    }
     private void OnEnable()
     {
         EventManager.ChangeFame += TierUp;

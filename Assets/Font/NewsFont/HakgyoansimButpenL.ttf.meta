@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 240fd98c921a95e4e91ad9b5e1314e94
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hakgyoansim Butpen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6180e4d452854bb4ebf5b795865d3ba5, type: 3}
+  - {fileID: 12800000, guid: c17fbc5232d2fed4fb8c7241a4fe0d8b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

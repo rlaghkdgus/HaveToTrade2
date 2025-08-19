@@ -440,7 +440,10 @@ public class Customer : MonoBehaviour
         reBargain = false;
         ItemManager.Instance.ListClear();
         yield return DialogPlay();
-                
+        if (buyOrSell == true)
+            BuyUI.SetActive(false);
+        else
+            SellUI.SetActive(false);
         yield return MoveAndFadeOutCustomer(newCustomer, customerTransform[2].position, fadeDuration);
         yield return YieldCache.WaitForSeconds(fadeDuration * 1.5f);
         if (cusCount <= 0)

@@ -146,6 +146,9 @@ public class Travel : MonoBehaviour
             case VillageType.GoldBen:
                 SoundManager.Instance.BGMplay(true, BGMtype.MineRoad);
                 break;
+            case VillageType.GreStar:
+                SoundManager.Instance.BGMplay(true, BGMtype.WheatRoad);
+                break;
         }
         for (int i = 0; i < clouds.Length; ++i)
         {
@@ -237,6 +240,9 @@ public class Travel : MonoBehaviour
                 break;
             case VillageType.GoldBen:
                 SoundManager.Instance.BGMplay(true, BGMtype.Mine);
+                break;
+            case VillageType.GreStar:
+                SoundManager.Instance.BGMplay(true, BGMtype.Wheat);
                 break;
         }
         yield return new WaitForSeconds(FadeTime);

@@ -9,11 +9,8 @@ public class CmanageDialog : MonoBehaviour
     [SerializeField] List<DialogSystem> dialogSystem;
     [SerializeField] private GameObject FadeUI;
     [SerializeField] private float FadeTime = 1f;
-    private bool changeState = false;
     public bool noDialog = true;
     public bool tradefail = false;
-    CustomerState changeCState;
-
     private void SetDialog(string dialogName)
     {
         noDialog = false;
@@ -23,7 +20,6 @@ public class CmanageDialog : MonoBehaviour
    public void InitSign()//신호 초기화
     {
         noDialog = true;
-        changeState = false;
         tradefail = false;
     }
    public void DialogBranch(int customnum)// 분기점 관리

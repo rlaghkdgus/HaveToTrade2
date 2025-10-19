@@ -160,9 +160,10 @@ public class ExcelImporter : AssetPostprocessor
 				object fieldValue = CellToFieldObject(cell, entityField);
 				entityField.SetValue(entity, fieldValue);
 			}
-			catch
+			catch (Exception e)
 			{
-				throw new Exception(string.Format("Invalid excel cell type at row {0}, column {1}, {2} sheet.", row.RowNum, cell.ColumnIndex, sheetName));
+				Debug.LogWarning($"[ExcelImporter] 셀 변환 실패 (Row {row.RowNum + 1}, Col {cell.ColumnIndex + 1}, Sheet {sheetName}): {e.Message}");
+				continue; // 이 필드는 건너뛰고 다음 필드 계속 진행
 			}
 		}
 		return entity;

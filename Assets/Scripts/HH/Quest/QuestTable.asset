@@ -14,46 +14,932 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest:
   - id: 1
-    questName: "\uBB3C\uAC74\uC744 \uAD6C\uB9E4\uD558\uC790"
+    questName: Wheat1
     sort: 0
-    questStuffName: 
-    questInfo: 15
+    questStuffName: "\uBC00"
+    questInfo: 20
     reward: 1
-    questText: "\uC2A4\uBAA8\uD0A4\uC548 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
-      15kg\uCE58 \uC0AC\uB77C!"
+    questText: Food buy 30kg(GreStar)
     buyOrSell: 1
-    villageType: 3
+    villageType: 0
     questType: 1
   - id: 2
-    questName: "\uBB3C\uAC74\uC744 \uD310\uB9E4\uD558\uC790"
+    questName: Wheat2
     sort: 0
-    questStuffName: 
-    questInfo: 30
+    questStuffName: "\uBC00"
+    questInfo: 35
     reward: 2
-    questText: "\uACE8\uB4DC\uBCA4 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
-      30kg\uCE58 \uD314\uC544\uB77C!"
+    questText: Food Delivery
     buyOrSell: 0
-    villageType: 2
-    questType: 1
+    villageType: 1
+    questType: 2
   - id: 3
-    questName: "\uBB3C\uAC74\uC744 \uD310\uB9E4\uD558\uC790"
+    questName: Wheat3
     sort: 0
-    questStuffName: 
+    questStuffName: "\uBC00"
     questInfo: 50
     reward: 3
-    questText: "\uC2A4\uBAA8\uD0A4\uC548 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
-      50kg\uCE58 \uD314\uC544\uB77C!"
-    buyOrSell: 0
-    villageType: 3
+    questText: Food buy 80kg
+    buyOrSell: 1
+    villageType: 0
     questType: 1
   - id: 4
-    questName: "\uBB3C\uAC74\uC744 \uAD6C\uB9E4\uD558\uC790"
+    questName: Barley1
     sort: 0
-    questStuffName: 
+    questStuffName: "\uBCF4\uB9AC"
+    questInfo: 10
+    reward: 1
+    questText: Food Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 5
+    questName: Barley2
+    sort: 0
+    questStuffName: "\uBCF4\uB9AC"
     questInfo: 30
     reward: 2
-    questText: "\uACE8\uB4DC\uBCA4 \uB9C8\uC744\uC5D0\uC11C \uBE44\uAC00\uACF5\uC2DD\uD488\uC744
-      30kg\uCE58 \uC0AC\uB77C!"
+    questText: Food buy 30kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 6
+    questName: Barley3
+    sort: 0
+    questStuffName: "\uBCF4\uB9AC"
+    questInfo: 50
+    reward: 3
+    questText: Food Delivery
     buyOrSell: 1
     villageType: 2
+    questType: 2
+  - id: 7
+    questName: Oats1
+    sort: 0
+    questStuffName: "\uADC0\uB9AC"
+    questInfo: 7
+    reward: 1
+    questText: Food buy 20kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 8
+    questName: Oats2
+    sort: 0
+    questStuffName: "\uADC0\uB9AC"
+    questInfo: 16
+    reward: 2
+    questText: Food Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 9
+    questName: Oats3
+    sort: 0
+    questStuffName: "\uADC0\uB9AC"
+    questInfo: 25
+    reward: 3
+    questText: Food buy 70kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 10
+    questName: Fish1
+    sort: 0
+    questStuffName: "\uBB3C\uACE0\uAE30"
+    questInfo: 20
+    reward: 1
+    questText: Food Delivery
+    buyOrSell: 1
+    villageType: 3
+    questType: 2
+  - id: 11
+    questName: Fish2
+    sort: 0
+    questStuffName: "\uBB3C\uACE0\uAE30"
+    questInfo: 30
+    reward: 2
+    questText: Food buy 50kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 12
+    questName: Fish3
+    sort: 0
+    questStuffName: "\uBB3C\uACE0\uAE30"
+    questInfo: 40
+    reward: 3
+    questText: Food Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 13
+    questName: Meat1
+    sort: 0
+    questStuffName: "\uACE0\uAE30"
+    questInfo: 15
+    reward: 1
+    questText: Food buy 30kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 14
+    questName: Meat2
+    sort: 0
+    questStuffName: "\uACE0\uAE30"
+    questInfo: 25
+    reward: 2
+    questText: Food Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 15
+    questName: Meat3
+    sort: 0
+    questStuffName: "\uACE0\uAE30"
+    questInfo: 35
+    reward: 3
+    questText: Food buy 100kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 16
+    questName: Apple1
+    sort: 0
+    questStuffName: "\uC0AC\uACFC"
+    questInfo: 20
+    reward: 1
+    questText: Food Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 17
+    questName: Apple2
+    sort: 0
+    questStuffName: "\uC0AC\uACFC"
+    questInfo: 25
+    reward: 2
+    questText: Food buy 40kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 18
+    questName: Apple3
+    sort: 0
+    questStuffName: "\uC0AC\uACFC"
+    questInfo: 30
+    reward: 3
+    questText: Food Delivery
+    buyOrSell: 0
+    villageType: 2
+    questType: 2
+  - id: 19
+    questName: Grape1
+    sort: 0
+    questStuffName: "\uD3EC\uB3C4"
+    questInfo: 13
+    reward: 1
+    questText: Food buy 10kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 20
+    questName: Grape2
+    sort: 0
+    questStuffName: "\uD3EC\uB3C4"
+    questInfo: 23
+    reward: 2
+    questText: Food Delivery
+    buyOrSell: 0
+    villageType: 1
+    questType: 2
+  - id: 21
+    questName: Grape3
+    sort: 0
+    questStuffName: "\uD3EC\uB3C4"
+    questInfo: 33
+    reward: 3
+    questText: Food buy 80kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 22
+    questName: Bread1
+    sort: 4
+    questStuffName: "\uBE75"
+    questInfo: 20
+    reward: 1
+    questText: ProcessedFood Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 23
+    questName: Bread2
+    sort: 4
+    questStuffName: "\uBE75"
+    questInfo: 35
+    reward: 2
+    questText: ProcessedFood buy 40kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 24
+    questName: Bread3
+    sort: 4
+    questStuffName: "\uBE75"
+    questInfo: 50
+    reward: 3
+    questText: ProcessedFood Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 25
+    questName: SmokedFish1
+    sort: 4
+    questStuffName: "\uD6C8\uC81C\uBB3C\uACE0\uAE30"
+    questInfo: 30
+    reward: 1
+    questText: ProcessedFood buy 30kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 26
+    questName: SmokedFish2
+    sort: 4
+    questStuffName: "\uD6C8\uC81C\uBB3C\uACE0\uAE30"
+    questInfo: 40
+    reward: 2
+    questText: ProcessedFood Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 27
+    questName: SmokedFish3
+    sort: 4
+    questStuffName: "\uD6C8\uC81C\uBB3C\uACE0\uAE30"
+    questInfo: 50
+    reward: 3
+    questText: ProcessedFood buy 70kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 28
+    questName: SmokedMeat1
+    sort: 4
+    questStuffName: "\uD6C8\uC81C\uACE0\uAE30"
+    questInfo: 28
+    reward: 1
+    questText: ProcessedFood Delivery
+    buyOrSell: 1
+    villageType: 3
+    questType: 2
+  - id: 29
+    questName: SmokedMeat2
+    sort: 4
+    questStuffName: "\uD6C8\uC81C\uACE0\uAE30"
+    questInfo: 33
+    reward: 2
+    questText: ProcessedFood buy 60kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 30
+    questName: SmokdeMeat3
+    sort: 4
+    questStuffName: "\uD6C8\uC81C\uACE0\uAE30"
+    questInfo: 38
+    reward: 3
+    questText: ProcessedFood Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 31
+    questName: AppleWine1
+    sort: 4
+    questStuffName: "\uC0AC\uACFC\uC640\uC778"
+    questInfo: 13
+    reward: 1
+    questText: ProcessedFood buy 3kg
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 32
+    questName: AppleWine2
+    sort: 4
+    questStuffName: "\uC0AC\uACFC\uC640\uC778"
+    questInfo: 19
+    reward: 2
+    questText: ProcessedFood Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 33
+    questName: AppleWine3
+    sort: 4
+    questStuffName: "\uC0AC\uACFC\uC640\uC778"
+    questInfo: 25
+    reward: 3
+    questText: ProcessedFood buy 12kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 34
+    questName: GrapeWine1
+    sort: 4
+    questStuffName: "\uD3EC\uB3C4\uC640\uC778"
+    questInfo: 11
+    reward: 1
+    questText: ProcessedFood Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 35
+    questName: GrapeWine2
+    sort: 4
+    questStuffName: "\uD3EC\uB3C4\uC640\uC778"
+    questInfo: 18
+    reward: 2
+    questText: ProcessedFood buy 6kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 36
+    questName: GrapeWine3
+    sort: 4
+    questStuffName: "\uD3EC\uB3C4\uC640\uC778"
+    questInfo: 25
+    reward: 3
+    questText: ProcessedFood Delivery
+    buyOrSell: 0
+    villageType: 2
+    questType: 2
+  - id: 37
+    questName: Fruitjam1
+    sort: 4
+    questStuffName: "\uACFC\uC77C\uC7BC"
+    questInfo: 12
+    reward: 1
+    questText: ProcessedFood buy 3kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 38
+    questName: Fruitjam2
+    sort: 4
+    questStuffName: "\uACFC\uC77C\uC7BC"
+    questInfo: 21
+    reward: 2
+    questText: ProcessedFood Delivery
+    buyOrSell: 0
+    villageType: 1
+    questType: 2
+  - id: 39
+    questName: Fruitjam3
+    sort: 4
+    questStuffName: "\uACFC\uC77C\uC7BC"
+    questInfo: 30
+    reward: 3
+    questText: ProcessedFood buy 13kg
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 40
+    questName: Dress1
+    sort: 3
+    questStuffName: "\uB4DC\uB808\uC2A4"
+    questInfo: 1
+    reward: 1
+    questText: Clothing Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 41
+    questName: Dress2
+    sort: 3
+    questStuffName: "\uB4DC\uB808\uC2A4"
+    questInfo: 2
+    reward: 2
+    questText: Clothing buy 7
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 42
+    questName: Dress3
+    sort: 3
+    questStuffName: "\uB4DC\uB808\uC2A4"
+    questInfo: 3
+    reward: 3
+    questText: Clothing Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 43
+    questName: Suit1
+    sort: 3
+    questStuffName: "\uC815\uC7A5"
+    questInfo: 1
+    reward: 1
+    questText: Clothing buy 2
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 44
+    questName: Suit2
+    sort: 3
+    questStuffName: "\uC815\uC7A5"
+    questInfo: 2
+    reward: 2
+    questText: Clothing Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 45
+    questName: Suit3
+    sort: 3
+    questStuffName: "\uC815\uC7A5"
+    questInfo: 3
+    reward: 3
+    questText: Clothing buy 10
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 46
+    questName: Top1
+    sort: 3
+    questStuffName: "\uC0C1\uC758"
+    questInfo: 1
+    reward: 1
+    questText: Clothing Delivery
+    buyOrSell: 1
+    villageType: 3
+    questType: 2
+  - id: 47
+    questName: Top2
+    sort: 3
+    questStuffName: "\uC0C1\uC758"
+    questInfo: 3
+    reward: 2
+    questText: Clothing buy 5
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 48
+    questName: Top3
+    sort: 3
+    questStuffName: "\uC0C1\uC758"
+    questInfo: 5
+    reward: 3
+    questText: Clothing Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 49
+    questName: Bottom1
+    sort: 3
+    questStuffName: "\uBC14\uC9C0"
+    questInfo: 1
+    reward: 1
+    questText: Clothing buy 4
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 50
+    questName: Bottom2
+    sort: 3
+    questStuffName: "\uBC14\uC9C0"
+    questInfo: 3
+    reward: 2
+    questText: Clothing Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 51
+    questName: Bottom3
+    sort: 3
+    questStuffName: "\uBC14\uC9C0"
+    questInfo: 5
+    reward: 3
+    questText: Clothing buy 12
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 52
+    questName: Gloves1
+    sort: 3
+    questStuffName: "\uC7A5\uAC11"
+    questInfo: 3
+    reward: 1
+    questText: Clothing Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 53
+    questName: Gloves2
+    sort: 3
+    questStuffName: "\uC7A5\uAC11"
+    questInfo: 5
+    reward: 2
+    questText: Clothing buy 10
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 54
+    questName: Gloves3
+    sort: 3
+    questStuffName: "\uC7A5\uAC11"
+    questInfo: 7
+    reward: 3
+    questText: Clothing Delivery
+    buyOrSell: 0
+    villageType: 2
+    questType: 2
+  - id: 55
+    questName: Armor1
+    sort: 3
+    questStuffName: "\uAC11\uC637"
+    questInfo: 1
+    reward: 1
+    questText: Clothing buy 1
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 56
+    questName: Armor2
+    sort: 3
+    questStuffName: "\uAC11\uC637"
+    questInfo: 2
+    reward: 2
+    questText: Clothing Delivery
+    buyOrSell: 0
+    villageType: 1
+    questType: 2
+  - id: 57
+    questName: Armor3
+    sort: 3
+    questStuffName: "\uAC11\uC637"
+    questInfo: 3
+    reward: 3
+    questText: Clothing buy 5
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 58
+    questName: Leather1
+    sort: 3
+    questStuffName: "\uAC00\uC8FD"
+    questInfo: 2
+    reward: 1
+    questText: Clothing Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 59
+    questName: Leather2
+    sort: 3
+    questStuffName: "\uAC00\uC8FD"
+    questInfo: 5
+    reward: 2
+    questText: Clothing buy 5
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 60
+    questName: Leather3
+    sort: 3
+    questStuffName: "\uAC00\uC8FD"
+    questInfo: 7
+    reward: 3
+    questText: Clothing Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 61
+    questName: Bed1
+    sort: 2
+    questStuffName: "\uCE68\uB300"
+    questInfo: 1
+    reward: 1
+    questText: Furniture buy 2
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 62
+    questName: Bed2
+    sort: 2
+    questStuffName: "\uCE68\uB300"
+    questInfo: 2
+    reward: 2
+    questText: Furniture Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 63
+    questName: Bed3
+    sort: 2
+    questStuffName: "\uCE68\uB300"
+    questInfo: 3
+    reward: 3
+    questText: Furniture buy 6
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 64
+    questName: Chair1
+    sort: 2
+    questStuffName: "\uC758\uC790"
+    questInfo: 2
+    reward: 1
+    questText: Furniture Delivery
+    buyOrSell: 1
+    villageType: 3
+    questType: 2
+  - id: 65
+    questName: Chair2
+    sort: 2
+    questStuffName: "\uC758\uC790"
+    questInfo: 4
+    reward: 2
+    questText: Furniture buy 5
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 66
+    questName: Chair3
+    sort: 2
+    questStuffName: "\uC758\uC790"
+    questInfo: 6
+    reward: 3
+    questText: Furniture Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 67
+    questName: Table1
+    sort: 2
+    questStuffName: "\uCC45\uC0C1"
+    questInfo: 1
+    reward: 1
+    questText: Furniture buy 1
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 68
+    questName: Table2
+    sort: 2
+    questStuffName: "\uCC45\uC0C1"
+    questInfo: 3
+    reward: 2
+    questText: Furniture Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 69
+    questName: Table3
+    sort: 2
+    questStuffName: "\uCC45\uC0C1"
+    questInfo: 5
+    reward: 3
+    questText: Furniture buy 7
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 70
+    questName: Closet1
+    sort: 2
+    questStuffName: "\uC637\uC7A5"
+    questInfo: 1
+    reward: 1
+    questText: Furniture Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 71
+    questName: Closet2
+    sort: 2
+    questStuffName: "\uC637\uC7A5"
+    questInfo: 2
+    reward: 2
+    questText: Furniture buy 3
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 72
+    questName: Closet3
+    sort: 2
+    questStuffName: "\uC637\uC7A5"
+    questInfo: 3
+    reward: 3
+    questText: Furniture Delivery
+    buyOrSell: 0
+    villageType: 2
+    questType: 2
+  - id: 73
+    questName: FarmingTool1
+    sort: 2
+    questStuffName: "\uB18D\uAE30\uAD6C"
+    questInfo: 2
+    reward: 1
+    questText: Furniture buy 3
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 74
+    questName: FarmingTool2
+    sort: 2
+    questStuffName: "\uB18D\uAE30\uAD6C"
+    questInfo: 5
+    reward: 2
+    questText: Furniture Delivery
+    buyOrSell: 0
+    villageType: 1
+    questType: 2
+  - id: 75
+    questName: FarmingTool3
+    sort: 2
+    questStuffName: "\uB18D\uAE30\uAD6C"
+    questInfo: 8
+    reward: 3
+    questText: Furniture buy 10
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 76
+    questName: PearlPreciounMetals1
+    sort: 1
+    questStuffName: "\uC9C4\uC8FC\uBAA9\uAC78\uC774"
+    questInfo: 1
+    reward: 1
+    questText: Jewelry Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 77
+    questName: PearlPrecoiusMetals2
+    sort: 1
+    questStuffName: "\uC9C4\uC8FC\uBAA9\uAC78\uC774"
+    questInfo: 2
+    reward: 2
+    questText: Jewelry buy 9
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 78
+    questName: PearlPreciousMetals3
+    sort: 1
+    questStuffName: "\uC9C4\uC8FC\uBAA9\uAC78\uC774"
+    questInfo: 3
+    reward: 3
+    questText: Jewelry Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 79
+    questName: AnUnprocessedPearl1
+    sort: 1
+    questStuffName: "\uBBF8\uAC00\uACF5\uC9C4\uC8FC"
+    questInfo: 1
+    reward: 1
+    questText: Jewelry buy 6
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 80
+    questName: AnUnprocessedPearl2
+    sort: 1
+    questStuffName: "\uBBF8\uAC00\uACF5\uC9C4\uC8FC"
+    questInfo: 2
+    reward: 2
+    questText: Jewelry Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 81
+    questName: AnUnprocessedPearl3
+    sort: 1
+    questStuffName: "\uBBF8\uAC00\uACF5\uC9C4\uC8FC"
+    questInfo: 3
+    reward: 3
+    questText: Jewelry buy 18
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 82
+    questName: PreciousMetals1
+    sort: 1
+    questStuffName: "\uBCF4\uC11D\uC774 \uBC15\uD78C \uBC18\uC9C0"
+    questInfo: 1
+    reward: 1
+    questText: Jewelry Delivery
+    buyOrSell: 1
+    villageType: 3
+    questType: 2
+  - id: 83
+    questName: PreciousMetals2
+    sort: 1
+    questStuffName: "\uBCF4\uC11D\uC774 \uBC15\uD78C \uBC18\uC9C0"
+    questInfo: 2
+    reward: 2
+    questText: Jewelry buy 10
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 84
+    questName: PreciousMetals3
+    sort: 1
+    questStuffName: "\uBCF4\uC11D\uC774 \uBC15\uD78C \uBC18\uC9C0"
+    questInfo: 3
+    reward: 3
+    questText: Jewelry Delivery
+    buyOrSell: 1
+    villageType: 2
+    questType: 2
+  - id: 85
+    questName: Bracelet1
+    sort: 1
+    questStuffName: "\uD314\uCC0C"
+    questInfo: 1
+    reward: 1
+    questText: Jewelry buy 3
+    buyOrSell: 0
+    villageType: 0
+    questType: 1
+  - id: 86
+    questName: Bracelet2
+    sort: 1
+    questStuffName: "\uD314\uCC0C"
+    questInfo: 2
+    reward: 2
+    questText: Jewelry Delivery
+    buyOrSell: 1
+    villageType: 1
+    questType: 2
+  - id: 87
+    questName: Beacelet3
+    sort: 1
+    questStuffName: "\uD314\uCC0C"
+    questInfo: 3
+    reward: 3
+    questText: Jewelry buy 16
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 88
+    questName: Ring1
+    sort: 1
+    questStuffName: "\uBC18\uC9C0"
+    questInfo: 1
+    reward: 1
+    questText: Jewelry Delivery
+    buyOrSell: 0
+    villageType: 3
+    questType: 2
+  - id: 89
+    questName: Ring2
+    sort: 1
+    questStuffName: "\uBC18\uC9C0"
+    questInfo: 2
+    reward: 2
+    questText: Jewelry buy 11
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 90
+    questName: Ring3
+    sort: 1
+    questStuffName: "\uBC18\uC9C0"
+    questInfo: 3
+    reward: 3
+    questText: Jewelry Delivery
+    buyOrSell: 0
+    villageType: 2
+    questType: 2
+  - id: 91
+    questName: Neckace1
+    sort: 1
+    questStuffName: "\uBAA9\uAC78\uC774"
+    questInfo: 1
+    reward: 1
+    questText: Jewelry buy 3
+    buyOrSell: 1
+    villageType: 0
+    questType: 1
+  - id: 92
+    questName: Necklace2
+    sort: 1
+    questStuffName: "\uBAA9\uAC78\uC774"
+    questInfo: 2
+    reward: 2
+    questText: Jewelry Delivery
+    buyOrSell: 0
+    villageType: 1
+    questType: 2
+  - id: 93
+    questName: Necklace3
+    sort: 1
+    questStuffName: "\uBAA9\uAC78\uC774"
+    questInfo: 3
+    reward: 3
+    questText: Jewelry buy 14
+    buyOrSell: 1
+    villageType: 0
     questType: 1

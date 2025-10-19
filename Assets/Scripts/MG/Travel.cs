@@ -44,6 +44,8 @@ public class Travel : MonoBehaviour
     [SerializeField] Customer customer;
     [Header("날씨 이벤트")]
     [SerializeField] ClimateEvent climate;
+    [Header("동물삭제")]
+    [SerializeField] AnimalMoving animals;
     private void CombinationRoad(TownDB nextTownDB)
     {
         RandomRoad.Clear();
@@ -136,7 +138,8 @@ public class Travel : MonoBehaviour
     {
         GameObject fadeInOut = Instantiate(fadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
         GameObject[] clouds = GameObject.FindGameObjectsWithTag("Cloud");
-
+        if(animals != null)
+        animals.isActive.Value = false;
         yield return new WaitForSeconds(FadeTime);
         switch (nextTownDB.TownType)
         {
@@ -228,11 +231,11 @@ public class Travel : MonoBehaviour
     {
         isFade = false;
         GameObject fadeInout = Instantiate(fadeUI, GameObject.FindGameObjectWithTag("Canvas").transform);
-
         yield return new WaitForSeconds(FadeTime);
         nextTownClone = Instantiate<GameObject>(nextTown, Vector3.zero, Quaternion.identity);
         EventManager.OnGenerateTownCall_Cloud(nextTownDB.UseCloud);
         Player.Instance.AnimationChange(false);
+      
         switch (nextTownDB.TownType)
         {
             case VillageType.Smokian:
@@ -252,6 +255,7 @@ public class Travel : MonoBehaviour
         climate.ChangeState();
         Player.Instance._MoveCount++;
         TownManager.Instance.UpdateTown();
+        animals.isActive.Value = true;
         customer.tradeOn();
         isFade = false;
         yield return null;

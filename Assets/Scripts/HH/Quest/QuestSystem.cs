@@ -141,20 +141,23 @@ public class QuestSystem : Singleton<QuestSystem>
 
         EventManager.OnChangeFameCall_Tier(qTargetItem);
     }
-    public void DeliveryQuestCheck()
+    public void DeliveryQuestCheck(VillageType village)
     {
+        Debug.Log("Check");
         if (currentQuestType != QuestType.Delivery || TownManager.Instance.curTown.TownType != questVillage)
             //배달 퀘스트가 아닐시 UI 추가가능
             return;
+        Debug.Log("Check1");
         ItemManager.Instance.playerInventory.CheckItemWeight(qTargetItemName);
         if (deliveryCheckSign == false)
             return;
         else if(deliveryCheckSign == true)
         {
+            Debug.Log("Check2");
             ItemManager.Instance.playerInventory.QuestItemRemove(qTargetItemName);
             QuestClear();
         }
-
+        return;
 
     }
 }

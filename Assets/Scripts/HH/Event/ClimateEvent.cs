@@ -83,8 +83,6 @@ public class ClimateEvent : MonoBehaviour
     }
     public void SetEventPrice(int curPrice,pItem curItem)
     {
-        if (c_State.Value == ClimateState.Idle)
-            return;
         switch(c_State.Value)
         {
             case ClimateState.BumperCrop when curItem.sort == ItemSorts.food || curItem.sort == ItemSorts.pFood:

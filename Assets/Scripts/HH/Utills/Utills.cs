@@ -80,18 +80,17 @@ public static class KoreanParticleHelper
     private static Dictionary<string, string> subjectCache = new();
     private static Dictionary<string, string> objectCache = new();
 
-    /// <summary>
     /// '이/가' 조사만 반환 (캐싱 포함)
-    /// </summary>
+
     public static string GetSubjectParticle(string word)
     {
         if (string.IsNullOrEmpty(word)) return "";
 
-        if (subjectCache.TryGetValue(word, out string particle))
+        if (subjectCache.TryGetValue(word, out string particle))//단어를 키로두고, 해당 단어의 저장되어있는 값(조사) 가 있으면 후의 계산을 거치지 않고 반환
             return particle;
 
-        particle = HasFinalConsonant(word) ? "이" : "가";
-        subjectCache[word] = particle;
+        particle = HasFinalConsonant(word) ? "이" : "가"; //받침유무를 확인후, 이 / 가 판별
+        subjectCache[word] = particle; //없으면 딕셔너리에 저장
         return particle;
     }
 

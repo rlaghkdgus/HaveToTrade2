@@ -137,7 +137,7 @@ public class DialogSystem : MonoBehaviour
 
         while (true)
         {
-            if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && DialogBG.activeSelf)
+            if (Input.GetMouseButtonDown(0) && DialogBG.activeSelf)
             {
                 if (isTypingEffect == true)
                 {

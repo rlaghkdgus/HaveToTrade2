@@ -12,7 +12,10 @@ public class TownManager : Singleton<TownManager>
     public GameObject ButtonGroup;
     private Travel travel;
     private TownViewChanger changer;
-   
+
+    [Header("움직일 동물")]
+    [SerializeField] AnimalMoving moveAni;
+
     private void Awake()
     {
         travel = GetComponent<Travel>();
@@ -57,6 +60,7 @@ public class TownManager : Singleton<TownManager>
     {
         // 현재 마을 동적 생성
         TownClone = Instantiate<GameObject>(curTown.TownPrefabs[changer.currentIndex], new Vector3(0, 0, 0), Quaternion.identity);
+       
         EventManager.OnGenerateTownCall_Cloud(curTown.UseCloud);
         Debug.Log("타운 생성 완료");
     }
@@ -67,9 +71,15 @@ public class TownManager : Singleton<TownManager>
         nextTown = null;
         TownClone = GameObject.FindGameObjectWithTag("Town");
         var MapButton = GameObject.FindWithTag("Canvas").transform.GetChild(0).Find("ButtonGroup").transform.Find("OpenMap");
+        if (moveAni != null)
+        {
+            moveAni.SelectAnimal(curTown);
+            
+        }
         MapButton.gameObject.SetActive(true);
         Debug.Log("업데이트 완료");
         changer.currentIndex = 0;
+        QuestSystem.Instance.DeliveryQuestCheck(curTown.TownType);
         changer.ButtonUIUpdate(curTown.TownPrefabs);
         ButtonGroup.SetActive(true);
         if (Player.Instance.isMaxCount)

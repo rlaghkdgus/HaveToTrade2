@@ -49,10 +49,11 @@ public enum VillageType
 
 public enum ClimateState
 {
-    Idle,
     BumperCrop,
     FakeJewel,
     ClothEvent,
     FurnEvent
 }
+
+
 

@@ -101,11 +101,22 @@ public class QuestSystem : Singleton<QuestSystem>
     private void TextReset()
     {
         if (currentQuestType == QuestType.Trade)
-            targetQuestText.text = "前格 :" + InGameUtills.RetStuffName(qTargetItem) + "\n" +"格利瘤 :" + questVillage.ToString() +"\n" + "  " + questTarget + " / " + questGoal + "  " + BuyOrSellText();
+            targetQuestText.text = "前格 :" + InGameUtills.RetStuffName(qTargetItem) + "\n" + "格利瘤 :" + HangeulVillage(questVillage) + "\n" + "  " + questTarget + " / " + questGoal + "  " + BuyOrSellText();
         else if (currentQuestType == QuestType.Delivery)
-            targetQuestText.text = "前格 :" + InGameUtills.RetStuffName(qTargetItem) + " 格利瘤 :" + questVillage.ToString();
+            targetQuestText.text = "前格 :" + InGameUtills.RetStuffName(qTargetItem) + " 格利瘤 :" + HangeulVillage(questVillage);
         else
             targetQuestText.text = "";
+    }
+
+    public string HangeulVillage(VillageType village)
+    {
+        switch(village)
+        {
+            case VillageType.GreStar: return "弊饭胶鸥";
+            case VillageType.GoldBen: return "榜靛亥";
+            case VillageType.Smokian: return "胶葛虐救";
+            default: return "包拌绝澜";    
+        }
     }
     private string BuyOrSellText()
     {

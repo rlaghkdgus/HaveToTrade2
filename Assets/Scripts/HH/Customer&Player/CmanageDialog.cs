@@ -28,14 +28,19 @@ public class CmanageDialog : MonoBehaviour
         {
             switch (customnum)
             {
-                case 0:
+                case 0://
                     SetDialog("아저씨거래전인사");
                     break;
-                case 1:
+                case 1: //speaker5, 인덱스 4
                     SetDialog("무뚝뚝거래전잡담");
                     break;
+                
+                case 3://npc1, speaker3, 인덱스2 
+                SetDialog("유쾌한거래전인사");
+                break;
+                
                 case 4:
-                    SetDialog("유쾌한거래전인사");
+                    SetDialog("소년거래전인사");
                     break;
                 case 91:
                     SetDialog("BreadShop_B");
@@ -49,7 +54,7 @@ public class CmanageDialog : MonoBehaviour
         {
             switch (customnum)
             {
-                case 0:
+                case 0://speaker3, 인덱스 2
                     SetDialog("아저씨거래후인사");
                     break;
                 case 1 when !ItemManager.Instance.bargainSuccess && tradefail:
@@ -58,8 +63,13 @@ public class CmanageDialog : MonoBehaviour
                 case 1:
                     SetDialog("화난작별인사");
                     break;
+                
+            case 3:
+                SetDialog("유쾌한거래후인사");
+                break;
+                
                 case 4:
-                    SetDialog("유쾌한거래후인사");
+                    SetDialog("소년거래후인사");
                     break;
                 case 91:
                     SetDialog("BreadShop_A");
@@ -76,8 +86,12 @@ public class CmanageDialog : MonoBehaviour
                 case 0 when !ItemManager.Instance.bargainSuccess && tradefail:
                     SetDialog("아이템이름출력");
                     break;
-                case 4 when !ItemManager.Instance.bargainSuccess && tradefail:
+                case 3 when !ItemManager.Instance.bargainSuccess && tradefail:
                     SetDialog("유쾌한재흥정");
+                    break;
+                    
+                    case 4 when !ItemManager.Instance.bargainSuccess && tradefail:
+                    SetDialog("소년재흥정");
                     break;
                 default:
                     InitSign();

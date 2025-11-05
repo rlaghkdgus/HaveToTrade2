@@ -42,7 +42,8 @@ public class DialogSystem : MonoBehaviour
     {
     { "[물건이름]", "" },
     { "[흥정제시가]", "" },
-    { "[목적어]", "" }
+    { "[목적어]", "" },
+    { "[주격조사]","" }
     };
 
     private string ReplacePlaceholders(string original, Dictionary<string, string> replacements)
@@ -218,6 +219,7 @@ public class DialogSystem : MonoBehaviour
             dialogReplacements["[물건이름]"] = itemName;
             dialogReplacements["[흥정제시가]"] = "" + customer.bargainValue;
             dialogReplacements["[목적어]"] = KoreanParticleHelper.GetObjectParticle(itemName);
+            dialogReplacements["[주격조사]"] = KoreanParticleHelper.GetSubjectParticle(itemName);
             curDialog = ReplacePlaceholders(dialogs[currentDialogIndex].dialog, dialogReplacements);
         }
         else

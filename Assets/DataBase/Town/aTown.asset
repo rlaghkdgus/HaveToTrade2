@@ -20,9 +20,6 @@ MonoBehaviour:
   - {fileID: 5181851120068721351, guid: f06defb450f98d24a927f406fd2daf61, type: 3}
   - {fileID: 5181851120068721351, guid: 3ae4c23bc2453954dad6728be039aad1, type: 3}
   - {fileID: 5181851120068721351, guid: a4bef1ca2ffa9a644a464971775bac94, type: 3}
-  RoadPrefabs_F:
-  - {fileID: 8627106026063730539, guid: 0c649e6b447e79442a4bf04280aff7bf, type: 3}
-  RoadPrefabs_M:
-  - {fileID: 5196915061000836307, guid: f0bb9c16a7fec8f45b47d1d226001f99, type: 3}
-  RoadPrefabs_B:
-  - {fileID: 6556213281477325812, guid: f8f2faddd32ad394592cfbaa9c7b85c3, type: 3}
+  RoadPrefabs_F: {fileID: 8627106026063730539, guid: 0c649e6b447e79442a4bf04280aff7bf, type: 3}
+  RoadPrefabs_M: {fileID: 5196915061000836307, guid: f0bb9c16a7fec8f45b47d1d226001f99, type: 3}
+  RoadPrefabs_B: {fileID: 6556213281477325812, guid: f8f2faddd32ad394592cfbaa9c7b85c3, type: 3}

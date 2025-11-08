@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9f1cef1a9b6d145b2d5ec8293a0e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 17.8
+  interval: 38.4
   speed_F: 4
   speed_M: 3
   speed_B: 2
@@ -681,7 +681,6 @@ MonoBehaviour:
   curTownClone: {fileID: 0}
   nextTown: {fileID: 0}
   nextTownClone: {fileID: 0}
-  RandomRoad: 
   fadeUI: {fileID: 3157655087275485958, guid: 3de8581217ca73e4f8f1601a8e9d7def, type: 3}
   isFade: 0
   FadeTime: 1
@@ -5978,7 +5977,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6977296053948334347, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00006575168
+      value: 0.00009617758
       objectReference: {fileID: 0}
     - target: {fileID: 6977296054373911116, guid: 9fa885bc7c4b23c4a8c64080f35f317e, type: 3}
       propertyPath: m_AnchorMax.x

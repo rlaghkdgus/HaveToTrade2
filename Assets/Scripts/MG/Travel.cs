@@ -13,8 +13,9 @@ public class Travel : MonoBehaviour
     [SerializeField] private float speed_B = 6f; // 맨 뒤 레이어 속도
 
     [Header("다음 마을 생성 타이밍")]
-    [SerializeField] private int NextIndex = 0; // 길 생성을 멈추고 다음 마을을 생성할 타이밍을 재는 변수
-    [SerializeField] private int RoadMaxIndex;
+    /*[SerializeField] private int NextIndex = 0; // 길 생성을 멈추고 다음 마을을 생성할 타이밍을 재는 변수
+    [SerializeField] private int RoadMaxIndex;*/
+    private bool isArrive = false;
 
     [Header("각 레이어 리스트")]
     [SerializeField] private List<GameObject> ForwardList = new List<GameObject>(); // 맨 앞 레이어 리스트
@@ -31,8 +32,6 @@ public class Travel : MonoBehaviour
     public GameObject nextTownClone;
     private TownDB nextTownDB;
 
-    [SerializeField] private List<int> RandomRoad;
-
     [Header("페이드 인/아웃")]
     [SerializeField] private GameObject fadeUI;
     [SerializeField] private bool isFade = false;
@@ -46,13 +45,6 @@ public class Travel : MonoBehaviour
     [SerializeField] ClimateEvent climate;
     [Header("동물삭제")]
     [SerializeField] AnimalMoving animals;
-    private void CombinationRoad(TownDB nextTownDB)
-    {
-        RandomRoad.Clear();
-        RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_F.Count));
-        RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_M.Count));
-        RandomRoad.Add(Random.Range(0, nextTownDB.RoadPrefabs_B.Count));
-    }
     
     private void CopyRoad(GameObject clone, int type) // forward = 0, middle = 1, back = 2
     {
@@ -80,10 +72,9 @@ public class Travel : MonoBehaviour
 
     public void LoadRoad(GameObject curTown, GameObject nextTown, TownDB nextTownDB)
     {
-        CombinationRoad(nextTownDB);
-        CopyRoad(nextTownDB.RoadPrefabs_F[RandomRoad[0]], 0);
-        CopyRoad(nextTownDB.RoadPrefabs_M[RandomRoad[1]], 1);
-        CopyRoad(nextTownDB.RoadPrefabs_B[RandomRoad[2]], 2);
+        CopyRoad(nextTownDB.RoadPrefabs_F, 0);
+        CopyRoad(nextTownDB.RoadPrefabs_M, 1);
+        CopyRoad(nextTownDB.RoadPrefabs_B, 2);
         this.nextTownDB = nextTownDB;
         curTownClone = curTown;
         this.nextTown = nextTown;
@@ -95,14 +86,14 @@ public class Travel : MonoBehaviour
         ForwardList.Clear();
         MiddleList.Clear();
         BackList.Clear();
-        RandomRoad.Clear();
 
         GameObject[] RoadObj = GameObject.FindGameObjectsWithTag("Road");
         foreach (GameObject obj in RoadObj)
         {
             Destroy(obj);
         }
-        NextIndex = 0;
+        //NextIndex = 0;
+        isArrive = false;
         index_F = 1;
         index_M = 1;
         index_B = 1;
@@ -113,7 +104,7 @@ public class Travel : MonoBehaviour
 
     private void SortBG(int type)
     {
-        List<GameObject> RoadList = null;
+        List<GameObject> RoadList = new List<GameObject>();
         switch (type)
         {
             case 0:
@@ -189,7 +180,13 @@ public class Travel : MonoBehaviour
         for (int i = 0; i < ForwardList.Count; i++)
         {
             ForwardList[i].transform.localPosition += Vector3.left * Time.deltaTime * speed_F;
-            if (NextIndex < RoadMaxIndex)
+            if (ForwardList[i].transform.localPosition.x <= -interval && nextTownClone == null && !isArrive)
+            {
+                isFade = true;
+                isArrive = true;
+            }
+            
+            /*if (NextIndex < RoadMaxIndex)
             {
                 if (ForwardList[i].transform.localPosition.x <= -interval)
                 {
@@ -203,7 +200,7 @@ public class Travel : MonoBehaviour
                 isFade = true;
                 NextIndex++;
                 //new Vector3(ForwardList[index_F].transform.localPosition.x + interval, 0f, 0f)
-            }
+            }*/
         }
 
         for (int i = 0; i < MiddleList.Count; i++)
@@ -257,7 +254,6 @@ public class Travel : MonoBehaviour
         TownManager.Instance.UpdateTown();
         animals.isActive.Value = true;
         customer.tradeOn();
-        isFade = false;
         yield return null;
     }
 }

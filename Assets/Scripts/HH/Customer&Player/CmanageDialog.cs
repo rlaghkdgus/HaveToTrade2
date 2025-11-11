@@ -99,6 +99,17 @@ public class CmanageDialog : MonoBehaviour
             }
         }
     }
+    public void ThinkBargain(bool sign)
+    {
+        if(sign)
+        {
+            SetDialog("상인구매흥정오류");
+        }
+        else
+        {
+            SetDialog("상인판매흥정오류");
+        }
+    }
  
   
     

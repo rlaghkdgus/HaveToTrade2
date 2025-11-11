@@ -51,6 +51,7 @@ public class TutorialController : MonoBehaviour
         Debug.Log("튜토리얼 종료");
         highlighter?.Hide();
         currentTutorial = null;
+        GameManager.Instance.GameStateChange(GameState.MainIdle);
         loadManager.StartFadeLoad();
     }
 }

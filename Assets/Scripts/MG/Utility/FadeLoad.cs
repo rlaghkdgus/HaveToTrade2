@@ -45,6 +45,7 @@ public class FadeLoad : MonoBehaviour
         yield return StartCoroutine(FadeTo(0f, 1f));
 
         yield return new WaitForSeconds(1f);
+        GameManager.Instance.GameStateChange(GameState.Tutorial);
         Destroy(fadeImageObject);
         Destroy(gameObject);
     }

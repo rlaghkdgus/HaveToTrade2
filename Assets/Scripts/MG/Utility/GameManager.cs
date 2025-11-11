@@ -6,8 +6,6 @@ public class GameManager : Singleton<GameManager>
 {
     private GameState curState;
 
-    [SerializeField] private DialogSystem endingDialog;
-
     public GameObject LoanClearPrefab;
     public GameObject BadEndPrefab;
 
@@ -56,6 +54,7 @@ public class GameManager : Singleton<GameManager>
 public enum GameState
 {
     Start,
+    Tutorial,
     MainIdle,
     BadEnding,
     LoanEnding

@@ -32,4 +32,6 @@ public class DialogData : ScriptableObject
 	public List<TextData> 소년거래전인사; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> 소년거래후인사; // Replace 'EntityType' to an actual type that is serializable.
 	public List<TextData> 소년재흥정; // Replace 'EntityType' to an actual type that is serializable.
+	public List<TextData> 상인구매흥정오류;
+	public List<TextData> 상인판매흥정오류;
 }

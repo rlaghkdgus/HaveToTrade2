@@ -317,6 +317,17 @@ public class Customer : MonoBehaviour
         Debug.Log("a");
         if (int.TryParse(bargainField.text, out bargainValue))//ÆÄ½Ì
         {
+            if (buyOrSell && bargainValue > ItemManager.Instance.currentPrice)
+            {
+                yield return DialogPlay(true);
+                yield break;
+            }
+            else if(!buyOrSell && bargainValue < 0)
+            {
+                yield return DialogPlay(false);
+                yield break;
+            }
+
             if (reBargain == true && buyOrSell && preBargainValue > bargainValue)
             {
                 nonNegoTextTween();
@@ -499,6 +510,24 @@ public class Customer : MonoBehaviour
 
         }
     }
+    private IEnumerator DialogPlay(bool sign)
+    {
+        if (sign)
+            newDialogSys.ThinkBargain(true);
+        else
+            newDialogSys.ThinkBargain(false);
+        for (int i = 0; i < customerDialog.Count; i++)
+        {
+            yield return new WaitUntil(() => customerDialog[i].UpdateDialog());
+            if (i != customerDialog.Count - 1)
+            {
+                GameObject FadeInOut = Instantiate(FadeUI);
+                yield return YieldCache.WaitForSeconds(FadeTime);
+            }
+            customerDialog[i].SetActiveFalseUI();
+
+        }
+    }
     #endregion
     private void UIon()// UI ÀÏ°ý on
     {
@@ -519,6 +548,7 @@ public class Customer : MonoBehaviour
         yield return DialogPlay();
         cState.Value = _cstate;
     }
+    
     
     private bool CusBargainReject(int customnum)
     {
